@@ -200,4 +200,189 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/transactionrecord.h \
     src/qt/guiconstants.h \
     src/qt/optionsmodel.h \
-    src/qt/monitoreddatamapper.
+    src/qt/monitoreddatamapper.h \
+    src/qt/transactiondesc.h \
+    src/qt/transactiondescdialog.h \
+    src/qt/bitcoinamountfield.h \
+    src/wallet.h \
+    src/keystore.h \
+    src/qt/transactionfilterproxy.h \
+    src/qt/transactionview.h \
+    src/qt/walletmodel.h \
+    src/bitcoinrpc.h \
+    src/qt/overviewpage.h \
+    src/qt/csvmodelwriter.h \
+    src/crypter.h \
+    src/qt/sendcoinsentry.h \
+    src/qt/qvalidatedlineedit.h \
+    src/qt/bitcoinunits.h \
+    src/qt/qvaluecombobox.h \
+    src/qt/askpassphrasedialog.h \
+    src/protocol.h \
+    src/qt/notificator.h \
+    src/qt/qtipcserver.h \
+    src/allocators.h \
+    src/ui_interface.h \
+    src/qt/rpcconsole.h \
+    src/version.h \
+    src/netbase.h \
+    src/clientversion.h \
+    src/threadsafety.h
+
+SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
+    src/qt/transactiontablemodel.cpp \
+    src/qt/addresstablemodel.cpp \
+    src/qt/optionsdialog.cpp \
+    src/qt/sendcoinsdialog.cpp \
+    src/qt/coincontroldialog.cpp \
+    src/qt/coincontroltreewidget.cpp \
+    src/qt/addressbookpage.cpp \
+    src/qt/signverifymessagedialog.cpp \
+    src/qt/aboutdialog.cpp \
+    src/qt/editaddressdialog.cpp \
+    src/qt/bitcoinaddressvalidator.cpp \
+    src/alert.cpp \
+    src/version.cpp \
+    src/sync.cpp \
+    src/util.cpp \
+    src/netbase.cpp \
+    src/key.cpp \
+    src/script.cpp \
+    src/main.cpp \
+    src/miner.cpp \
+    src/init.cpp \
+    src/net.cpp \
+    src/irc.cpp \
+    src/checkpoints.cpp \
+    src/addrman.cpp \
+    src/db.cpp \
+    src/walletdb.cpp \
+    src/qt/clientmodel.cpp \
+    src/qt/guiutil.cpp \
+    src/qt/transactionrecord.cpp \
+    src/qt/optionsmodel.cpp \
+    src/qt/monitoreddatamapper.cpp \
+    src/qt/transactiondesc.cpp \
+    src/qt/transactiondescdialog.cpp \
+    src/qt/bitcoinstrings.cpp \
+    src/qt/bitcoinamountfield.cpp \
+    src/wallet.cpp \
+    src/keystore.cpp \
+    src/qt/transactionfilterproxy.cpp \
+    src/qt/transactionview.cpp \
+    src/qt/walletmodel.cpp \
+    src/bitcoinrpc.cpp \
+    src/rpcdump.cpp \
+    src/rpcnet.cpp \
+    src/rpcmining.cpp \
+    src/rpcwallet.cpp \
+    src/rpcblockchain.cpp \
+    src/rpcrawtransaction.cpp \
+    src/qt/overviewpage.cpp \
+    src/qt/csvmodelwriter.cpp \
+    src/crypter.cpp \
+    src/qt/sendcoinsentry.cpp \
+    src/qt/qvalidatedlineedit.cpp \
+    src/qt/bitcoinunits.cpp \
+    src/qt/qvaluecombobox.cpp \
+    src/qt/askpassphrasedialog.cpp \
+    src/protocol.cpp \
+    src/qt/notificator.cpp \
+    src/qt/qtipcserver.cpp \
+    src/qt/rpcconsole.cpp \
+    src/noui.cpp \
+    src/kernel.cpp \
+    src/scrypt-arm.S \
+    src/scrypt-x86.S \
+    src/scrypt-x86_64.S \
+    src/scrypt.cpp \
+    src/pbkdf2.cpp \
+    src/zerocoin/Accumulator.cpp \
+    src/zerocoin/AccumulatorProofOfKnowledge.cpp \
+    src/zerocoin/Coin.cpp \
+    src/zerocoin/CoinSpend.cpp \
+    src/zerocoin/Commitment.cpp \
+    src/zerocoin/ParamGeneration.cpp \
+    src/zerocoin/Params.cpp \
+    src/zerocoin/SerialNumberSignatureOfKnowledge.cpp \
+    src/zerocoin/SpendMetaData.cpp \
+    src/zerocoin/ZeroTest.cpp
+
+RESOURCES += \
+    src/qt/bitcoin.qrc
+
+FORMS += \
+    src/qt/forms/coincontroldialog.ui \
+    src/qt/forms/sendcoinsdialog.ui \
+    src/qt/forms/addressbookpage.ui \
+    src/qt/forms/signverifymessagedialog.ui \
+    src/qt/forms/aboutdialog.ui \
+    src/qt/forms/editaddressdialog.ui \
+    src/qt/forms/transactiondescdialog.ui \
+    src/qt/forms/overviewpage.ui \
+    src/qt/forms/sendcoinsentry.ui \
+    src/qt/forms/askpassphrasedialog.ui \
+    src/qt/forms/rpcconsole.ui \
+    src/qt/forms/optionsdialog.ui
+
+contains(USE_QRCODE, 1) {
+HEADERS += src/qt/qrcodedialog.h
+SOURCES += src/qt/qrcodedialog.cpp
+FORMS += src/qt/forms/qrcodedialog.ui
+}
+
+CODECFORTR = UTF-8
+
+# for lrelease/lupdate
+# also add new translations to src/qt/bitcoin.qrc under translations/
+TRANSLATIONS = $$files(src/qt/locale/bitcoin_*.ts)
+
+isEmpty(QMAKE_LRELEASE) {
+    win32:QMAKE_LRELEASE = $$[QT_INSTALL_BINS]\\lrelease.exe
+    else:QMAKE_LRELEASE = $$[QT_INSTALL_BINS]/lrelease
+}
+isEmpty(QM_DIR):QM_DIR = $$PWD/src/qt/locale
+# automatically build translations, so they can be included in resource file
+TSQM.name = lrelease ${QMAKE_FILE_IN}
+TSQM.input = TRANSLATIONS
+TSQM.output = $$QM_DIR/${QMAKE_FILE_BASE}.qm
+TSQM.commands = $$QMAKE_LRELEASE ${QMAKE_FILE_IN} -qm ${QMAKE_FILE_OUT}
+TSQM.CONFIG = no_link
+QMAKE_EXTRA_COMPILERS += TSQM
+
+# "Other files" to show in Qt Creator
+OTHER_FILES += \
+    doc/*.rst doc/*.txt doc/README README.md res/bitcoin-qt.rc
+
+# platform specific defaults, if not overridden on command line
+isEmpty(BOOST_LIB_SUFFIX) {
+    macx:BOOST_LIB_SUFFIX = -mt
+    windows:BOOST_LIB_SUFFIX = -mt
+}
+
+isEmpty(BOOST_THREAD_LIB_SUFFIX) {
+    win32:BOOST_THREAD_LIB_SUFFIX = _win32$$BOOST_LIB_SUFFIX
+    else:BOOST_THREAD_LIB_SUFFIX = $$BOOST_LIB_SUFFIX
+}
+
+isEmpty(BDB_LIB_PATH) {
+    macx:BDB_LIB_PATH = /opt/local/lib/db48
+}
+
+isEmpty(BDB_LIB_SUFFIX) {
+    macx:BDB_LIB_SUFFIX = -4.8
+}
+
+isEmpty(BDB_INCLUDE_PATH) {
+    macx:BDB_INCLUDE_PATH = /opt/local/include/db48
+}
+
+isEmpty(BOOST_LIB_PATH) {
+    macx:BOOST_LIB_PATH = /opt/local/lib
+}
+
+isEmpty(BOOST_INCLUDE_PATH) {
+    macx:BOOST_INCLUDE_PATH = /opt/local/include
+}
+
+windows:DEFI
