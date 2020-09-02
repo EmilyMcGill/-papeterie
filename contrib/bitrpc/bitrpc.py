@@ -271,4 +271,54 @@ elif cmd == "setaccount":
 
 elif cmd == "setgenerate":
 	try:
-		gen= raw_in
+		gen= raw_input("Generate? (true/false): ")
+		cpus = raw_input("Max processors/cores (-1 for unlimited, optional):")
+		try:
+			print access.setgenerate(gen, cpus)
+		except:
+			print access.setgenerate(gen)
+	except:
+		print "\n---An error occurred---\n"
+
+elif cmd == "settxfee":
+	try:
+		amt = raw_input("Amount:")
+		print access.settxfee(amt)
+	except:
+		print "\n---An error occurred---\n"
+
+elif cmd == "stop":
+	try:
+		print access.stop()
+	except:
+		print "\n---An error occurred---\n"
+
+elif cmd == "validateaddress":
+	try:
+		addr = raw_input("Address: ")
+		print access.validateaddress(addr)
+	except:
+		print "\n---An error occurred---\n"
+
+elif cmd == "walletpassphrase":
+	try:
+		pwd = raw_input("Enter wallet passphrase: ")
+		access.walletpassphrase(pwd, 60)
+		print "\n---Wallet unlocked---\n"
+	except:
+		print "\n---An error occurred---\n"
+
+elif cmd == "walletpassphrasechange":
+	try:
+		pwd = raw_input("Enter old wallet passphrase: ")
+		pwd2 = raw_input("Enter new wallet passphrase: ")
+		access.walletpassphrasechange(pwd, pwd2)
+		print
+		print "\n---Passphrase changed---\n"
+	except:
+		print
+		print "\n---An error occurred---\n"
+		print
+
+else:
+	print "Command not found or not supported"
