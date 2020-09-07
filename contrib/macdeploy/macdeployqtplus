@@ -1,0 +1,145 @@
+
+#!/usr/bin/env python
+
+#
+# Copyright (C) 2011  Patrick "p2k" Schneider <me@p2k-network.org>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+import subprocess, sys, re, os, shutil, stat, os.path
+from string import Template
+from time import sleep
+from argparse import ArgumentParser
+
+# This is ported from the original macdeployqt with modifications
+
+class FrameworkInfo(object):
+    def __init__(self):
+        self.frameworkDirectory = ""
+        self.frameworkName = ""
+        self.frameworkPath = ""
+        self.binaryDirectory = ""
+        self.binaryName = ""
+        self.binaryPath = ""
+        self.version = ""
+        self.installName = ""
+        self.deployedInstallName = ""
+        self.sourceFilePath = ""
+        self.destinationDirectory = ""
+        self.sourceResourcesDirectory = ""
+        self.destinationResourcesDirectory = ""
+    
+    def __eq__(self, other):
+        if self.__class__ == other.__class__:
+            return self.__dict__ == other.__dict__
+        else:
+            return False
+    
+    def __str__(self):
+        return """ Framework name: %s
+ Framework directory: %s
+ Framework path: %s
+ Binary name: %s
+ Binary directory: %s
+ Binary path: %s
+ Version: %s
+ Install name: %s
+ Deployed install name: %s
+ Source file Path: %s
+ Deployed Directory (relative to bundle): %s
+""" % (self.frameworkName,
+       self.frameworkDirectory,
+       self.frameworkPath,
+       self.binaryName,
+       self.binaryDirectory,
+       self.binaryPath,
+       self.version,
+       self.installName,
+       self.deployedInstallName,
+       self.sourceFilePath,
+       self.destinationDirectory)
+    
+    def isDylib(self):
+        return self.frameworkName.endswith(".dylib")
+    
+    def isQtFramework(self):
+        if self.isDylib():
+            return self.frameworkName.startswith("libQt")
+        else:
+            return self.frameworkName.startswith("Qt")
+    
+    reOLine = re.compile(r'^(.+) \(compatibility version [0-9.]+, current version [0-9.]+\)$')
+    bundleFrameworkDirectory = "Contents/Frameworks"
+    bundleBinaryDirectory = "Contents/MacOS"
+    
+    @classmethod
+    def fromOtoolLibraryLine(cls, line):
+        # Note: line must be trimmed
+        if line == "":
+            return None
+        
+        # Don't deploy system libraries (exception for libQtuitools and libQtlucene).
+        if line.startswith("/System/Library/") or line.startswith("@executable_path") or (line.startswith("/usr/lib/") and "libQt" not in line):
+            return None
+        
+        m = cls.reOLine.match(line)
+        if m is None:
+            raise RuntimeError("otool line could not be parsed: " + line)
+        
+        path = m.group(1)
+        
+        info = cls()
+        info.sourceFilePath = path
+        info.installName = path
+        
+        if path.endswith(".dylib"):
+            dirname, filename = os.path.split(path)
+            info.frameworkName = filename
+            info.frameworkDirectory = dirname
+            info.frameworkPath = path
+            
+            info.binaryDirectory = dirname
+            info.binaryName = filename
+            info.binaryPath = path
+            info.version = "-"
+            
+            info.installName = path
+            info.deployedInstallName = "@executable_path/../Frameworks/" + info.binaryName
+            info.sourceFilePath = path
+            info.destinationDirectory = cls.bundleFrameworkDirectory
+        else:
+            parts = path.split("/")
+            i = 0
+            # Search for the .framework directory
+            for part in parts:
+                if part.endswith(".framework"):
+                    break
+                i += 1
+            if i == len(parts):
+                raise RuntimeError("Could not find .framework or .dylib in otool line: " + line)
+            
+            info.frameworkName = parts[i]
+            info.frameworkDirectory = "/".join(parts[:i])
+            info.frameworkPath = os.path.join(info.frameworkDirectory, info.frameworkName)
+            
+            info.binaryName = parts[i+3]
+            info.binaryDirectory = "/".join(parts[i+1:i+3])
+            info.binaryPath = os.path.join(info.binaryDirectory, info.binaryName)
+            info.version = parts[i+2]
+            
+            info.deployedInstallName = "@executable_path/../Frameworks/" + os.path.join(info.frameworkName, info.binaryPath)
+            info.destinationDirectory = os.path.join(cls.bundleFrameworkDirectory, info.frameworkName, info.binaryDirectory)
+            
+            info.sourceResourcesDirectory = os.path.join(info.frameworkPath, "Resources")
