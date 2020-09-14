@@ -396,4 +396,133 @@ HIDE_IN_BODY_DOCS      = NO
 # The INTERNAL_DOCS tag determines if documentation 
 # that is typed after a \internal command is included. If the tag is set 
 # to NO (the default) then the documentation will be excluded. 
-# Set it to YES to include the internal docume
+# Set it to YES to include the internal documentation.
+
+INTERNAL_DOCS          = NO
+
+# If the CASE_SENSE_NAMES tag is set to NO then Doxygen will only generate 
+# file names in lower-case letters. If set to YES upper-case letters are also 
+# allowed. This is useful if you have classes or files whose names only differ 
+# in case and if your file system supports case sensitive file names. Windows 
+# and Mac users are advised to set this option to NO.
+
+CASE_SENSE_NAMES       = NO
+
+# If the HIDE_SCOPE_NAMES tag is set to NO (the default) then Doxygen 
+# will show members with their full class and namespace scopes in the 
+# documentation. If set to YES the scope will be hidden.
+
+HIDE_SCOPE_NAMES       = NO
+
+# If the SHOW_INCLUDE_FILES tag is set to YES (the default) then Doxygen 
+# will put a list of the files that are included by a file in the documentation 
+# of that file.
+
+SHOW_INCLUDE_FILES     = YES
+
+# If the FORCE_LOCAL_INCLUDES tag is set to YES then Doxygen 
+# will list include files with double quotes in the documentation 
+# rather than with sharp brackets.
+
+FORCE_LOCAL_INCLUDES   = NO
+
+# If the INLINE_INFO tag is set to YES (the default) then a tag [inline] 
+# is inserted in the documentation for inline members.
+
+INLINE_INFO            = YES
+
+# If the SORT_MEMBER_DOCS tag is set to YES (the default) then doxygen 
+# will sort the (detailed) documentation of file and class members 
+# alphabetically by member name. If set to NO the members will appear in 
+# declaration order.
+
+SORT_MEMBER_DOCS       = YES
+
+# If the SORT_BRIEF_DOCS tag is set to YES then doxygen will sort the 
+# brief documentation of file, namespace and class members alphabetically 
+# by member name. If set to NO (the default) the members will appear in 
+# declaration order.
+
+SORT_BRIEF_DOCS        = NO
+
+# If the SORT_MEMBERS_CTORS_1ST tag is set to YES then doxygen 
+# will sort the (brief and detailed) documentation of class members so that 
+# constructors and destructors are listed first. If set to NO (the default) 
+# the constructors will appear in the respective orders defined by 
+# SORT_MEMBER_DOCS and SORT_BRIEF_DOCS. 
+# This tag will be ignored for brief docs if SORT_BRIEF_DOCS is set to NO 
+# and ignored for detailed docs if SORT_MEMBER_DOCS is set to NO.
+
+SORT_MEMBERS_CTORS_1ST = NO
+
+# If the SORT_GROUP_NAMES tag is set to YES then doxygen will sort the 
+# hierarchy of group names into alphabetical order. If set to NO (the default) 
+# the group names will appear in their defined order.
+
+SORT_GROUP_NAMES       = NO
+
+# If the SORT_BY_SCOPE_NAME tag is set to YES, the class list will be 
+# sorted by fully-qualified names, including namespaces. If set to 
+# NO (the default), the class list will be sorted only by class name, 
+# not including the namespace part. 
+# Note: This option is not very useful if HIDE_SCOPE_NAMES is set to YES. 
+# Note: This option applies only to the class list, not to the 
+# alphabetical list.
+
+SORT_BY_SCOPE_NAME     = NO
+
+# If the STRICT_PROTO_MATCHING option is enabled and doxygen fails to 
+# do proper type resolution of all parameters of a function it will reject a 
+# match between the prototype and the implementation of a member function even 
+# if there is only one candidate or it is obvious which candidate to choose 
+# by doing a simple string match. By disabling STRICT_PROTO_MATCHING doxygen 
+# will still accept a match between prototype and implementation in such cases.
+
+STRICT_PROTO_MATCHING  = NO
+
+# The GENERATE_TODOLIST tag can be used to enable (YES) or 
+# disable (NO) the todo list. This list is created by putting \todo 
+# commands in the documentation.
+
+GENERATE_TODOLIST      = YES
+
+# The GENERATE_TESTLIST tag can be used to enable (YES) or 
+# disable (NO) the test list. This list is created by putting \test 
+# commands in the documentation.
+
+GENERATE_TESTLIST      = YES
+
+# The GENERATE_BUGLIST tag can be used to enable (YES) or 
+# disable (NO) the bug list. This list is created by putting \bug 
+# commands in the documentation.
+
+GENERATE_BUGLIST       = YES
+
+# The GENERATE_DEPRECATEDLIST tag can be used to enable (YES) or 
+# disable (NO) the deprecated list. This list is created by putting 
+# \deprecated commands in the documentation.
+
+GENERATE_DEPRECATEDLIST= YES
+
+# The ENABLED_SECTIONS tag can be used to enable conditional 
+# documentation sections, marked by \if sectionname ... \endif.
+
+ENABLED_SECTIONS       = 
+
+# The MAX_INITIALIZER_LINES tag determines the maximum number of lines 
+# the initial value of a variable or macro consists of for it to appear in 
+# the documentation. If the initializer consists of more lines than specified 
+# here it will be hidden. Use a value of 0 to hide initializers completely. 
+# The appearance of the initializer of individual variables and macros in the 
+# documentation can be controlled using \showinitializer or \hideinitializer 
+# command in the documentation regardless of this setting.
+
+MAX_INITIALIZER_LINES  = 30
+
+# Set the SHOW_USED_FILES tag to NO to disable the list of files generated 
+# at the bottom of the documentation of classes and structs. If set to YES the 
+# list will mention the files that were used to generate the documentation.
+
+SHOW_USED_FILES        = YES
+
+# If t
