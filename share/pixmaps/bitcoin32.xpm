@@ -216,4 +216,17 @@ static const char * bitcoin32_xpm[] = {
 "u B._._.5.5.8.y.g.c.g.w.oXoX,.h A F <..XoXoX1.k ' ' ' V.N.r.-   ",
 "u u.Q.~.r.6.z.N.V.I.v.k.oXoX@.B | _ c 1.oXoX}.a ' ' O.I.b.O.= o ",
 "u ..Q.Q.v.i.s.c.N.L.l.Z.oXoX@.B t.=.S &.oXoXXXy Y R +.N.b.Q % o ",
-"t T C.I.I.6.u.z.z.5.S 1.oXoX@.e B h D |
+"t T C.I.I.6.u.z.z.5.S 1.oXoX@.e B h D |.oXoXS.f Y Y 6.d.d.n X O ",
+"%Xs m.V.Q.r.r.z.5.<.}.oXoXoXXXW.}.oXoXoXoXW.h G H R a.p.s.7   %X",
+"%X7 O.V.V.v.+.r.` 4.oXoXoXoXoXoXoXoXXXR.<.h v N N o.a.p.Q =   %X",
+"%Xw x v.v.v.r.+. .Z l d e }.Z.r }.3.d l V G n n R a.s.a.s X O %X",
+"%X%X6 { v.l.v.+.O.5.=.^ d }.4.9 }.1.f J G m m G d.d.x.Q =   %X%X",
+"%X%X%Xs u.v.v.v.r.6.o. .l }.4.9 W.4.l ^ ^ J ) c.N.N.y.7 X O %X%X",
+"%X%X%X5 z v.v.M.I.g.;. .J 1.#.B 1.#.) 7.$.S..X'.W.Y.j $   %X%X%X",
+"%X%X%X%X5 b N.Y.~.).Y.j.5.$.=.=.$.*.2.J.@X$X#X#XoXC $   %X%X%X%X",
+"%X%X%X%X%X3 z U.@X+X`.`.`.(.E.E.E.|.@X@X#X#X#X/.j %   %X%X%X%X%X",
+"%X%X%X%X%X%Xw a q.OX|.).`._.'.'.XX.X.X+X+X X%.w X o %X%X%X%X%X%X",
+"%X%X%X%X%X%X%X%Xw a _ j.~.~.).).`.`.`.F._ t & . # %X%X%X%X%X%X%X",
+"%X%X%X%X%X%X%X%X%X%X4 3 t z L U Z z t 1 $ . 8 %X%X%X%X%X%X%X%X%X",
+"%X%X%X%X%X%X%X%X%X%X%X%X%X< ; & + + , 8 %X%X%X%X%X%X%X%X%X%X%X%X"
+};
