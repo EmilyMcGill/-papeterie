@@ -230,4 +230,28 @@ struct zero_after_free_allocator : public std::allocator<T>
     typedef std::allocator<T> base;
     typedef typename base::size_type size_type;
     typedef typename base::difference_type  difference_type;
-    typedef typename base
+    typedef typename base::pointer pointer;
+    typedef typename base::const_pointer const_pointer;
+    typedef typename base::reference reference;
+    typedef typename base::const_reference const_reference;
+    typedef typename base::value_type value_type;
+    zero_after_free_allocator() throw() {}
+    zero_after_free_allocator(const zero_after_free_allocator& a) throw() : base(a) {}
+    template <typename U>
+    zero_after_free_allocator(const zero_after_free_allocator<U>& a) throw() : base(a) {}
+    ~zero_after_free_allocator() throw() {}
+    template<typename _Other> struct rebind
+    { typedef zero_after_free_allocator<_Other> other; };
+
+    void deallocate(T* p, std::size_t n)
+    {
+        if (p != NULL)
+            memset(p, 0, sizeof(T) * n);
+        std::allocator<T>::deallocate(p, n);
+    }
+};
+
+// This is exactly like std::string, but with a custom allocator.
+typedef std::basic_string<char, std::char_traits<char>, secure_allocator<char> > SecureString;
+
+#endif
