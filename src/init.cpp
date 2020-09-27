@@ -671,3 +671,265 @@ bool AppInit2()
         BOOST_FOREACH(string strAddr, mapMultiArgs["-externalip"]) {
             CService addrLocal(strAddr, GetListenPort(), fNameLookup);
             if (!addrLocal.IsValid())
+                return InitError(strprintf(_("Cannot resolve -externalip address: '%s'"), strAddr.c_str()));
+            AddLocal(CService(strAddr, GetListenPort(), fNameLookup), LOCAL_MANUAL);
+        }
+    }
+
+    if (mapArgs.count("-reservebalance")) // ppcoin: reserve balance amount
+    {
+        if (!ParseMoney(mapArgs["-reservebalance"], nReserveBalance))
+        {
+            InitError(_("Invalid amount for -reservebalance=<amount>"));
+            return false;
+        }
+    }
+
+    if (mapArgs.count("-checkpointkey")) // ppcoin: checkpoint master priv key
+    {
+        if (!Checkpoints::SetCheckpointPrivKey(GetArg("-checkpointkey", "")))
+            InitError(_("Unable to sign checkpoint, wrong checkpointkey?\n"));
+    }
+
+    BOOST_FOREACH(string strDest, mapMultiArgs["-seednode"])
+        AddOneShot(strDest);
+
+    // ********************************************************* Step 7: load blockchain
+
+    if (!bitdb.Open(GetDataDir()))
+    {
+        string msg = strprintf(_("Error initializing database environment %s!"
+                                 " To recover, BACKUP THAT DIRECTORY, then remove"
+                                 " everything from it except for wallet.dat."), strDataDir.c_str());
+        return InitError(msg);
+    }
+
+    if (GetBoolArg("-loadblockindextest"))
+    {
+        CTxDB txdb("r");
+        txdb.LoadBlockIndex();
+        PrintBlockTree();
+        return false;
+    }
+
+    uiInterface.InitMessage(_("Loading block index..."));
+    printf("Loading block index...\n");
+    nStart = GetTimeMillis();
+    if (!LoadBlockIndex())
+        return InitError(_("Error loading blkindex.dat"));
+
+
+    // as LoadBlockIndex can take several minutes, it's possible the user
+    // requested to kill bitcoin-qt during the last operation. If so, exit.
+    // As the program has not fully started yet, Shutdown() is possibly overkill.
+    if (fRequestShutdown)
+    {
+        printf("Shutdown requested. Exiting.\n");
+        return false;
+    }
+    printf(" block index %15"PRId64"ms\n", GetTimeMillis() - nStart);
+
+    if (GetBoolArg("-printblockindex") || GetBoolArg("-printblocktree"))
+    {
+        PrintBlockTree();
+        return false;
+    }
+
+    if (mapArgs.count("-printblock"))
+    {
+        string strMatch = mapArgs["-printblock"];
+        int nFound = 0;
+        for (map<uint256, CBlockIndex*>::iterator mi = mapBlockIndex.begin(); mi != mapBlockIndex.end(); ++mi)
+        {
+            uint256 hash = (*mi).first;
+            if (strncmp(hash.ToString().c_str(), strMatch.c_str(), strMatch.size()) == 0)
+            {
+                CBlockIndex* pindex = (*mi).second;
+                CBlock block;
+                block.ReadFromDisk(pindex);
+                block.BuildMerkleTree();
+                block.print();
+                printf("\n");
+                nFound++;
+            }
+        }
+        if (nFound == 0)
+            printf("No blocks matching %s were found\n", strMatch.c_str());
+        return false;
+    }
+
+    // ********************************************************* Testing Zerocoin
+
+
+    if (GetBoolArg("-zerotest", false))
+    {
+        printf("\n=== ZeroCoin tests start ===\n");
+        Test_RunAllTests();
+        printf("=== ZeroCoin tests end ===\n\n");
+    }
+
+    // ********************************************************* Step 8: load wallet
+
+    uiInterface.InitMessage(_("Loading wallet..."));
+    printf("Loading wallet...\n");
+    nStart = GetTimeMillis();
+    bool fFirstRun = true;
+    pwalletMain = new CWallet(strWalletFileName);
+    DBErrors nLoadWalletRet = pwalletMain->LoadWallet(fFirstRun);
+    if (nLoadWalletRet != DB_LOAD_OK)
+    {
+        if (nLoadWalletRet == DB_CORRUPT)
+            strErrors << _("Error loading wallet.dat: Wallet corrupted") << "\n";
+        else if (nLoadWalletRet == DB_NONCRITICAL_ERROR)
+        {
+            string msg(_("Warning: error reading wallet.dat! All keys read correctly, but transaction data"
+                         " or address book entries might be missing or incorrect."));
+            uiInterface.ThreadSafeMessageBox(msg, _("Abjcoin"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
+        }
+        else if (nLoadWalletRet == DB_TOO_NEW)
+            strErrors << _("Error loading wallet.dat: Wallet requires newer version of Abjcoin") << "\n";
+        else if (nLoadWalletRet == DB_NEED_REWRITE)
+        {
+            strErrors << _("Wallet needed to be rewritten: restart Abjcoin to complete") << "\n";
+            printf("%s", strErrors.str().c_str());
+            return InitError(strErrors.str());
+        }
+        else
+            strErrors << _("Error loading wallet.dat") << "\n";
+    }
+
+    if (GetBoolArg("-upgradewallet", fFirstRun))
+    {
+        int nMaxVersion = GetArg("-upgradewallet", 0);
+        if (nMaxVersion == 0) // the -upgradewallet without argument case
+        {
+            printf("Performing wallet upgrade to %i\n", FEATURE_LATEST);
+            nMaxVersion = CLIENT_VERSION;
+            pwalletMain->SetMinVersion(FEATURE_LATEST); // permanently upgrade the wallet immediately
+        }
+        else
+            printf("Allowing wallet upgrade up to %i\n", nMaxVersion);
+        if (nMaxVersion < pwalletMain->GetVersion())
+            strErrors << _("Cannot downgrade wallet") << "\n";
+        pwalletMain->SetMaxVersion(nMaxVersion);
+    }
+
+    if (fFirstRun)
+    {
+        // Create new keyUser and set as default key
+        RandAddSeedPerfmon();
+
+        CPubKey newDefaultKey;
+        if (pwalletMain->GetKeyFromPool(newDefaultKey, false)) {
+            pwalletMain->SetDefaultKey(newDefaultKey);
+            if (!pwalletMain->SetAddressBookName(pwalletMain->vchDefaultKey.GetID(), ""))
+                strErrors << _("Cannot write default address") << "\n";
+        }
+    }
+
+    printf("%s", strErrors.str().c_str());
+    printf(" wallet      %15"PRId64"ms\n", GetTimeMillis() - nStart);
+
+    RegisterWallet(pwalletMain);
+
+    CBlockIndex *pindexRescan = pindexBest;
+    if (GetBoolArg("-rescan"))
+        pindexRescan = pindexGenesisBlock;
+    else
+    {
+        CWalletDB walletdb(strWalletFileName);
+        CBlockLocator locator;
+        if (walletdb.ReadBestBlock(locator))
+            pindexRescan = locator.GetBlockIndex();
+    }
+    if (pindexBest != pindexRescan && pindexBest && pindexRescan && pindexBest->nHeight > pindexRescan->nHeight)
+    {
+        uiInterface.InitMessage(_("Rescanning..."));
+        printf("Rescanning last %i blocks (from block %i)...\n", pindexBest->nHeight - pindexRescan->nHeight, pindexRescan->nHeight);
+        nStart = GetTimeMillis();
+        pwalletMain->ScanForWalletTransactions(pindexRescan, true);
+        printf(" rescan      %15"PRId64"ms\n", GetTimeMillis() - nStart);
+    }
+
+    // ********************************************************* Step 9: import blocks
+
+    if (mapArgs.count("-loadblock"))
+    {
+        uiInterface.InitMessage(_("Importing blockchain data file."));
+
+        BOOST_FOREACH(string strFile, mapMultiArgs["-loadblock"])
+        {
+            FILE *file = fopen(strFile.c_str(), "rb");
+            if (file)
+                LoadExternalBlockFile(file);
+        }
+        exit(0);
+    }
+
+    filesystem::path pathBootstrap = GetDataDir() / "bootstrap.dat";
+    if (filesystem::exists(pathBootstrap)) {
+        uiInterface.InitMessage(_("Importing bootstrap blockchain data file."));
+
+        FILE *file = fopen(pathBootstrap.string().c_str(), "rb");
+        if (file) {
+            filesystem::path pathBootstrapOld = GetDataDir() / "bootstrap.dat.old";
+            LoadExternalBlockFile(file);
+            RenameOver(pathBootstrap, pathBootstrapOld);
+        }
+    }
+
+    // ********************************************************* Step 10: load peers
+
+    uiInterface.InitMessage(_("Loading addresses..."));
+    printf("Loading addresses...\n");
+    nStart = GetTimeMillis();
+
+    {
+        CAddrDB adb;
+        if (!adb.Read(addrman))
+            printf("Invalid or missing peers.dat; recreating\n");
+    }
+
+    printf("Loaded %i addresses from peers.dat  %"PRId64"ms\n",
+           addrman.size(), GetTimeMillis() - nStart);
+
+    // ********************************************************* Step 11: start node
+
+    if (!CheckDiskSpace())
+        return false;
+
+    RandAddSeedPerfmon();
+
+    //// debug print
+    printf("mapBlockIndex.size() = %"PRIszu"\n",   mapBlockIndex.size());
+    printf("nBestHeight = %d\n",            nBestHeight);
+    printf("setKeyPool.size() = %"PRIszu"\n",      pwalletMain->setKeyPool.size());
+    printf("mapWallet.size() = %"PRIszu"\n",       pwalletMain->mapWallet.size());
+    printf("mapAddressBook.size() = %"PRIszu"\n",  pwalletMain->mapAddressBook.size());
+
+    if (!NewThread(StartNode, NULL))
+        InitError(_("Error: could not start node"));
+
+    if (fServer)
+        NewThread(ThreadRPCServer, NULL);
+
+    // ********************************************************* Step 12: finished
+
+    uiInterface.InitMessage(_("Done loading"));
+    printf("Done loading\n");
+
+    if (!strErrors.str().empty())
+        return InitError(strErrors.str());
+
+     // Add wallet transactions that aren't already in a block to mapTransactions
+    pwalletMain->ReacceptWalletTransactions();
+
+#if !defined(QT_GUI)
+    // Loop until process is exit()ed from shutdown() function,
+    // called from ThreadRPCServer thread when a "stop" command is received.
+    while (1)
+        MilliSleep(5000);
+#endif
+
+    return true;
+}
