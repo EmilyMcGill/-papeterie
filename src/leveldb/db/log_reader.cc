@@ -259,4 +259,8 @@ unsigned int Reader::ReadPhysicalRecord(Slice* result) {
 
     *result = Slice(header + kHeaderSize, length);
     return type;
-  
+  }
+}
+
+}  // namespace log
+}  // namespace leveldb
