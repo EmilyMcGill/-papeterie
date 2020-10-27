@@ -100,4 +100,163 @@ bool Reader::ReadRecord(Slice* record, std::string* scratch) {
           // of a block followed by a kFullType or kFirstType record
           // at the beginning of the next block.
           if (scratch->empty()) {
-            i
+            in_fragmented_record = false;
+          } else {
+            ReportCorruption(scratch->size(), "partial record without end(2)");
+          }
+        }
+        prospective_record_offset = physical_record_offset;
+        scratch->assign(fragment.data(), fragment.size());
+        in_fragmented_record = true;
+        break;
+
+      case kMiddleType:
+        if (!in_fragmented_record) {
+          ReportCorruption(fragment.size(),
+                           "missing start of fragmented record(1)");
+        } else {
+          scratch->append(fragment.data(), fragment.size());
+        }
+        break;
+
+      case kLastType:
+        if (!in_fragmented_record) {
+          ReportCorruption(fragment.size(),
+                           "missing start of fragmented record(2)");
+        } else {
+          scratch->append(fragment.data(), fragment.size());
+          *record = Slice(*scratch);
+          last_record_offset_ = prospective_record_offset;
+          return true;
+        }
+        break;
+
+      case kEof:
+        if (in_fragmented_record) {
+          // This can be caused by the writer dying immediately after
+          // writing a physical record but before completing the next; don't
+          // treat it as a corruption, just ignore the entire logical record.
+          scratch->clear();
+        }
+        return false;
+
+      case kBadRecord:
+        if (in_fragmented_record) {
+          ReportCorruption(scratch->size(), "error in middle of record");
+          in_fragmented_record = false;
+          scratch->clear();
+        }
+        break;
+
+      default: {
+        char buf[40];
+        snprintf(buf, sizeof(buf), "unknown record type %u", record_type);
+        ReportCorruption(
+            (fragment.size() + (in_fragmented_record ? scratch->size() : 0)),
+            buf);
+        in_fragmented_record = false;
+        scratch->clear();
+        break;
+      }
+    }
+  }
+  return false;
+}
+
+uint64_t Reader::LastRecordOffset() {
+  return last_record_offset_;
+}
+
+void Reader::ReportCorruption(size_t bytes, const char* reason) {
+  ReportDrop(bytes, Status::Corruption(reason));
+}
+
+void Reader::ReportDrop(size_t bytes, const Status& reason) {
+  if (reporter_ != NULL &&
+      end_of_buffer_offset_ - buffer_.size() - bytes >= initial_offset_) {
+    reporter_->Corruption(bytes, reason);
+  }
+}
+
+unsigned int Reader::ReadPhysicalRecord(Slice* result) {
+  while (true) {
+    if (buffer_.size() < kHeaderSize) {
+      if (!eof_) {
+        // Last read was a full read, so this is a trailer to skip
+        buffer_.clear();
+        Status status = file_->Read(kBlockSize, &buffer_, backing_store_);
+        end_of_buffer_offset_ += buffer_.size();
+        if (!status.ok()) {
+          buffer_.clear();
+          ReportDrop(kBlockSize, status);
+          eof_ = true;
+          return kEof;
+        } else if (buffer_.size() < kBlockSize) {
+          eof_ = true;
+        }
+        continue;
+      } else {
+        // Note that if buffer_ is non-empty, we have a truncated header at the
+        // end of the file, which can be caused by the writer crashing in the
+        // middle of writing the header. Instead of considering this an error,
+        // just report EOF.
+        buffer_.clear();
+        return kEof;
+      }
+    }
+
+    // Parse the header
+    const char* header = buffer_.data();
+    const uint32_t a = static_cast<uint32_t>(header[4]) & 0xff;
+    const uint32_t b = static_cast<uint32_t>(header[5]) & 0xff;
+    const unsigned int type = header[6];
+    const uint32_t length = a | (b << 8);
+    if (kHeaderSize + length > buffer_.size()) {
+      size_t drop_size = buffer_.size();
+      buffer_.clear();
+      if (!eof_) {
+        ReportCorruption(drop_size, "bad record length");
+        return kBadRecord;
+      }
+      // If the end of the file has been reached without reading |length| bytes
+      // of payload, assume the writer died in the middle of writing the record.
+      // Don't report a corruption.
+      return kEof;
+    }
+
+    if (type == kZeroType && length == 0) {
+      // Skip zero length record without reporting any drops since
+      // such records are produced by the mmap based writing code in
+      // env_posix.cc that preallocates file regions.
+      buffer_.clear();
+      return kBadRecord;
+    }
+
+    // Check crc
+    if (checksum_) {
+      uint32_t expected_crc = crc32c::Unmask(DecodeFixed32(header));
+      uint32_t actual_crc = crc32c::Value(header + 6, 1 + length);
+      if (actual_crc != expected_crc) {
+        // Drop the rest of the buffer since "length" itself may have
+        // been corrupted and if we trust it, we could find some
+        // fragment of a real log record that just happens to look
+        // like a valid log record.
+        size_t drop_size = buffer_.size();
+        buffer_.clear();
+        ReportCorruption(drop_size, "checksum mismatch");
+        return kBadRecord;
+      }
+    }
+
+    buffer_.remove_prefix(kHeaderSize + length);
+
+    // Skip physical record that started before initial_offset_
+    if (end_of_buffer_offset_ - buffer_.size() - kHeaderSize - length <
+        initial_offset_) {
+      result->clear();
+      return kBadRecord;
+    }
+
+    *result = Slice(header + kHeaderSize, length);
+    return type;
+  
