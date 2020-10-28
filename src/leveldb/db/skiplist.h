@@ -318,4 +318,62 @@ typename SkipList<Key,Comparator>::Node* SkipList<Key,Comparator>::FindLast()
   }
 }
 
-templa
+template<typename Key, class Comparator>
+SkipList<Key,Comparator>::SkipList(Comparator cmp, Arena* arena)
+    : compare_(cmp),
+      arena_(arena),
+      head_(NewNode(0 /* any key will do */, kMaxHeight)),
+      max_height_(reinterpret_cast<void*>(1)),
+      rnd_(0xdeadbeef) {
+  for (int i = 0; i < kMaxHeight; i++) {
+    head_->SetNext(i, NULL);
+  }
+}
+
+template<typename Key, class Comparator>
+void SkipList<Key,Comparator>::Insert(const Key& key) {
+  // TODO(opt): We can use a barrier-free variant of FindGreaterOrEqual()
+  // here since Insert() is externally synchronized.
+  Node* prev[kMaxHeight];
+  Node* x = FindGreaterOrEqual(key, prev);
+
+  // Our data structure does not allow duplicate insertion
+  assert(x == NULL || !Equal(key, x->key));
+
+  int height = RandomHeight();
+  if (height > GetMaxHeight()) {
+    for (int i = GetMaxHeight(); i < height; i++) {
+      prev[i] = head_;
+    }
+    //fprintf(stderr, "Change height from %d to %d\n", max_height_, height);
+
+    // It is ok to mutate max_height_ without any synchronization
+    // with concurrent readers.  A concurrent reader that observes
+    // the new value of max_height_ will see either the old value of
+    // new level pointers from head_ (NULL), or a new value set in
+    // the loop below.  In the former case the reader will
+    // immediately drop to the next level since NULL sorts after all
+    // keys.  In the latter case the reader will use the new node.
+    max_height_.NoBarrier_Store(reinterpret_cast<void*>(height));
+  }
+
+  x = NewNode(key, height);
+  for (int i = 0; i < height; i++) {
+    // NoBarrier_SetNext() suffices since we will add a barrier when
+    // we publish a pointer to "x" in prev[i].
+    x->NoBarrier_SetNext(i, prev[i]->NoBarrier_Next(i));
+    prev[i]->SetNext(i, x);
+  }
+}
+
+template<typename Key, class Comparator>
+bool SkipList<Key,Comparator>::Contains(const Key& key) const {
+  Node* x = FindGreaterOrEqual(key, NULL);
+  if (x != NULL && Equal(key, x->key)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+}  // namespace leveldb
