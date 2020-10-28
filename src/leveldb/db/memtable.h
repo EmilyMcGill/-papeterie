@@ -58,4 +58,34 @@ class MemTable {
            const Slice& value);
 
   // If memtable contains a value for key, store it in *value and return true.
-  // If memtable contains a deletion for key, store a
+  // If memtable contains a deletion for key, store a NotFound() error
+  // in *status and return true.
+  // Else, return false.
+  bool Get(const LookupKey& key, std::string* value, Status* s);
+
+ private:
+  ~MemTable();  // Private since only Unref() should be used to delete it
+
+  struct KeyComparator {
+    const InternalKeyComparator comparator;
+    explicit KeyComparator(const InternalKeyComparator& c) : comparator(c) { }
+    int operator()(const char* a, const char* b) const;
+  };
+  friend class MemTableIterator;
+  friend class MemTableBackwardIterator;
+
+  typedef SkipList<const char*, KeyComparator> Table;
+
+  KeyComparator comparator_;
+  int refs_;
+  Arena arena_;
+  Table table_;
+
+  // No copying allowed
+  MemTable(const MemTable&);
+  void operator=(const MemTable&);
+};
+
+}  // namespace leveldb
+
+#endif  // STORAGE_LEVELDB_DB_MEMTABLE_H_
