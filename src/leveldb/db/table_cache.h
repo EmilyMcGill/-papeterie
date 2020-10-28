@@ -53,4 +53,9 @@ class TableCache {
   const Options* options_;
   Cache* cache_;
 
-  Status FindTable(uint64_t file_number, uint64_t file_size, Ca
+  Status FindTable(uint64_t file_number, uint64_t file_size, Cache::Handle**);
+};
+
+}  // namespace leveldb
+
+#endif  // STORAGE_LEVELDB_DB_TABLE_CACHE_H_
