@@ -89,3 +89,19 @@ class Status {
   Status(Code code, const Slice& msg, const Slice& msg2);
   static const char* CopyState(const char* s);
 };
+
+inline Status::Status(const Status& s) {
+  state_ = (s.state_ == NULL) ? NULL : CopyState(s.state_);
+}
+inline void Status::operator=(const Status& s) {
+  // The following condition catches both aliasing (when this == &s),
+  // and the common case where both s and *this are ok.
+  if (state_ != s.state_) {
+    delete[] state_;
+    state_ = (s.state_ == NULL) ? NULL : CopyState(s.state_);
+  }
+}
+
+}  // namespace leveldb
+
+#endif  // STORAGE_LEVELDB_INCLUDE_STATUS_H_
