@@ -6,4 +6,6 @@
 
 namespace leveldb {
 
-FilterPolicy::~FilterPolic
+FilterPolicy::~FilterPolicy() { }
+
+}  // namespace leveldb
