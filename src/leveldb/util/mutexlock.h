@@ -31,4 +31,11 @@ class SCOPED_LOCKABLE MutexLock {
  private:
   port::Mutex *const mu_;
   // No copying allowed
-  MutexLock(const MutexL
+  MutexLock(const MutexLock&);
+  void operator=(const MutexLock&);
+};
+
+}  // namespace leveldb
+
+
+#endif  // STORAGE_LEVELDB_UTIL_MUTEXLOCK_H_
