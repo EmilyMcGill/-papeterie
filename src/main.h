@@ -392,4 +392,182 @@ public:
         return SerializeHash(*this);
     }
 
-    friend bool operat
+    friend bool operator==(const CTxOut& a, const CTxOut& b)
+    {
+        return (a.nValue       == b.nValue &&
+                a.scriptPubKey == b.scriptPubKey);
+    }
+
+    friend bool operator!=(const CTxOut& a, const CTxOut& b)
+    {
+        return !(a == b);
+    }
+
+    std::string ToStringShort() const
+    {
+        return strprintf(" out %s %s", FormatMoney(nValue).c_str(), scriptPubKey.ToString(true).c_str());
+    }
+
+    std::string ToString() const
+    {
+        if (IsEmpty()) return "CTxOut(empty)";
+        return strprintf("CTxOut(nValue=%s, scriptPubKey=%s)", FormatMoney(nValue).c_str(), scriptPubKey.ToString().c_str());
+    }
+
+    void print() const
+    {
+        printf("%s\n", ToString().c_str());
+    }
+};
+
+
+
+
+enum GetMinFee_mode
+{
+    GMF_BLOCK,
+    GMF_RELAY,
+    GMF_SEND,
+};
+
+typedef std::map<uint256, std::pair<CTxIndex, CTransaction> > MapPrevTx;
+
+/** The basic transaction that is broadcasted on the network and contained in
+ * blocks.  A transaction can contain multiple inputs and outputs.
+ */
+class CTransaction
+{
+public:
+    static const int CURRENT_VERSION=1;
+    int nVersion;
+    unsigned int nTime;
+    std::vector<CTxIn> vin;
+    std::vector<CTxOut> vout;
+    unsigned int nLockTime;
+
+    // Denial-of-service detection:
+    mutable int nDoS;
+    bool DoS(int nDoSIn, bool fIn) const { nDoS += nDoSIn; return fIn; }
+
+    CTransaction()
+    {
+        SetNull();
+    }
+
+    IMPLEMENT_SERIALIZE
+    (
+        READWRITE(this->nVersion);
+        nVersion = this->nVersion;
+        READWRITE(nTime);
+        READWRITE(vin);
+        READWRITE(vout);
+        READWRITE(nLockTime);
+    )
+
+    void SetNull()
+    {
+        nVersion = CTransaction::CURRENT_VERSION;
+        nTime = GetAdjustedTime();
+        vin.clear();
+        vout.clear();
+        nLockTime = 0;
+        nDoS = 0;  // Denial-of-service prevention
+    }
+
+    bool IsNull() const
+    {
+        return (vin.empty() && vout.empty());
+    }
+
+    uint256 GetHash() const
+    {
+        return SerializeHash(*this);
+    }
+
+    bool IsNewerThan(const CTransaction& old) const
+    {
+        if (vin.size() != old.vin.size())
+            return false;
+        for (unsigned int i = 0; i < vin.size(); i++)
+            if (vin[i].prevout != old.vin[i].prevout)
+                return false;
+
+        bool fNewer = false;
+        unsigned int nLowest = std::numeric_limits<unsigned int>::max();
+        for (unsigned int i = 0; i < vin.size(); i++)
+        {
+            if (vin[i].nSequence != old.vin[i].nSequence)
+            {
+                if (vin[i].nSequence <= nLowest)
+                {
+                    fNewer = false;
+                    nLowest = vin[i].nSequence;
+                }
+                if (old.vin[i].nSequence < nLowest)
+                {
+                    fNewer = true;
+                    nLowest = old.vin[i].nSequence;
+                }
+            }
+        }
+        return fNewer;
+    }
+
+    bool IsCoinBase() const
+    {
+        return (vin.size() == 1 && vin[0].prevout.IsNull() && vout.size() >= 1);
+    }
+
+    bool IsCoinStake() const
+    {
+        // ppcoin: the coin stake transaction is marked with the first output empty
+        return (vin.size() > 0 && (!vin[0].prevout.IsNull()) && vout.size() >= 2 && vout[0].IsEmpty());
+    }
+
+    /** Check for standard transaction types
+        @param[in] mapInputs	Map of previous transactions that have outputs we're spending
+        @return True if all inputs (scriptSigs) use only standard transaction forms
+        @see CTransaction::FetchInputs
+    */
+    bool AreInputsStandard(const MapPrevTx& mapInputs) const;
+
+    /** Count ECDSA signature operations the old-fashioned (pre-0.6) way
+        @return number of sigops this transaction's outputs will produce when spent
+        @see CTransaction::FetchInputs
+    */
+    unsigned int GetLegacySigOpCount() const;
+
+    /** Count ECDSA signature operations in pay-to-script-hash inputs.
+
+        @param[in] mapInputs	Map of previous transactions that have outputs we're spending
+        @return maximum number of sigops required to validate this transaction's inputs
+        @see CTransaction::FetchInputs
+     */
+    unsigned int GetP2SHSigOpCount(const MapPrevTx& mapInputs) const;
+
+    /** Amount of bitcoins spent by this transaction.
+        @return sum of all outputs (note: does not include fees)
+     */
+    int64_t GetValueOut() const
+    {
+        int64_t nValueOut = 0;
+        BOOST_FOREACH(const CTxOut& txout, vout)
+        {
+            nValueOut += txout.nValue;
+            if (!MoneyRange(txout.nValue) || !MoneyRange(nValueOut))
+                throw std::runtime_error("CTransaction::GetValueOut() : value out of range");
+        }
+        return nValueOut;
+    }
+
+    /** Amount of bitcoins coming in to this transaction
+        Note that lightweight clients may not know anything besides the hash of previous transactions,
+        so may not be able to calculate this.
+
+        @param[in] mapInputs	Map of previous transactions that have outputs we're spending
+        @return	Sum of value of all inputs (scriptSigs)
+        @see CTransaction::FetchInputs
+     */
+    int64_t GetValueIn(const MapPrevTx& mapInputs) const;
+
+    int64_t GetMinFee(unsigned int nBlockSize=1, enum GetMinFee_mode mode=GMF_BLOCK, unsigned int nBytes = 
