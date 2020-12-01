@@ -570,4 +570,154 @@ public:
      */
     int64_t GetValueIn(const MapPrevTx& mapInputs) const;
 
-    int64_t GetMinFee(unsigned int nBlockSize=1, enum GetMinFee_mode mode=GMF_BLOCK, unsigned int nBytes = 
+    int64_t GetMinFee(unsigned int nBlockSize=1, enum GetMinFee_mode mode=GMF_BLOCK, unsigned int nBytes = 0) const;
+
+    bool ReadFromDisk(CDiskTxPos pos, FILE** pfileRet=NULL)
+    {
+        CAutoFile filein = CAutoFile(OpenBlockFile(pos.nFile, 0, pfileRet ? "rb+" : "rb"), SER_DISK, CLIENT_VERSION);
+        if (!filein)
+            return error("CTransaction::ReadFromDisk() : OpenBlockFile failed");
+
+        // Read transaction
+        if (fseek(filein, pos.nTxPos, SEEK_SET) != 0)
+            return error("CTransaction::ReadFromDisk() : fseek failed");
+
+        try {
+            filein >> *this;
+        }
+        catch (std::exception &e) {
+            return error("%s() : deserialize or I/O error", __PRETTY_FUNCTION__);
+        }
+
+        // Return file pointer
+        if (pfileRet)
+        {
+            if (fseek(filein, pos.nTxPos, SEEK_SET) != 0)
+                return error("CTransaction::ReadFromDisk() : second fseek failed");
+            *pfileRet = filein.release();
+        }
+        return true;
+    }
+
+    friend bool operator==(const CTransaction& a, const CTransaction& b)
+    {
+        return (a.nVersion  == b.nVersion &&
+                a.nTime     == b.nTime &&
+                a.vin       == b.vin &&
+                a.vout      == b.vout &&
+                a.nLockTime == b.nLockTime);
+    }
+
+    friend bool operator!=(const CTransaction& a, const CTransaction& b)
+    {
+        return !(a == b);
+    }
+
+    std::string ToStringShort() const
+    {
+        std::string str;
+        str += strprintf("%s %s", GetHash().ToString().c_str(), IsCoinBase()? "base" : (IsCoinStake()? "stake" : "user"));
+        return str;
+    }
+
+    std::string ToString() const
+    {
+        std::string str;
+        str += IsCoinBase()? "Coinbase" : (IsCoinStake()? "Coinstake" : "CTransaction");
+        str += strprintf("(hash=%s, nTime=%d, ver=%d, vin.size=%"PRIszu", vout.size=%"PRIszu", nLockTime=%d)\n",
+            GetHash().ToString().substr(0,10).c_str(),
+            nTime,
+            nVersion,
+            vin.size(),
+            vout.size(),
+            nLockTime);
+        for (unsigned int i = 0; i < vin.size(); i++)
+            str += "    " + vin[i].ToString() + "\n";
+        for (unsigned int i = 0; i < vout.size(); i++)
+            str += "    " + vout[i].ToString() + "\n";
+        return str;
+    }
+
+    void print() const
+    {
+        printf("%s", ToString().c_str());
+    }
+
+
+    bool ReadFromDisk(CTxDB& txdb, COutPoint prevout, CTxIndex& txindexRet);
+    bool ReadFromDisk(CTxDB& txdb, COutPoint prevout);
+    bool ReadFromDisk(COutPoint prevout);
+    bool DisconnectInputs(CTxDB& txdb);
+
+    /** Fetch from memory and/or disk. inputsRet keys are transaction hashes.
+
+     @param[in] txdb	Transaction database
+     @param[in] mapTestPool	List of pending changes to the transaction index database
+     @param[in] fBlock	True if being called to add a new best-block to the chain
+     @param[in] fMiner	True if being called by CreateNewBlock
+     @param[out] inputsRet	Pointers to this transaction's inputs
+     @param[out] fInvalid	returns true if transaction is invalid
+     @return	Returns true if all inputs are in txdb or mapTestPool
+     */
+    bool FetchInputs(CTxDB& txdb, const std::map<uint256, CTxIndex>& mapTestPool,
+                     bool fBlock, bool fMiner, MapPrevTx& inputsRet, bool& fInvalid);
+
+    /** Sanity check previous transactions, then, if all checks succeed,
+        mark them as spent by this transaction.
+
+        @param[in] inputs	Previous transactions (from FetchInputs)
+        @param[out] mapTestPool	Keeps track of inputs that need to be updated on disk
+        @param[in] posThisTx	Position of this transaction on disk
+        @param[in] pindexBlock
+        @param[in] fBlock	true if called from ConnectBlock
+        @param[in] fMiner	true if called from CreateNewBlock
+        @return Returns true if all checks succeed
+     */
+    bool ConnectInputs(CTxDB& txdb, MapPrevTx inputs,
+                       std::map<uint256, CTxIndex>& mapTestPool, const CDiskTxPos& posThisTx,
+                       const CBlockIndex* pindexBlock, bool fBlock, bool fMiner);
+    bool CheckTransaction() const;
+    bool GetCoinAge(CTxDB& txdb, uint64_t& nCoinAge) const;  // ppcoin: get transaction coin age
+
+protected:
+    const CTxOut& GetOutputFor(const CTxIn& input, const MapPrevTx& inputs) const;
+};
+
+/** Check for standard transaction types
+    @return True if all outputs (scriptPubKeys) use only standard transaction forms
+*/
+bool IsStandardTx(const CTransaction& tx);
+
+bool IsFinalTx(const CTransaction &tx, int nBlockHeight = 0, int64_t nBlockTime = 0);
+
+
+
+/** A transaction with a merkle branch linking it to the block chain. */
+class CMerkleTx : public CTransaction
+{
+private:
+    int GetDepthInMainChainINTERNAL(CBlockIndex* &pindexRet) const;
+public:
+    uint256 hashBlock;
+    std::vector<uint256> vMerkleBranch;
+    int nIndex;
+
+    // memory only
+    mutable bool fMerkleVerified;
+
+
+    CMerkleTx()
+    {
+        Init();
+    }
+
+    CMerkleTx(const CTransaction& txIn) : CTransaction(txIn)
+    {
+        Init();
+    }
+
+    void Init()
+    {
+        hashBlock = 0;
+        nIndex = -1;
+        fMerkle
