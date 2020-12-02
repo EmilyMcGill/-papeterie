@@ -1,0 +1,7 @@
+obj/init.o: init.cpp txdb.h txdb-leveldb.h main.h bignum.h serialize.h \
+ allocators.h version.h clientversion.h uint256.h sync.h threadsafety.h \
+ net.h mruset.h netbase.h compat.h protocol.h addrman.h util.h script.h \
+ keystore.h crypter.h key.h scrypt.h zerocoin/Zerocoin.h \
+ zerocoin/../serialize.h zerocoin/../bignum.h zerocoin/../util.h \
+ zerocoin/Params.h zerocoin/Coin.h zerocoin/Commitment.h \
+ zerocoin/Accumulator.h zerocoin/AccumulatorProofOfKnow
