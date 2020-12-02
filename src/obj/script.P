@@ -1,0 +1,1 @@
+obj/script.o: script.cpp script.h keystore.h crypter.h allocators.h
