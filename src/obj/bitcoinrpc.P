@@ -1,0 +1,2 @@
+obj/bitcoinrpc.o: bitcoinrpc.cpp init.h wallet.h main.h bignum.h \
+ serialize.h allocators.h version.h clientversion.h uint256
