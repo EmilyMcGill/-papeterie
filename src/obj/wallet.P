@@ -22,4 +22,11 @@ wallet.cpp txdb.h txdb-leveldb.h main.h bignum.h :
  zerocoin/Params.h zerocoin/Coin.h zerocoin/Commitment.h :
  zerocoin/Accumulator.h zerocoin/AccumulatorProofOfKnowledge.h :
  zerocoin/CoinSpend.h zerocoin/SerialNumberSignatureOfKnowledge.h :
- zerocoin/SpendMetaData.
+ zerocoin/SpendMetaData.h zerocoin/../uint256.h :
+ zerocoin/ParamGeneration.h /root/Abj/src/leveldb/include/leveldb/db.h :
+ /root/Abj/src/leveldb/include/leveldb/iterator.h :
+ /root/Abj/src/leveldb/include/leveldb/slice.h :
+ /root/Abj/src/leveldb/include/leveldb/status.h :
+ /root/Abj/src/leveldb/include/leveldb/options.h :
+ /root/Abj/src/leveldb/include/leveldb/write_batch.h wallet.h :
+ ui_interface.h walletdb.h db.h base58.h kernel.h coincontrol.h :
