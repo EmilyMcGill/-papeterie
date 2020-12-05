@@ -94,3 +94,45 @@ class CAddress : public CService
              READWRITE(nServices);
              READWRITE(*pip);
             )
+
+        void print() const;
+
+    // TODO: make private (improves encapsulation)
+    public:
+        uint64_t nServices;
+
+        // disk and network only
+        unsigned int nTime;
+
+        // memory only
+        int64_t nLastTry;
+};
+
+/** inv message data */
+class CInv
+{
+    public:
+        CInv();
+        CInv(int typeIn, const uint256& hashIn);
+        CInv(const std::string& strType, const uint256& hashIn);
+
+        IMPLEMENT_SERIALIZE
+        (
+            READWRITE(type);
+            READWRITE(hash);
+        )
+
+        friend bool operator<(const CInv& a, const CInv& b);
+
+        bool IsKnownType() const;
+        const char* GetCommand() const;
+        std::string ToString() const;
+        void print() const;
+
+    // TODO: make private (improves encapsulation)
+    public:
+        int type;
+        uint256 hash;
+};
+
+#endif // __INCLUDED_PROTOCOL_H__
