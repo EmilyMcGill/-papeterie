@@ -242,3 +242,30 @@ bool AskPassphraseDialog::eventFilter(QObject *object, QEvent *event)
      */
     if (event->type() == QEvent::KeyPress) {
         QKeyEvent *ke = static_cast<QKeyEvent *>(event);
+        QString str = ke->text();
+        if (str.length() != 0) {
+            const QChar *psz = str.unicode();
+            bool fShift = (ke->modifiers() & Qt::ShiftModifier) != 0;
+            if ((fShift && psz->isLower()) || (!fShift && psz->isUpper())) {
+                fCapsLock = true;
+                ui->capsLabel->setText(tr("Warning: The Caps Lock key is on!"));
+            } else if (psz->isLetter()) {
+                fCapsLock = false;
+                ui->capsLabel->clear();
+            }
+        }
+    }
+    return QDialog::eventFilter(object, event);
+}
+
+void AskPassphraseDialog::secureClearPassFields()
+{
+    // Attempt to overwrite text so that they do not linger around in memory
+    ui->passEdit1->setText(QString(" ").repeated(ui->passEdit1->text().size()));
+    ui->passEdit2->setText(QString(" ").repeated(ui->passEdit2->text().size()));
+    ui->passEdit3->setText(QString(" ").repeated(ui->passEdit3->text().size()));
+
+    ui->passEdit1->clear();
+    ui->passEdit2->clear();
+    ui->passEdit3->clear();
+}
