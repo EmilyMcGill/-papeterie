@@ -2680,4 +2680,127 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+5"/>
-        <source>Threshold for disconnecting misbeha
+        <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Detach block and address databases. Increases shutdown time (default: 0)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+109"/>
+        <source>Error: The transaction was rejected.  This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds  </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-87"/>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 29304 or testnet: 39304)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-11"/>
+        <source>Accept command line and JSON-RPC commands</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+101"/>
+        <source>Error: Transaction creation failed  </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Error: Wallet locked, unable to create transaction  </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-8"/>
+        <source>Importing blockchain data file.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Importing bootstrap blockchain data file.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-88"/>
+        <source>Run in the background as a daemon and accept commands</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use the test network</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-24"/>
+        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-38"/>
+        <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+117"/>
+        <source>Error initializing database environment %s! To recover, BACKUP THAT DIRECTORY, then remove everything from it except for wallet.dat.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-20"/>
+        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+61"/>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Abjcoin will not work properly.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-31"/>
+        <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-18"/>
+        <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-30"/>
+        <source>Attempt to recover private keys from a corrupt wallet.dat</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Block creation options:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-62"/>
+        <source>Connect only to the specified node(s)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
