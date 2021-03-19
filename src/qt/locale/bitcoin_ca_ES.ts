@@ -333,4 +333,148 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Browse transaction history</source>
-        <translation>Cerca a l&apos;historial de tra
+        <translation>Cerca a l&apos;historial de transaccions</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>&amp;Address Book</source>
+        <translation>&amp;Llibreta d&apos;adreces</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Edit the list of stored addresses and labels</source>
+        <translation>Edició de la llista d&apos;adreces i etiquetes emmagatzemades</translation>
+    </message>
+    <message>
+        <location line="-13"/>
+        <source>&amp;Receive coins</source>
+        <translation>&amp;Rebre monedes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show the list of addresses for receiving payments</source>
+        <translation>Mostra la llista d&apos;adreces per rebre pagaments</translation>
+    </message>
+    <message>
+        <location line="-7"/>
+        <source>&amp;Send coins</source>
+        <translation>&amp;Enviar monedes</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>E&amp;xit</source>
+        <translation>S&amp;ortir</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Quit application</source>
+        <translation>Sortir de l&apos;aplicació</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Show information about Abjcoin</source>
+        <translation>Mostra informació sobre Abjcoin</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>About &amp;Qt</source>
+        <translation>Sobre &amp;Qt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show information about Qt</source>
+        <translation>Mostra informació sobre Qt</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Options...</source>
+        <translation>&amp;Opcions...</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&amp;Encrypt Wallet...</source>
+        <translation>&amp;Xifrar moneder</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Backup Wallet...</source>
+        <translation>&amp;Realitzar copia de seguretat del moneder...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Change Passphrase...</source>
+        <translation>&amp;Canviar contrasenya...</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+250"/>
+        <source>~%n block(s) remaining</source>
+        <translation><numerusform>~%n bloc restant</numerusform><numerusform>~%n blocs restants</numerusform></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Downloaded %1 of %2 blocks of transaction history (%3% done).</source>
+        <translation>Descarregats %1 de %2 blocs d&apos;historial de transaccions (%3% completat).</translation>
+    </message>
+    <message>
+        <location line="-247"/>
+        <source>&amp;Export...</source>
+        <translation>&amp;Exportar...</translation>
+    </message>
+    <message>
+        <location line="-62"/>
+        <source>Send coins to a Abjcoin address</source>
+        <translation>Enviar monedes a una adreça Abjcoin</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Modify configuration options for Abjcoin</source>
+        <translation>Modificar les opcions de configuració per a Abjcoin</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Export the data in the current tab to a file</source>
+        <translation>Exportar les dades de la pestanya actual a un arxiu</translation>
+    </message>
+    <message>
+        <location line="-14"/>
+        <source>Encrypt or decrypt wallet</source>
+        <translation>Xifrar o desxifrar moneder</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Backup wallet to another location</source>
+        <translation>Realitzar còpia de seguretat del moneder a un altre directori</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>Canviar la constrasenya d&apos;encriptació del moneder</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>&amp;Debug window</source>
+        <translation>&amp;Finestra de depuració</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Open debugging and diagnostic console</source>
+        <translation>Obrir la consola de diagnòstic i depuració</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>&amp;Verify message...</source>
+        <translation>&amp;Verifica el missatge..</translation>
+    </message>
+    <message>
+        <location line="-200"/>
+        <source>Abjcoin</source>
+        <translation>Abjcoin</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Wallet</source>
+        <translation>Moneder</translation>
+    </message>
+    <message>
+        <location line="+178"/>
+      
