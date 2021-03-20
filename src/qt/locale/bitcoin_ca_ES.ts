@@ -609,4 +609,125 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+10"/>
-        <source>Last received block was gen
+        <source>Last received block was generated %1.</source>
+        <translation>El darrer bloc rebut s&apos;ha generat %1.</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
+        <translation>Aquesta transacció es troba sobre el límit de mida. Encara pot enviar-la amb una comisió de 1%, aquesta va als nodes que processen la seva transacció i ajuda a mantenir la xarxa. Vol pagar la quota?</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Confirm transaction fee</source>
+        <translation>Confirmeu comisió</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Sent transaction</source>
+        <translation>Transacció enviada</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Incoming transaction</source>
+        <translation>Transacció entrant</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Date: %1
+Amount: %2
+Type: %3
+Address: %4
+</source>
+        <translation>Data: %1\nQuantitat %2\n Tipus: %3\n Adreça: %4\n</translation>
+    </message>
+    <message>
+        <location line="+100"/>
+        <location line="+15"/>
+        <source>URI handling</source>
+        <translation>Manejant URI</translation>
+    </message>
+    <message>
+        <location line="-15"/>
+        <location line="+15"/>
+        <source>URI can not be parsed! This can be caused by an invalid Abjcoin address or malformed URI parameters.</source>
+        <translation>l&apos;URI no es pot analitzar! Això pot ser causat per una adreça Abjcoin no vàlida o paràmetres URI malformats.</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
+        <translation>El moneder està &lt;b&gt;encriptat&lt;/b&gt; i actualment &lt;b&gt;desbloquejat&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
+        <translation>El moneder està &lt;b&gt;encriptat&lt;/b&gt; i actualment &lt;b&gt;bloquejat&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Backup Wallet</source>
+        <translation>Realitzar còpia de seguretat del moneder</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Wallet Data (*.dat)</source>
+        <translation>Dades del moneder (*.dat)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Backup Failed</source>
+        <translation>Còpia de seguretat fallida</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>There was an error trying to save the wallet data to the new location.</source>
+        <translation>Hi ha un error al tractar de salvar les dades del seu moneder a la nova ubicació.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+76"/>
+        <source>%n second(s)</source>
+        <translation><numerusform>%n segon</numerusform><numerusform>%n segons</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n minute(s)</source>
+        <translation><numerusform>%n minut</numerusform><numerusform>%n minuts</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n hour(s)</source>
+        <translation><numerusform>%n hora</numerusform><numerusform>%n hores</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n day(s)</source>
+        <translation><numerusform>%n dia</numerusform><numerusform>%n dies</numerusform></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Not staking</source>
+        <translation>No s&apos;està fent &quot;stake&quot; </translation>
+    </message>
+    <message>
+        <location filename="../bitcoin.cpp" line="+109"/>
+        <source>A fatal error occurred. Abjcoin can no longer continue safely and will quit.</source>
+        <translation>S&apos;ha produït un error fatal. Abjcoin ja no pot continuar de forma segura i es tancarà.</translation>
+    </message>
+</context>
+<context>
+    <name>ClientModel</name>
+    <message>
+        <location filename="../clientmodel.cpp" line="+90"/>
+        <source>Network Alert</source>
+        <translation>Alerta de xarxa</translation>
+    </message>
+</context>
+<context>
+    <name>CoinControlDialog</name>
+    <message>
+        <location filename="../forms/coincontroldialog.ui" line="+14"/>
+        <source>Coin Control</source>
+        <translation>Opcions del control de monedes</translation>
+    </message>
+    <message>
+        <location line="+31"/
