@@ -907,4 +907,142 @@ Address: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>low</sourc
+        <source>low</source>
+        <translation>baix</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>lowest</source>
+        <translation>el més baix</translation>
+    </message>
+    <message>
+        <location line="+155"/>
+        <source>DUST</source>
+        <translation>POLS</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>yes</source>
+        <translation>si</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>This label turns red, if the transaction size is bigger than 10000 bytes.
+
+ This means a fee of at least %1 per kb is required.
+
+ Can vary +/- 1 Byte per input.</source>
+        <translation>Aquesta etiqueta es tornarà vermell, si la mida de la transacció és més gran que 10000 bytes.
+
+En aquest cas es requereix una comisió d&apos;almenys el 1% per kb. 
+
+Pot variar + / - 1 Byte per entrada.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Transactions with higher priority get more likely into a block.
+
+This label turns red, if the priority is smaller than &quot;medium&quot;.
+
+ This means a fee of at least %1 per kb is required.</source>
+        <translation>Les operacions amb més prioritat entren mes facilment a un bloc. 
+
+Aquesta etiqueta es torna vermella, si la prioritat és menor que &quot;mitja&quot;.
+
+En aquest cas es requereix una comisió d&apos;almenys el 1% per kb.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This label turns red, if any recipient receives an amount smaller than %1.
+
+ This means a fee of at least %2 is required. 
+
+ Amounts below 0.546 times the minimum relay fee are shown as DUST.</source>
+        <translation>Aquesta etiqueta es torna vermella, si qualsevol beneficiari rep una quantitat inferior a 1%.
+
+En aquest cas es requereix una comisió d&apos;almenys 2%.
+
+Les quantitats inferiors a 0.546 vegades la quota mínima del relé es mostren com a POLS.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This label turns red, if the change is smaller than %1.
+
+ This means a fee of at least %2 is required.</source>
+        <translation>Aquesta etiqueta es torna vermella, si el canvi és menor que 1%.
+
+En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <location line="+66"/>
+        <source>(no label)</source>
+        <translation>(sense etiqueta)</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>change from %1 (%2)</source>
+        <translation>canvi desde %1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>(change)</source>
+        <translation>(canviar)</translation>
+    </message>
+</context>
+<context>
+    <name>EditAddressDialog</name>
+    <message>
+        <location filename="../forms/editaddressdialog.ui" line="+14"/>
+        <source>Edit Address</source>
+        <translation>Editar Adreça</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>&amp;Label</source>
+        <translation>&amp;Etiqueta</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>The label associated with this address book entry</source>
+        <translation>L&apos;etiqueta associada amb aquesta entrada de la llibreta d&apos;adreces</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>&amp;Address</source>
+        <translation>&amp;Direcció</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>The address associated with this address book entry. This can only be modified for sending addresses.</source>
+        <translation>La direcció associada amb aquesta entrada de la llibreta d&apos;adreces. Només pot ser modificada per a l&apos;enviament d&apos;adreces.</translation>
+    </message>
+    <message>
+        <location filename="../editaddressdialog.cpp" line="+20"/>
+        <source>New receiving address</source>
+        <translation>Nova adreça de recepció.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>New sending address</source>
+        <translation>Nova adreça d&apos;enviament</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Edit receiving address</source>
+        <translation>Editar adreces de recepció</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Edit sending address</source>
+        <translation>Editar adreces d&apos;enviament</translation>
+    </message>
+    <message>
+        <location line="+76"/>
+        <source>The entered address &quot;%1&quot; is already in the address book.</source>
+        <translation>L&apos;adreça introduïda &quot;%1&quot; ja és present a la llibreta d&apos;adreces.</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>The entered address &quot;%1&quot; is not a valid Abjcoin address.</source>
+        <translation>La direcció introduïda &
