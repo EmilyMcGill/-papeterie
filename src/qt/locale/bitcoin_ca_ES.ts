@@ -1282,4 +1282,148 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location line="+71"/>
         <source>&amp;OK</source>
-        <translation>&amp;OK</tr
+        <translation>&amp;OK</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>&amp;Cancel</source>
+        <translation>&amp;Cancel·la</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>&amp;Apply</source>
+        <translation>&amp;Aplicar</translation>
+    </message>
+    <message>
+        <location filename="../optionsdialog.cpp" line="+55"/>
+        <source>default</source>
+        <translation>Per defecte</translation>
+    </message>
+    <message>
+        <location line="+149"/>
+        <location line="+9"/>
+        <source>Warning</source>
+        <translation>Avís</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <location line="+9"/>
+        <source>This setting will take effect after restarting Abjcoin.</source>
+        <translation>Aquesta configuració s&apos;aplicarà després de reiniciar Abjcoin.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The supplied proxy address is invalid.</source>
+        <translation>L&apos;adreça proxy introduïda és invalida.</translation>
+    </message>
+</context>
+<context>
+    <name>OverviewPage</name>
+    <message>
+        <location filename="../forms/overviewpage.ui" line="+14"/>
+        <source>Form</source>
+        <translation>Formulari</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <location line="+231"/>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Abjcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>La informació mostrada pot estar fora de data. El seu moneder es sincronitza automàticament amb la xarxa Abjcoin després d&apos;establir una connexió, però aquest procés no s&apos;ha completat encara.</translation>
+    </message>
+    <message>
+        <location line="-160"/>
+        <source>Stake:</source>
+        <translation>En &quot;stake&quot;:</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Unconfirmed:</source>
+        <translation>Sense confirmar:</translation>
+    </message>
+    <message>
+        <location line="-107"/>
+        <source>Wallet</source>
+        <translation>Moneder</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Spendable:</source>
+        <translation>Disponible:</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Your current spendable balance</source>
+        <translation>El balanç de saldo actual disponible</translation>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>Immature:</source>
+        <translation>Immatur:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Mined balance that has not yet matured</source>
+        <translation>Balanç minat que encara no ha madurat</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Total:</source>
+        <translation>Total:</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Your current total balance</source>
+        <translation>El seu balanç total</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
+        <translation>&lt;b&gt;Transaccions recents&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location line="-108"/>
+        <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
+        <translation>Total de transaccions que encara no s&apos;han confirmat, i encara no compten per al balanç actual</translation>
+    </message>
+    <message>
+        <location line="-29"/>
+        <source>Total of coins that was staked, and do not yet count toward the current balance</source>
+        <translation>Total de les monedes que s&apos;han posat a fer &quot;stake&quot; (en joc, aposta), i encara no compten per al balanç actual</translation>
+    </message>
+    <message>
+        <location filename="../overviewpage.cpp" line="+113"/>
+        <location line="+1"/>
+        <source>out of sync</source>
+        <translation>Fora de sincronia</translation>
+    </message>
+</context>
+<context>
+    <name>QRCodeDialog</name>
+    <message>
+        <location filename="../forms/qrcodedialog.ui" line="+14"/>
+        <source>QR Code Dialog</source>
+        <translation>Diàleg de codi QR</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>Request Payment</source>
+        <translation>Sol·licitud de pagament</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Amount:</source>
+        <translation>Quantitat:</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>Label:</source>
+        <translation>Etiqueta:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Message:</source>
+        <translation>Missatge:</translation>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>&amp;Save As...</
