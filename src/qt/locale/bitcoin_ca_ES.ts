@@ -1864,4 +1864,127 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
 <context>
     <name>SendCoinsEntry</name>
     <message>
-        <location filename="../for
+        <location filename="../forms/sendcoinsentry.ui" line="+14"/>
+        <source>Form</source>
+        <translation>Formulari</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>A&amp;mount:</source>
+        <translation>Q&amp;uantitat:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Pay &amp;To:</source>
+        <translation>Pagar &amp;A:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <location filename="../sendcoinsentry.cpp" line="+25"/>
+        <source>Enter a label for this address to add it to your address book</source>
+        <translation>Introdueixi una etiquera per a aquesta adreça per afegir-la a la llibreta d&apos;adreces</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>&amp;Label:</source>
+        <translation>&amp;Etiqueta:</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>The address to send the payment to  (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>L&apos;adreça per a enviar el pagament (per exemple: B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Choose address from address book</source>
+        <translation>Trieu la direcció de la llibreta d&apos;adreces</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Alt+A</source>
+        <translation>Alta+A</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Paste address from clipboard</source>
+        <translation>Enganxar adreça del porta-retalls</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Remove this recipient</source>
+        <translation>Eliminar aquest destinatari</translation>
+    </message>
+    <message>
+        <location filename="../sendcoinsentry.cpp" line="+1"/>
+        <source>Enter a Abjcoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Introdueix una adreça Abjcoin (p.ex. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+    </message>
+</context>
+<context>
+    <name>SignVerifyMessageDialog</name>
+    <message>
+        <location filename="../forms/signverifymessagedialog.ui" line="+14"/>
+        <source>Signatures - Sign / Verify a Message</source>
+        <translation>Signatures .Signar/Verificar un Missatge</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+124"/>
+        <source>&amp;Sign Message</source>
+        <translation>&amp;Signar Missatge</translation>
+    </message>
+    <message>
+        <location line="-118"/>
+        <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Pots signar missatges amb la teva adreça per provar que són teus. Sigues cautelòs al signar qualsevol cosa, ja que els atacs phising poden intentar confondre&apos;t per a que els hi signis amb la teva identitat. Tan sols signa als documents completament detallats amb els que hi estàs d&apos;acord.</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>L&apos;adreça per a signar el missatge (per exemple B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+203"/>
+        <source>Choose an address from the address book</source>
+        <translation>Trieu una adreça de la llibreta d&apos;adreces</translation>
+    </message>
+    <message>
+        <location line="-193"/>
+        <location line="+203"/>
+        <source>Alt+A</source>
+        <translation>Alta+A</translation>
+    </message>
+    <message>
+        <location line="-193"/>
+        <source>Paste address from clipboard</source>
+        <translation>Enganxar adreça del porta-retalls</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Enter the message you want to sign here</source>
+        <translation>Introdueix aqui el missatge que vols signar</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Copy the current signature to the system clipboard</source>
+        <translation>Copiar la signatura actual al porta-retalls del sistema</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Sign the message to prove you own this Abjcoin address</source>
+        <translation>Signar un missatge per demostrar que és propietari d&apos;aquesta adreça Abjcoin</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Reset all sign message field
