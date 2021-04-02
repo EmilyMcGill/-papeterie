@@ -1987,4 +1987,121 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Reset all sign message field
+        <source>Reset all sign message fields</source>
+        <translation>Neteja tots els camps de clau</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+146"/>
+        <source>Clear &amp;All</source>
+        <translation>Esborrar &amp;Tot</translation>
+    </message>
+    <message>
+        <location line="-87"/>
+        <location line="+70"/>
+        <source>&amp;Verify Message</source>
+        <translation>&amp;Verificar el missatge</translation>
+    </message>
+    <message>
+        <location line="-64"/>
+        <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
+        <translation>Introdueixi l&apos;adreça signant, missatge (assegura&apos;t que copies salts de línia, espais, tabuladors, etc excactament tot el text) i la signatura a sota per verificar el missatge. Per evitar ser enganyat per un atac home-entre-mig, vés amb compte de no llegir més en la signatura del que hi ha al missatge signat mateix.</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>La direcció que va ser signada amb un missatge (per exemple B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>Verify the message to ensure it was signed with the specified Abjcoin address</source>
+        <translation>Comproveu el missatge per assegurar-se que es va signar amb l&apos;adreça Abjcoin especificada.</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Reset all verify message fields</source>
+        <translation>Neteja tots els camps de verificació de missatge</translation>
+    </message>
+    <message>
+        <location filename="../signverifymessagedialog.cpp" line="+27"/>
+        <location line="+3"/>
+        <source>Enter a Abjcoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Introdueix una adreça Abjcoin (p.ex. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Click &quot;Sign Message&quot; to generate signature</source>
+        <translation>Clica &quot;Signar Missatge&quot; per a generar una signatura</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Enter Abjcoin signature</source>
+        <translation>Introduïu la signatura Abjcoin</translation>
+    </message>
+    <message>
+        <location line="+82"/>
+        <location line="+81"/>
+        <source>The entered address is invalid.</source>
+        <translation>L&apos;adreça intoduïda és invàlida.</translation>
+    </message>
+    <message>
+        <location line="-81"/>
+        <location line="+8"/>
+        <location line="+73"/>
+        <location line="+8"/>
+        <source>Please check the address and try again.</source>
+        <translation>Siu us plau, comprovi l&apos;adreça i provi de nou.</translation>
+    </message>
+    <message>
+        <location line="-81"/>
+        <location line="+81"/>
+        <source>The entered address does not refer to a key.</source>
+        <translation>L&apos;adreça introduïda no referencia a cap clau.</translation>
+    </message>
+    <message>
+        <location line="-73"/>
+        <source>Wallet unlock was cancelled.</source>
+        <translation>El desbloqueig del moneder ha estat cancelat.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Private key for the entered address is not available.</source>
+        <translation>La clau privada per a la adreça introduïda no està disponible.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Message signing failed.</source>
+        <translation>El signat del missatge ha fallat.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Message signed.</source>
+        <translation>Missatge signat.</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>The signature could not be decoded.</source>
+        <translation>La signatura no s&apos;ha pogut decodificar .</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+13"/>
+        <source>Please check the signature and try again.</source>
+        <translation>Su us plau, comprovi la signatura i provi de nou.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The signature did not match the message digest.</source>
+        <translation>La signatura no coincideix amb el resum del missatge.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Message verification failed.</source>
+        <translation>Ha fallat la verificació del missatge.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Message verified.</source>
+        <translation>Missatge verificat.</translation>
+    </message>
+</contex
