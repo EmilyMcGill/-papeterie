@@ -2247,4 +2247,160 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
         <location line="+7"/>
         <source>Debug information</source>
         <translation>Informació de depuració</translation>
-    </m
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Transaction</source>
+        <translation>Transacció</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Inputs</source>
+        <translation>Entrades</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Amount</source>
+        <translation>Quantitat</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>true</source>
+        <translation>cert</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>false</source>
+        <translation>fals</translation>
+    </message>
+    <message>
+        <location line="-211"/>
+        <source>, has not been successfully broadcast yet</source>
+        <translation>, encara no ha estat emès correctement</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>unknown</source>
+        <translation>desconegut</translation>
+    </message>
+</context>
+<context>
+    <name>TransactionDescDialog</name>
+    <message>
+        <location filename="../forms/transactiondescdialog.ui" line="+14"/>
+        <source>Transaction details</source>
+        <translation>Detall de la transacció</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>This pane shows a detailed description of the transaction</source>
+        <translation>Aquest panell mostra una descripció detallada de la transacció</translation>
+    </message>
+</context>
+<context>
+    <name>TransactionTableModel</name>
+    <message>
+        <location filename="../transactiontablemodel.cpp" line="+226"/>
+        <source>Date</source>
+        <translation>Data</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Type</source>
+        <translation>Tipus</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Address</source>
+        <translation>Direcció</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Amount</source>
+        <translation>Quantitat</translation>
+    </message>
+    <message>
+        <location line="+60"/>
+        <source>Open until %1</source>
+        <translation>Obert fins %1</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Confirmed (%1 confirmations)</source>
+        <translation>Confirmat (%1 confirmacions)</translation>
+    </message>
+    <message numerus="yes">
+        <location line="-15"/>
+        <source>Open for %n more block(s)</source>
+        <translation><numerusform>Obert per a %n bloc més</numerusform><numerusform>Obert per a %n blocs més</numerusform></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Offline</source>
+        <translation>Desconnectat</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Unconfirmed</source>
+        <translation>Sense confirmar</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Confirming (%1 of %2 recommended confirmations)</source>
+        <translation>Confirmant (%1 de %2 confirmacions recomanat)</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Conflicted</source>
+        <translation>Conflicte</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <translation>Immadurs (%1 confirmacions, estaran disponibles després de %2)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This block was not received by any other nodes and will probably not be accepted!</source>
+        <translation>Aquest bloc no ha estat rebut per cap altre node i probablement no serà acceptat!</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Generated but not accepted</source>
+        <translation>Generat però no acceptat</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Received with</source>
+        <translation>Rebut desde</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Received from</source>
+        <translation>Rebut de</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Sent to</source>
+        <translation>Enviat a</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Payment to yourself</source>
+        <translation>Pagament a un mateix</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Mined</source>
+        <translation>Minat</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>(n/a)</source>
+        <translation>(n/a)</translation>
+    </message>
+    <message>
+        <location line="+190"/>
+        <source>Transaction status. Hover over this field to show number of confirmations.</source>
+        <translation>Estat de la transacció. Desplaça&apos;t per aquí sobre per mostrar el nombre de confirmacions.</translation>
+    </me
