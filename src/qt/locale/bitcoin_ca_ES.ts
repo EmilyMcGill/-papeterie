@@ -2882,4 +2882,117 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location line="+35"/>
         <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>Opcions SSL: (veure la Wiki de Bitcoin
+        <translation>Opcions SSL: (veure la Wiki de Bitcoin per a instruccions de configuració SSL)</translation>
+    </message>
+    <message>
+        <location line="-74"/>
+        <source>Select the version of socks proxy to use (4-5, default: 5)</source>
+        <translation>Seleccioneu la versió de proxy socks per utilitzar (4-5, per defecte: 5)</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Send trace/debug info to console instead of debug.log file</source>
+        <translation>Enviar informació de traça/depuració a la consola en comptes del arxiu debug.log</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Send trace/debug info to debugger</source>
+        <translation>Enviar informació de traça/depuració al depurador</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Set maximum block size in bytes (default: 250000)</source>
+        <translation>Establir una mida máxima de bloc en bytes (per defecte: 250000)</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Set minimum block size in bytes (default: 0)</source>
+        <translation>Establir una mida mínima de bloc en bytes (per defecte: 0)</translation>
+    </message>
+    <message>
+        <location line="-29"/>
+        <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
+        <translation>Reduir l&apos;arxiu debug.log al iniciar el client (per defecte 1 quan no -debug)</translation>
+    </message>
+    <message>
+        <location line="-42"/>
+        <source>Specify connection timeout in milliseconds (default: 5000)</source>
+        <translation>Especificar el temps limit per a un intent de connexió en milisegons (per defecte: 5000)</translation>
+    </message>
+    <message>
+        <location line="+109"/>
+        <source>Unable to sign checkpoint, wrong checkpointkey?
+</source>
+        <translation>No es pot signar el punt de control, la clau del punt de control esta malament?
+</translation>
+    </message>
+    <message>
+        <location line="-80"/>
+        <source>Use UPnP to map the listening port (default: 0)</source>
+        <translation>Utilitza UPnP per a mapejar els ports d&apos;escolta (per defecte: 0)</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Use UPnP to map the listening port (default: 1 when listening)</source>
+        <translation>Utilitza UPnP per a mapejar els ports d&apos;escolta (per defecte: 1 quan s&apos;escolta)</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
+        <translation>Utilitza proxy per arribar als serveis ocults de Tor (per defecte: la mateixa que -proxy)</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Username for JSON-RPC connections</source>
+        <translation>Nom d&apos;usuari per a connexions JSON-RPC</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Verifying database integrity...</source>
+        <translation>Comprovant la integritat de la base de dades ...</translation>
+    </message>
+    <message>
+        <location line="+57"/>
+        <source>WARNING: syncronized checkpoint violation detected, but skipped!</source>
+        <translation>ADVERTÈNCIA: violació de punt de control sincronitzat detectada, es saltarà!</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Warning: Disk space is low!</source>
+        <translation>Avís: L&apos;espai en disc és baix!</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Warning: This version is obsolete, upgrade required!</source>
+        <translation>Advertència: Aquetsa versió està obsoleta, és necessari actualitzar!</translation>
+    </message>
+    <message>
+        <location line="-48"/>
+        <source>wallet.dat corrupt, salvage failed</source>
+        <translation>L&apos;arxiu wallet.data és corrupte, el rescat de les dades ha fallat</translation>
+    </message>
+    <message>
+        <location line="-54"/>
+        <source>Password for JSON-RPC connections</source>
+        <translation>Contrasenya per a connexions JSON-RPC</translation>
+    </message>
+    <message>
+        <location line="-84"/>
+        <source>%s, you must set a rpcpassword in the configuration file:
+ %s
+It is recommended you use the following random password:
+rpcuser=abjcoinrpc
+rpcpassword=%s
+(you do not need to remember this password)
+The username and password MUST NOT be the same.
+If the file does not exist, create it with owner-readable-only file permissions.
+It is also recommended to set alertnotify so you are notified of problems;
+for example: alertnotify=echo %%s | mail -s &quot;Abjcoin Alert&quot; admin@foo.com
+</source>
+        <translation>%s, ha d&apos;establir un rpcpassword al fitxer de configuració:
+%s
+Es recomana utilitzar la següent contrasenya aleatòria:
+rpcuser=abjcoinrpc
+rpcpassword=%s
+(No cal recordar aquesta contrasenya)
+El nom d&apos
