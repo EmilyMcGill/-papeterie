@@ -2995,4 +2995,106 @@ Es recomana utilitzar la següent contrasenya aleatòria:
 rpcuser=abjcoinrpc
 rpcpassword=%s
 (No cal recordar aquesta contrasenya)
-El nom d&apos
+El nom d&apos;usuari i contrasenya NO HA DE SER el mateix.
+Si no hi ha l&apos;arxiu, s&apos;ha de crear amb els permisos de només lectura per al propietari.
+També es recomana establir alertnotify per a que se li notifiquin els problemes;
+per exemple: alertnotify=echo %%s | mail -s &quot;Abjcoin Alert&quot; admin@foo.com
+</translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Find peers using internet relay chat (default: 0)</source>
+        <translation>Trobar companys utilitzant l&apos;IRC (per defecte: 1) {0)?}</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Sync time with other nodes. Disable if time on your system is precise e.g. syncing with NTP (default: 1)</source>
+        <translation>Sincronitzar el temps amb altres nodes. Desactivar si el temps al seu sistema és precís, per exemple, si fa ús de sincronització amb NTP (per defecte: 1)</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>When creating transactions, ignore inputs with value less than this (default: 0.01)</source>
+        <translation>En crear transaccions, ignorar les entrades amb valor inferior a aquesta (per defecte: 0.01)</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Allow JSON-RPC connections from specified IP address</source>
+        <translation>Permetre connexions JSON-RPC d&apos;adreces IP específiques</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
+        <translation>Enviar ordre al node en execució a &lt;ip&gt; (per defecte: 127.0.0.1)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
+        <translation>Executar orde quan el millor bloc canviï (%s al cmd es reemplaça per un bloc de hash)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
+        <translation>Executar una ordre quan una transacció del moneder canviï (%s in cmd es canvia per TxID)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Require a confirmations for change (default: 0)</source>
+        <translation>Requerir les confirmacions de canvi (per defecte: 0)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enforce transaction scripts to use canonical PUSH operators (default: 1)</source>
+        <translation>Fer complir als scripts de transaccions d&apos;utilitzar operadors PUSH canòniques (per defecte: 1)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Execute command when a relevant alert is received (%s in cmd is replaced by message)</source>
+        <translation>
+Executar una ordre quan es rep un avís rellevant (%s en cmd es substitueix per missatge)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Upgrade wallet to latest format</source>
+        <translation>Actualitzar moneder a l&apos;últim format</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Set key pool size to &lt;n&gt; (default: 100)</source>
+        <translation>Establir límit de nombre de claus a &lt;n&gt; (per defecte: 100)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rescan the block chain for missing wallet transactions</source>
+        <translation>Re-escanejar cadena de blocs en cerca de transaccions de moneder perdudes</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>How many blocks to check at startup (default: 2500, 0 = all)</source>
+        <translation>Quants blocs s&apos;han de confirmar a l&apos;inici (per defecte: 2500, 0 = tots)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>How thorough the block verification is (0-6, default: 1)</source>
+        <translation>Com és de minuciosa la verificació del bloc (0-6, per defecte: 1)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Imports blocks from external blk000?.dat file</source>
+        <translation>Importar blocs desde l&apos;arxiu extern blk000?.dat</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Use OpenSSL (https) for JSON-RPC connections</source>
+        <translation>Utilitzar OpenSSL (https) per a connexions JSON-RPC</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Server certificate file (default: server.cert)</source>
+        <translation>Arxiu del certificat de servidor (per defecte: server.cert)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Server private key (default: server.pem)</source>
+        <translation>Clau privada del servidor (per defecte: server.pem)</translation>
+    </message>
+   
