@@ -3097,4 +3097,117 @@ Executar una ordre quan es rep un avís rellevant (%s en cmd es substitueix per 
         <source>Server private key (default: server.pem)</source>
         <translation>Clau privada del servidor (per defecte: server.pem)</translation>
     </message>
-   
+    <message>
+        <location line="+1"/>
+        <source>Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</source>
+        <translation>Xifres acceptables (per defecte: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Error: Wallet unlocked for staking only, unable to create transaction.</source>
+        <translation>Error: Cartera bloquejada nomès per a fer &quot;stake&quot;, no es pot de crear la transacció</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>WARNING: Invalid checkpoint found! Displayed transactions may not be correct! You may need to upgrade, or notify developers.</source>
+        <translation>ADVERTÈNCIA: Punt de control invàlid! Les transaccions mostrades podríen no ser correctes! Podria ser necessari actualitzar o notificar-ho als desenvolupadors.</translation>
+    </message>
+    <message>
+        <location line="-158"/>
+        <source>This help message</source>
+        <translation>Aquest misatge d&apos;ajuda</translation>
+    </message>
+    <message>
+        <location line="+95"/>
+        <source>Wallet %s resides outside data directory %s.</source>
+        <translation>El moneder %s resideix fora del directori de dades %s.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot obtain a lock on data directory %s.  Abjcoin is probably already running.</source>
+        <translation>No es pot obtenir un bloqueig en el directori de dades %s. Abjcoin probablement ja estigui en funcionament.</translation>
+    </message>
+    <message>
+        <location line="-98"/>
+        <source>Abjcoin</source>
+        <translation>Abjcoin</translation>
+    </message>
+    <message>
+        <location line="+140"/>
+        <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
+        <translation>Impossible d&apos;unir %s a aquest ordinador (s&apos;ha retornat l&apos;error %d, %s)</translation>
+    </message>
+    <message>
+        <location line="-130"/>
+        <source>Connect through socks proxy</source>
+        <translation>Conectar a través d&apos;un proxy SOCKS</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
+        <translation>Permetre consultes DNS per a -addnode, -seednode i -connect</translation>
+    </message>
+    <message>
+        <location line="+122"/>
+        <source>Loading addresses...</source>
+        <translation>Carregant adreces...</translation>
+    </message>
+    <message>
+        <location line="-15"/>
+        <source>Error loading blkindex.dat</source>
+        <translation>Error carregant blkindex.dat</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Error loading wallet.dat: Wallet corrupted</source>
+        <translation>Error carregant wallet.dat: Moneder corrupte</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Error loading wallet.dat: Wallet requires newer version of Abjcoin</source>
+        <translation>Error en carregar wallet.dat: El moneder requereix la versió més recent de Abjcoin</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wallet needed to be rewritten: restart Abjcoin to complete</source>
+        <translation>El moneder necessita ser reescrita: reiniciar Abjcoin per completar</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Error loading wallet.dat</source>
+        <translation>Error carregant wallet.dat</translation>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>Invalid -proxy address: &apos;%s&apos;</source>
+        <translation>Adreça -proxy invalida: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
+        <translation>Xarxa desconeguda especificada a -onlynet: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Unknown -socks proxy version requested: %i</source>
+        <translation>S&apos;ha demanat una versió desconeguda de -socks proxy: %i</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot resolve -bind address: &apos;%s&apos;</source>
+        <translation>No es pot resoldre l&apos;adreça -bind: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
+        <translation>No es pot resoldre l&apos;adreça -externalip: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="-24"/>
+        <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
+        <translation>Quantitat invalida per a -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <source>Error: could not start node</source>
+        <translation>Error: no s&apos;ha pogut iniciar el node</translation>
