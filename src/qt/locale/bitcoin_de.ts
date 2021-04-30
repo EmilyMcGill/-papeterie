@@ -2854,4 +2854,126 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-16"/>
         <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
-        <translation>Verbinde nur z
+        <translation>Verbinde nur zu Knoten des Netztyps &lt;net&gt; (IPv4, IPv6 oder Tor)</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Output extra debugging information. Implies all other -debug* options</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Output extra network debugging information</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Prepend debug output with timestamp</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
+        <translation>SSL-Optionen: (siehe Bitcoin-Wiki für SSL-Installationsanweisungen)</translation>
+    </message>
+    <message>
+        <location line="-74"/>
+        <source>Select the version of socks proxy to use (4-5, default: 5)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Send trace/debug info to console instead of debug.log file</source>
+        <translation>Rückverfolgungs- und Debuginformationen an die Konsole senden anstatt sie in die Datei debug.log zu schreiben</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Send trace/debug info to debugger</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Set maximum block size in bytes (default: 250000)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Set minimum block size in bytes (default: 0)</source>
+        <translation>Minimale Blockgröße in Byte festlegen (Standard: 0)</translation>
+    </message>
+    <message>
+        <location line="-29"/>
+        <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
+        <translation>Verkleinere Datei debug.log beim Starten des Clients (Standard: 1, wenn kein -debug)</translation>
+    </message>
+    <message>
+        <location line="-42"/>
+        <source>Specify connection timeout in milliseconds (default: 5000)</source>
+        <translation>Verbindungstimeout in Millisekunden festlegen (Standard: 5000)</translation>
+    </message>
+    <message>
+        <location line="+109"/>
+        <source>Unable to sign checkpoint, wrong checkpointkey?
+</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-80"/>
+        <source>Use UPnP to map the listening port (default: 0)</source>
+        <translation>UPnP verwenden, um die Portweiterleitung einzurichten (Standard: 0)</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Use UPnP to map the listening port (default: 1 when listening)</source>
+        <translation>UPnP verwenden, um die Portweiterleitung einzurichten (Standard: 1, wenn abgehört wird)</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
+        <translation>Proxy benutzen um versteckte Services zu erreichen (Standard: selbe Einstellung wie Proxy)</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Username for JSON-RPC connections</source>
+        <translation>Benutzername für JSON-RPC-Verbindungen</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Verifying database integrity...</source>
+        <translation>Überprüfe Datenbank Integrität...</translation>
+    </message>
+    <message>
+        <location line="+57"/>
+        <source>WARNING: syncronized checkpoint violation detected, but skipped!</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Warning: Disk space is low!</source>
+        <translation>Warnung: Festplatte hat wenig freien Speicher</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Warning: This version is obsolete, upgrade required!</source>
+        <translation>Warnung: Diese Version is veraltet, Aktualisierung erforderlich!</translation>
+    </message>
+    <message>
+        <location line="-48"/>
+        <source>wallet.dat corrupt, salvage failed</source>
+        <translation>wallet.dat beschädigt, Rettung fehlgeschlagen</translation>
+    </message>
+    <message>
+        <location line="-54"/>
+        <source>Password for JSON-RPC connections</source>
+        <translation>Passwort für JSON-RPC-Verbindungen</translation>
+    </message>
+    <message>
+        <location line="-84"/>
+        <source>%s, you must set a rpcpassword in the configuration file:
+ %s
+It is recommended you use the following random password:
+rpcuser=abjcoinrpc
+rpcpassword=%s
+(you do not need to remember this password)
+The username and password MUST NOT be the same.
+If the file does not exist, create it with owner-readable-only file permiss
