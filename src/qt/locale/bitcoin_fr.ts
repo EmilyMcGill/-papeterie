@@ -844,4 +844,163 @@ Adresse : %4
         <translation>Copier l’étiquette</translation>
     </message>
     <message>
-        <location line="+
+        <location line="+1"/>
+        <location line="+26"/>
+        <source>Copy amount</source>
+        <translation>Copier le montant</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <source>Copy transaction ID</source>
+        <translation>Copier l&apos;ID de la transaction</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Copy quantity</source>
+        <translation>Copier la quantité</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Copy fee</source>
+        <translation>Copier les frais</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy after fee</source>
+        <translation>Copier le montant après les frais</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy bytes</source>
+        <translation>Copier les octets</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy priority</source>
+        <translation>Copier la priorité</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy low output</source>
+        <translation>Copier la sortie faible</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy change</source>
+        <translation>Copier la monnaie</translation>
+    </message>
+    <message>
+        <location line="+317"/>
+        <source>highest</source>
+        <translation>la plus élevée</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>high</source>
+        <translation>élevée</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>medium-high</source>
+        <translation>moyennement-élevée</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>medium</source>
+        <translation>moyenne</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>low-medium</source>
+        <translation>moyennement-basse</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>low</source>
+        <translation>basse</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>lowest</source>
+        <translation>la plus basse</translation>
+    </message>
+    <message>
+        <location line="+155"/>
+        <source>DUST</source>
+        <translation>DUST</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>yes</source>
+        <translation>oui</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>This label turns red, if the transaction size is bigger than 10000 bytes.
+
+ This means a fee of at least %1 per kb is required.
+
+ Can vary +/- 1 Byte per input.</source>
+        <translation>Cette étiquette passe au rouge, si la taille de la transaction est supérieure à 10000 bytes.
+
+Cela implique que des frais à hauteur d&apos;au moins %1 par kb seront nécessaires.
+
+Ceux-ci Peuvent varier de +/- 1 Byte par entrée.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Transactions with higher priority get more likely into a block.
+
+This label turns red, if the priority is smaller than &quot;medium&quot;.
+
+ This means a fee of at least %1 per kb is required.</source>
+        <translation>Les transactions avec une priorité haute ont plus de chances d&apos;être traitées en un block.
+
+L&apos;étiquette passe au rouge si votre priorité est plus basse que la &quot;moyenne&quot;.
+
+Cela implique que des frais d&apos;un minimum de %1 par kb sont requis</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This label turns red, if any recipient receives an amount smaller than %1.
+
+ This means a fee of at least %2 is required. 
+
+ Amounts below 0.546 times the minimum relay fee are shown as DUST.</source>
+        <translation>Cette étiquette passe au rouge, Lorsqu&apos;un destinataire reçoit un montant inférieur à %1.
+
+Cela implique que des frais à hauteur de %2 seront nécessaire 
+
+Les montants inférieurs à  0.546 fois les frais minimum de relais apparaissent en tant que DUST.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This label turns red, if the change is smaller than %1.
+
+ This means a fee of at least %2 is required.</source>
+        <translation>Cette étiquette passe au rouge, lorsque la différence est inférieure à %1.
+
+Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <location line="+66"/>
+        <source>(no label)</source>
+        <translation>(aucune étiquette)</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>change from %1 (%2)</source>
+        <translation>monnaie de %1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>(change)</source>
+        <translation>(monnaie)</translation>
+    </message>
+</context>
+<context>
+    <name>EditAddressDialog</name>
+    <message>
+        <location filename="../forms/editaddressdialog.ui" line="+14"/>
+        <sour
