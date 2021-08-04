@@ -1521,4 +1521,148 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
         <translation>Sur testnet</translation>
     </message>
     <message>
-        <lo
+        <location line="+23"/>
+        <source>Block chain</source>
+        <translation>Chaîne de blocs</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Current number of blocks</source>
+        <translation>Nombre actuel de blocs</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Estimated total blocks</source>
+        <translation>Nombre total de blocs estimé</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Last block time</source>
+        <translation>Horodatage du dernier bloc</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>&amp;Open</source>
+        <translation>&amp;Ouvrir</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Command-line options</source>
+        <translation>Options de ligne de commande</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Show the Abjcoin-Qt help message to get a list with possible Abjcoin command-line options.</source>
+        <translation>Afficher le message d&apos;aide Abjcoin-Qt afin d&apos;obtenir la liste des options de de L&apos;outil en ligne de commande Abjcoin</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Show</source>
+        <translation>&amp;Afficher</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>&amp;Console</source>
+        <translation>&amp;Console</translation>
+    </message>
+    <message>
+        <location line="-260"/>
+        <source>Build date</source>
+        <translation>Date de compilation</translation>
+    </message>
+    <message>
+        <location line="-104"/>
+        <source>Abjcoin - Debug window</source>
+        <translation>Abjcoin - Fenêtre de déboggage</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Abjcoin Core</source>
+        <translation>Abjcoin Core</translation>
+    </message>
+    <message>
+        <location line="+279"/>
+        <source>Debug log file</source>
+        <translation>Journal de débogage</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Open the Abjcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Ouvrir le fichier journal de debug Abjcoin au sein du répertoire courant. Cette opération peut prendre quelques secondes dans le cas de fichiers journaux volumineux.</translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <source>Clear console</source>
+        <translation>Nettoyer la console</translation>
+    </message>
+    <message>
+        <location filename="../rpcconsole.cpp" line="-33"/>
+        <source>Welcome to the Abjcoin RPC console.</source>
+        <translation>Bienvenue sur la console RPC de Abjcoin.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>Utiliser les touches de curseur pour naviguer dans l&apos;historique et &lt;b&gt;Ctrl-L&lt;/b&gt; pour effacer l&apos;écran.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
+        <translation>Taper &lt;b&gt;help&lt;/b&gt; pour afficher une vue générale des commandes disponibles.</translation>
+    </message>
+</context>
+<context>
+    <name>SendCoinsDialog</name>
+    <message>
+        <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
+        <location filename="../sendcoinsdialog.cpp" line="+182"/>
+        <location line="+5"/>
+        <location line="+5"/>
+        <location line="+5"/>
+        <location line="+6"/>
+        <location line="+5"/>
+        <location line="+5"/>
+        <source>Send Coins</source>
+        <translation>Envoyer des monnaies</translation>
+    </message>
+    <message>
+        <location line="+76"/>
+        <source>Coin Control Features</source>
+        <translation>Fonctions de contrôle des monnaies</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Inputs...</source>
+        <translation>Entrants...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>automatically selected</source>
+        <translation>choisi automatiquement</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Insufficient funds!</source>
+        <translation>Fonds insuffisants!</translation>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>Quantity:</source>
+        <translation>Quantité:</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+35"/>
+        <source>0</source>
+        <translation>0</translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <source>Bytes:</source>
+        <translation>Octets:</translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Amount:</source>
+        <translation>Montant:</translation>
+    </message>
