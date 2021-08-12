@@ -2814,4 +2814,111 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
         <translation>Avertissement : wallet.dat corrompu, données récupérées ! Le fichier wallet.dat original a été enregistré en tant que wallet.{timestamp}.bak dans %s ; si votre solde ou transactions sont incorrects vous devriez effectuer une restauration depuis une sauvegarde.</translation>
     </message>
     <message>
-        <location l
+        <location line="-30"/>
+        <source>Attempt to recover private keys from a corrupt wallet.dat</source>
+        <translation>Tenter de récupérer les clefs privées d&apos;un wallet.dat corrompu</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Block creation options:</source>
+        <translation>Options de création de bloc:</translation>
+    </message>
+    <message>
+        <location line="-62"/>
+        <source>Connect only to the specified node(s)</source>
+        <translation>Ne se connecter qu&apos;au(x) nœud(s) spécifié(s)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
+        <translation>Découvrir sa propre adresse IP (par défaut: 1 lors de l&apos;écoute et si aucun -externalip)</translation>
+    </message>
+    <message>
+        <location line="+94"/>
+        <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
+        <translation>Échec de l&apos;écoute sur un port quelconque. Utilisez -listen=0 si vous voulez ceci.</translation>
+    </message>
+    <message>
+        <location line="-90"/>
+        <source>Find peers using DNS lookup (default: 1)</source>
+        <translation>Trouvez des peers utilisant DNS lookup (default: 1)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Sync checkpoints policy (default: strict)</source>
+        <translation>Politique de synchronisation des checkpoints (default: strict)</translation>
+    </message>
+    <message>
+        <location line="+83"/>
+        <source>Invalid -tor address: &apos;%s&apos;</source>
+        <translation>Adresse -tor invalide: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
+        <translation>Montant incorrect pour -reservebalance=&lt;montant&gt;</translation>
+    </message>
+    <message>
+        <location line="-82"/>
+        <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
+        <translation>Tampon maximal de réception par « -connection » &lt;n&gt;*1 000 octets (par défaut : 5 000)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 1000)</source>
+        <translation>Tampon maximal d&apos;envoi par « -connection », &lt;n&gt;*1 000 octets (par défaut : 1 000)</translation>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
+        <translation>Se connecter uniquement aux nœuds du réseau &lt;net&gt; (IPv4, IPv6 ou Tor)</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Output extra debugging information. Implies all other -debug* options</source>
+        <translation>Voir les autres informations de débogage. Implique toutes les autres options -debug*</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Output extra network debugging information</source>
+        <translation>Voir les autres informations de débogage du réseau</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Prepend debug output with timestamp</source>
+        <translation>Horodater les messages de debug</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
+        <translation>Options SSL : (voir le Wiki de Bitcoin pour les instructions de configuration du SSL)</translation>
+    </message>
+    <message>
+        <location line="-74"/>
+        <source>Select the version of socks proxy to use (4-5, default: 5)</source>
+        <translation>Sélectionner la version du proxy socks à utiliser (4-5, par défaut: 5)</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Send trace/debug info to console instead of debug.log file</source>
+        <translation>Envoyer les informations de débogage/trace à la console au lieu du fichier debug.log</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Send trace/debug info to debugger</source>
+        <translation>Envoyer les informations de débogage/trace à la console au lieu du fichier debug.log</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Set maximum block size in bytes (default: 250000)</source>
+        <translation>Fixer la taille maximale d&apos;un block en bytes (default: 250000)</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Set minimum block size in bytes (default: 0)</source>
+        <translation>Définir la taille minimale de bloc en octets (par défaut : 0)</translation>
+    </message>
+    <message>
+        <location line="-29"/>
+        <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
+        <translation>Rédu
