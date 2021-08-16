@@ -2921,4 +2921,107 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="-29"/>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
-        <translation>Rédu
+        <translation>Réduire le fichier debug.log lors du démarrage du client (par défaut : 1 lorsque -debug n&apos;est pas présente)</translation>
+    </message>
+    <message>
+        <location line="-42"/>
+        <source>Specify connection timeout in milliseconds (default: 5000)</source>
+        <translation>Spécifier le délai d&apos;expiration de la connexion en millisecondes (par défaut: 5000)</translation>
+    </message>
+    <message>
+        <location line="+109"/>
+        <source>Unable to sign checkpoint, wrong checkpointkey?
+</source>
+        <translation>Impossible de &quot;signer&quot; le checkpoint, mauvaise clef de checkpoint?
+</translation>
+    </message>
+    <message>
+        <location line="-80"/>
+        <source>Use UPnP to map the listening port (default: 0)</source>
+        <translation>Utiliser l&apos;UPnP pour rediriger le port d&apos;écoute (par défaut: 0)</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Use UPnP to map the listening port (default: 1 when listening)</source>
+        <translation>Utiliser l&apos;UPnP pour rediriger le port d&apos;écoute (par défaut: 1 lors de l&apos;écoute)</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
+        <translation>Utiliser un proxy pour atteindre les services cachés (par défaut: équivalent à -proxy)</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Username for JSON-RPC connections</source>
+        <translation>Nom d&apos;utilisateur pour les connexions JSON-RPC</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Verifying database integrity...</source>
+        <translation>Vérification d&apos;intégrité de la base de données...</translation>
+    </message>
+    <message>
+        <location line="+57"/>
+        <source>WARNING: syncronized checkpoint violation detected, but skipped!</source>
+        <translation>ATTENTION : violation du checkpoint de synchronisation, mais ignorée!</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Warning: Disk space is low!</source>
+        <translation>Avertissement: Espace disque faible!</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Warning: This version is obsolete, upgrade required!</source>
+        <translation>Avertissement : cette version est obsolète, une mise à niveau est nécessaire !</translation>
+    </message>
+    <message>
+        <location line="-48"/>
+        <source>wallet.dat corrupt, salvage failed</source>
+        <translation>wallet.dat corrompu, la récupération a échoué</translation>
+    </message>
+    <message>
+        <location line="-54"/>
+        <source>Password for JSON-RPC connections</source>
+        <translation>Mot de passe pour les connexions JSON-RPC</translation>
+    </message>
+    <message>
+        <location line="-84"/>
+        <source>%s, you must set a rpcpassword in the configuration file:
+ %s
+It is recommended you use the following random password:
+rpcuser=abjcoinrpc
+rpcpassword=%s
+(you do not need to remember this password)
+The username and password MUST NOT be the same.
+If the file does not exist, create it with owner-readable-only file permissions.
+It is also recommended to set alertnotify so you are notified of problems;
+for example: alertnotify=echo %%s | mail -s &quot;Abjcoin Alert&quot; admin@foo.com
+</source>
+        <translation>%s, vous devez définir un mot de passe rpc &apos;rpcpassword&apos; au sein du fichier de configuration:
+ %s
+Il est recommandé d&apos;utiliser le mot de passe aléatoire suivant:
+rpcuser=abjcoinrpc
+rpcpassword=%s
+(il n&apos;est pas nécessaire de retenir ce mot de passe)
+Le nom d&apos;utilisateur et le mot de passe doivent IMPERATIVEMENT être différents.
+Si le fichier n&apos;existe pas, il est nécessaire de le créer, avec les droit de lecture au propriétaire seulement.
+Il est également recommandé d&apos;utiliser l&apos;option alertnotify afin d&apos;être notifié des problèmes;
+par exemple: alertnotify=echo %%s | mail -s &quot;Alerte Abjcoin&quot; admin@foo.com
+</translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Find peers using internet relay chat (default: 0)</source>
+        <translation>Trouvez des pairs utilisant DNS lookup (par défault: 1) {0)?}</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Sync time with other nodes. Disable if time on your system is precise e.g. syncing with NTP (default: 1)</source>
+        <translation>Synchronisation de l&apos;horloge avec d&apos;autres noeuds. Désactiver si votre serveur est déjà synchronisé avec le protocole NTP (défaut: 1)</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>When creating transactions, ignore inputs with value less than this (default: 0.01)</source>
+        <translation>Lors de la création de transactions, ignorer les entrées dont la valeur sont inférieures (défaut: 0.01)</translation>
+    </me
