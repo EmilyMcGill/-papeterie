@@ -44,4 +44,154 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+27"/>
         <source>Create a new address</source>
-        <translation>Dodajte novu adresu</transla
+        <translation>Dodajte novu adresu</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Copy the currently selected address to the system clipboard</source>
+        <translation>Kopiraj trenutno odabranu adresu u međuspremnik</translation>
+    </message>
+    <message>
+        <location line="-11"/>
+        <source>&amp;New Address</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-46"/>
+        <source>These are your Abjcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+60"/>
+        <source>&amp;Copy Address</source>
+        <translation>&amp;Kopirati adresu</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Show &amp;QR Code</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Sign a message to prove you own a Abjcoin address</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Sign &amp;Message</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Delete the currently selected address from the list</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-14"/>
+        <source>Verify a message to ensure it was signed with a specified Abjcoin address</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Verify Message</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>&amp;Delete</source>
+        <translation>&amp;Brisanje</translation>
+    </message>
+    <message>
+        <location filename="../addressbookpage.cpp" line="+65"/>
+        <source>Copy &amp;Label</source>
+        <translation>Kopirati &amp;oznaku</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Edit</source>
+        <translation>&amp;Izmjeniti</translation>
+    </message>
+    <message>
+        <location line="+250"/>
+        <source>Export Address Book Data</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Comma separated file (*.csv)</source>
+        <translation>Datoteka vrijednosti odvojenih zarezom (*. csv)</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Error exporting</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Could not write to file %1.</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>AddressTableModel</name>
+    <message>
+        <location filename="../addresstablemodel.cpp" line="+144"/>
+        <source>Label</source>
+        <translation>Oznaka</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Address</source>
+        <translation>Adresa</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>(no label)</source>
+        <translation>(bez oznake)</translation>
+    </message>
+</context>
+<context>
+    <name>AskPassphraseDialog</name>
+    <message>
+        <location filename="../forms/askpassphrasedialog.ui" line="+26"/>
+        <source>Passphrase Dialog</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Enter passphrase</source>
+        <translation>Unesite lozinku</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>New passphrase</source>
+        <translation>Nova lozinka</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Repeat new passphrase</source>
+        <translation>Ponovite novu lozinku</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>For staking only</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../askpassphrasedialog.cpp" line="+35"/>
+        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <translation>Unesite novi lozinku za novčanik. &lt;br/&gt; Molimo Vas da koristite zaporku od &lt;b&gt;10 ili više slučajnih znakova,&lt;/b&gt; ili &lt;b&gt;osam ili više riječi.&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Encrypt wallet</source>
+        <translation>Šifriranje novčanika</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>This operation needs your
