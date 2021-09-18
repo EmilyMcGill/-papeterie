@@ -1739,4 +1739,148 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"/>
     </message>
     <message>
-        <loc
+        <location line="+15"/>
+        <source>Copy quantity</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy amount</source>
+        <translation>Kopiraj iznos</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy fee</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy after fee</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy bytes</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy priority</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy low output</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy change</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+86"/>
+        <source>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Confirm send coins</source>
+        <translation>Potvrdi slanje novca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Are you sure you want to send %1?</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source> and </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The recipient address is not valid, please recheck.</source>
+        <translation>Adresa primatelja je nevaljala, molimo provjerite je ponovo.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The amount to pay must be larger than 0.</source>
+        <translation>Iznos mora biti veći od 0.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The amount exceeds your balance.</source>
+        <translation>Iznos je veći od stanja računa.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The total exceeds your balance when the %1 transaction fee is included.</source>
+        <translation>Iznos je veći od stanja računa kad se doda naknada za transakcije od %1.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Duplicate address found, can only send to each address once per send operation.</source>
+        <translation>Pronašli smo adresu koja se ponavlja. U svakom plaćanju program može svaku adresu koristiti samo jedanput.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Error: Transaction creation failed.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+251"/>
+        <source>WARNING: Invalid Abjcoin address</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>(no label)</source>
+        <translation>(bez oznake)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>WARNING: unknown change address</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>SendCoinsEntry</name>
+    <message>
+        <location filename="../forms/sendcoinsentry.ui" line="+14"/>
+        <source>Form</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>A&amp;mount:</source>
+        <translation>&amp;Iznos:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Pay &amp;To:</source>
+        <translation>&amp;Primatelj plaćanja:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <location filename="../sendcoinsentry.cpp" line="+25"/>
+        <source>Enter a label for this address to add it to your address book</source>
+        <translation>Unesite oznaku za ovu adresu kako bi ju dodali u vaš adresar</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>&amp;Label:</source>
+        <translation>&amp;Oznaka:</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>The address to send the payment to  (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <locat
