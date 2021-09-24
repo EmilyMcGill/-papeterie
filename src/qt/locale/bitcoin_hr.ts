@@ -3175,4 +3175,105 @@ for example: alertnotify=echo %%s | mail -s &quot;Abjcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+2"/>
-        <source>Cannot r
+        <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-24"/>
+        <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
+        <translation>Nevaljali iznos za opciju -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <source>Error: could not start node</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Sending...</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Invalid amount</source>
+        <translation>Nevaljali iznos za opciju</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Insufficient funds</source>
+        <translation>Nedovoljna sredstva</translation>
+    </message>
+    <message>
+        <location line="-34"/>
+        <source>Loading block index...</source>
+        <translation>Učitavanje indeksa blokova...</translation>
+    </message>
+    <message>
+        <location line="-103"/>
+        <source>Add a node to connect to and attempt to keep the connection open</source>
+        <translation>Unesite nod s kojim se želite spojiti and attempt to keep the connection open</translation>
+    </message>
+    <message>
+        <location line="+122"/>
+        <source>Unable to bind to %s on this computer. Abjcoin is probably already running.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-97"/>
+        <source>Fee per KB to add to transactions you send</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+55"/>
+        <source>Invalid amount for -mininput=&lt;amount&gt;: &apos;%s&apos;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Loading wallet...</source>
+        <translation>Učitavanje novčanika...</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Cannot downgrade wallet</source>
+        <translation>Nije moguće novčanik vratiti na prijašnju verziju.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot initialize keypool</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot write default address</source>
+        <translation>Nije moguće upisati zadanu adresu.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rescanning...</source>
+        <translation>Rescaniranje</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Done loading</source>
+        <translation>Učitavanje gotovo</translation>
+    </message>
+    <message>
+        <location line="-167"/>
+        <source>To use the %s option</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Error</source>
+        <translation>Greška</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
+%s
+If the file does not exist, create it with owner-readable-only file permissions.</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+</TS>
