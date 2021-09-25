@@ -1,23 +1,25 @@
 
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="hu" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="id_ID" version="2.1">
 <context>
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About Abjcoin</source>
-        <translation>A Abjcoin-ról</translation>
+        <translation>Tentang Abjcoin</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>&lt;b&gt;Abjcoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Abjcoin&lt;/b&gt; verzió</translation>
+        <translation>&lt;b&gt;Abjcoin&lt;/b&gt; versi</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The Abjcoin developers</source>
-        <translation type="unfinished"/>
+        <translation>Copyright © 2009-2014 para pengembang Bitcoin
+Copyright © 2012-2014 para pengembang NovaCoin
+Copyright © 2014 para pengembang Abjcoin</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -27,11 +29,7 @@ This is experimental software.
 Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.</source>
-        <translation>
-Ez egy kísérleti program.
-MIT/X11 szoftverlicenc alatt kiadva, lásd a mellékelt COPYING fájlt vagy a http://www.opensource.org/licenses/mit-license.php weboldalt.
-
-Ez a termék tartalmaz az OpenSSL Project által az OpenSSL Toolkit-hez (http://www.openssl.org/) fejlesztett szoftvert; kriptográfiai szoftvert, melyet Eric Young (eay@cryptsoft.com) írt; és Thomas Bernard által írt UPnP szoftvert.</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -39,102 +37,102 @@ Ez a termék tartalmaz az OpenSSL Project által az OpenSSL Toolkit-hez (http://
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
         <source>Address Book</source>
-        <translation>Címjegyzék</translation>
+        <translation>Buku Alamat</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Double-click to edit address or label</source>
-        <translation>Kattints duplán a cím vagy címke szerkesztéséhez</translation>
+        <translation>Klik dua-kali untuk mengubah alamat atau label</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Create a new address</source>
-        <translation>Új cím létrehozása</translation>
+        <translation>Buat alamat baru</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Copy the currently selected address to the system clipboard</source>
-        <translation>A kiválasztott cím másolása a vágólapra</translation>
+        <translation>Salin alamat yang dipilih ke clipboard</translation>
     </message>
     <message>
         <location line="-11"/>
         <source>&amp;New Address</source>
-        <translation>&amp;Új Cím</translation>
+        <translation>&amp;Alamat Baru</translation>
     </message>
     <message>
         <location line="-46"/>
         <source>These are your Abjcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Ezek a Abjcoin-címeid a fizetések fogadásához. Érdemes minden küldőnek egy külön címet létrehozni, hogy könnyebben követhesd személyenként a tranzakciókat.</translation>
+        <translation>Ini adalah alamat Abjcoin Anda untuk menerima pembayaran. Anda dapat memberikan alamat yang berbeda untuk setiap pengirim, sehingga Anda dapat melacak siapa yang membayar Anda.</translation>
     </message>
     <message>
         <location line="+60"/>
         <source>&amp;Copy Address</source>
-        <translation>&amp;Cím Másolása</translation>
+        <translation>&amp;Salin Alamat</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Show &amp;QR Code</source>
-        <translation>&amp;QR Kód Mutatása</translation>
+        <translation>Unjukkan &amp;Kode QR</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Sign a message to prove you own a Abjcoin address</source>
-        <translation>Írj alá egy üzenetet, hogy bizonyíthasd egy Abjcoin-cím birtoklását</translation>
+        <translation>Masukan  pesan untuk membuktikan bahwa anda telah mempunyai adress Abjcoin</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Sign &amp;Message</source>
-        <translation>&amp;Üzenet Aláírása</translation>
+        <translation>Sign &amp; Pesan</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Delete the currently selected address from the list</source>
-        <translation>A kiválasztott cím törlése a listáról</translation>
+        <translation>Menghapus alamat yang saat ini dipilih dari daftar yang tersedia</translation>
     </message>
     <message>
         <location line="-14"/>
         <source>Verify a message to ensure it was signed with a specified Abjcoin address</source>
-        <translation>Hitelesíts egy üzenetet ahhoz, hogy bebizonyosodjon Abjcoin-cím alapján a feladó kiléte</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Verify Message</source>
-        <translation>Üzenet &amp;Hitelesítése</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+14"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Törlés</translation>
+        <translation>&amp;Hapus</translation>
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+65"/>
         <source>Copy &amp;Label</source>
-        <translation>Címke &amp;Másolása</translation>
+        <translation>Salin &amp;Label</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Edit</source>
-        <translation>Sz&amp;erkesztés</translation>
+        <translation>&amp;Ubah</translation>
     </message>
     <message>
         <location line="+250"/>
         <source>Export Address Book Data</source>
-        <translation>Címjegyzék Exportálása</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
-        <translation>Vesszővel elválasztott fájl (*.csv)</translation>
+        <translation>File CSV (*.csv)</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Error exporting</source>
-        <translation>Hiba exportálás</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Could not write to file %1.</source>
-        <translation>Nem lehetett írni a fájlt a következő helyen: %1.</translation>
+        <translation>Penulisan data ke file gagal %1</translation>
     </message>
 </context>
 <context>
@@ -142,17 +140,17 @@ Ez a termék tartalmaz az OpenSSL Project által az OpenSSL Toolkit-hez (http://
     <message>
         <location filename="../addresstablemodel.cpp" line="+144"/>
         <source>Label</source>
-        <translation>Címke</translation>
+        <translation>Label</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Address</source>
-        <translation>Cím</translation>
+        <translation>Alamat</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>(no label)</source>
-        <translation>(nincs címke)</translation>
+        <translation>(tidak ada label)</translation>
     </message>
 </context>
 <context>
@@ -160,109 +158,109 @@ Ez a termék tartalmaz az OpenSSL Project által az OpenSSL Toolkit-hez (http://
     <message>
         <location filename="../forms/askpassphrasedialog.ui" line="+26"/>
         <source>Passphrase Dialog</source>
-        <translation>Kulcsszó Párbeszédablak</translation>
+        <translation>Dialog Kata kunci</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Enter passphrase</source>
-        <translation>Add meg a jelszót</translation>
+        <translation>Masukkan kata kunci</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>New passphrase</source>
-        <translation>Új jelszó</translation>
+        <translation>Kata kunci baru</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Repeat new passphrase</source>
-        <translation>Új jelszó ismét</translation>
+        <translation>Ulangi kata kunci baru</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
-        <translation>Triviálisan a sendmoney parancs letiltására szolgál, amennyiben az OS felhasználója kompromittálódik. Nem ad valós biztonságot.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>For staking only</source>
-        <translation>Csak kamatoztatásra</translation>
+        <translation>Hanya untuk staking</translation>
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="+35"/>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
-        <translation>Írd be az új jelszót a tárcához.&lt;br/&gt;Használj &lt;b&gt;legalább 10 véletlenszerű karaktert&lt;/b&gt;, vagy &lt;b&gt;legalább nyolc szót&lt;/b&gt;.</translation>
+        <translation>Masukkan kata kunci baru ke dompet.&lt;br/&gt;Mohon gunakan kata kunci dengan &lt;b&gt;10 karakter atau lebih dengan acak&lt;/b&gt;, atau &lt;b&gt;delapan kata atau lebih&lt;/b&gt;.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Encrypt wallet</source>
-        <translation>Tárca kódolása</translation>
+        <translation>Meng-enkripsikan dompet</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
-        <translation>Ez a művelet a tárcád jelszavának megadását igényli annak megnyitásához.</translation>
+        <translation>Operasi ini memerlukan kata kunci dompet Anda untuk membuka dompet ini.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Unlock wallet</source>
-        <translation>Tárca feloldása</translation>
+        <translation>Buka dompet</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
-        <translation>Ez a művelet a tárcád jelszavának megadását igényli annak dekódolásához.</translation>
+        <translation>Operasi ini memerlukan kata kunci dompet Anda untuk mendekripsi dompet ini.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Decrypt wallet</source>
-        <translation>Tárca dekódolása</translation>
+        <translation>Men-dekripsikan dompet</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Change passphrase</source>
-        <translation>Jelszó megváltoztatása</translation>
+        <translation>Ubah kata kunci</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Enter the old and new passphrase to the wallet.</source>
-        <translation>Írd be a tárca régi és új jelszavát.</translation>
+        <translation>Masukkan kata kunci lama dan baru ke dompet ini.</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Confirm wallet encryption</source>
-        <translation>Biztosan kódolni akarod a tárcát?</translation>
+        <translation>Menkonfirmasi enkripsi dompet</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
-        <translation>Figyelmeztetés: Ha kódolod a tárcád és elveszíted annak jelszavát, el fogod &lt;b&gt;VESZÍTENI AZ ÖSSZES ÉRMÉDET&lt;/b&gt;!</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation>Biztosan kódolni akarod a tárcát?</translation>
+        <translation>Apakah Anda yakin untuk mengenkripsi dompet Anda?</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
-        <translation>FONTOS: A pénztárca-fájl korábbi mentéseit ezzel az új, titkosított pénztárca-fájllal kell helyettesíteni. Biztonsági okokból a pénztárca-fájl korábbi titkosítás nélküli mentései haszontalanná válnak amint elkezdi használni az új, titkosított pénztárcát.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+103"/>
         <location line="+24"/>
         <source>Warning: The Caps Lock key is on!</source>
-        <translation type="unfinished"/>
+        <translation>Peringatan: tombol Caps Lock aktif!</translation>
     </message>
     <message>
         <location line="-133"/>
         <location line="+60"/>
         <source>Wallet encrypted</source>
-        <translation>Tárca kódolva</translation>
+        <translation>Dompet terenkripsi</translation>
     </message>
     <message>
         <location line="-58"/>
         <source>Abjcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished"/>
+        <translation>Abjcoin akan ditutup untuk menyelesaikan proses enkripsi. Ingat bahwa dompet Anda tidak bisa di lindungi dengan enkripsi sepenuhny dari pencurian melalui infeksi malware di komputer Anda.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -270,40 +268,40 @@ Ez a termék tartalmaz az OpenSSL Project által az OpenSSL Toolkit-hez (http://
         <location line="+44"/>
         <location line="+6"/>
         <source>Wallet encryption failed</source>
-        <translation>Tárca kódolása sikertelen.</translation>
+        <translation>Enkripsi dompet gagal</translation>
     </message>
     <message>
         <location line="-56"/>
         <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
-        <translation>Tárca kódolása belső hiba miatt sikertelen. A tárcád nem lett kódolva.</translation>
+        <translation>Enkripsi dompet gagal karena kesalahan internal. Dompet Anda tidak dienkripsi.</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+50"/>
         <source>The supplied passphrases do not match.</source>
-        <translation>A megadott jelszavak nem egyeznek.</translation>
+        <translation>Kata kunci yang dimasukkan tidak cocok.</translation>
     </message>
     <message>
         <location line="-38"/>
         <source>Wallet unlock failed</source>
-        <translation>Tárca megnyitása sikertelen</translation>
+        <translation>Gagal buka dompet</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+12"/>
         <location line="+19"/>
         <source>The passphrase entered for the wallet decryption was incorrect.</source>
-        <translation>Hibás jelszó.</translation>
+        <translation>Kata kunci yang dimasukkan untuk dekripsi dompet tidak cocok.</translation>
     </message>
     <message>
         <location line="-20"/>
         <source>Wallet decryption failed</source>
-        <translation>Dekódolás sikertelen.</translation>
+        <translation>Dekripsi dompet gagal</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Wallet passphrase was successfully changed.</source>
-        <translation>Jelszó megváltoztatva.</translation>
+        <translation>Passphrase dompet telah berhasil diubah.</translation>
     </message>
 </context>
 <context>
@@ -311,239 +309,239 @@ Ez a termék tartalmaz az OpenSSL Project által az OpenSSL Toolkit-hez (http://
     <message>
         <location filename="../bitcoingui.cpp" line="+280"/>
         <source>Sign &amp;message...</source>
-        <translation>Üzenet aláírása...</translation>
+        <translation>Pesan &amp;penanda...</translation>
     </message>
     <message>
         <location line="+242"/>
         <source>Synchronizing with network...</source>
-        <translation>Szinkronizálás a hálózattal...</translation>
+        <translation>Sinkronisasi dengan jaringan...</translation>
     </message>
     <message>
         <location line="-308"/>
         <source>&amp;Overview</source>
-        <translation>&amp;Áttekintés</translation>
+        <translation>&amp;Kilasan</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show general overview of wallet</source>
-        <translation>Tárca általános áttekintése</translation>
+        <translation>Tampilkan kilasan umum dari dompet</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Transactions</source>
-        <translation>&amp;Tranzakciók</translation>
+        <translation>&amp;Transaksi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Browse transaction history</source>
-        <translation>Tranzakciótörténet megtekintése</translation>
+        <translation>Jelajah sejarah transaksi</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>&amp;Address Book</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Buku Alamat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit the list of stored addresses and labels</source>
-        <translation type="unfinished"/>
+        <translation>Mengedit daftar alamat-alamat dan label</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>&amp;Receive coins</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Menerima koin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show the list of addresses for receiving payments</source>
-        <translation type="unfinished"/>
+        <translation>Tampilkan daftar alamat untuk menerima pembayaran</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>&amp;Send coins</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Kirim koin</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>E&amp;xit</source>
-        <translation>&amp;Kilépés</translation>
+        <translation>K&amp;eluar</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Quit application</source>
-        <translation>Kilépés</translation>
+        <translation>Keluar dari aplikasi</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Show information about Abjcoin</source>
-        <translation type="unfinished"/>
+        <translation>Tunjukkan informasi tentang Abjcoin</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>About &amp;Qt</source>
-        <translation>A &amp;Qt-ról</translation>
+        <translation>Mengenai &amp;Qt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show information about Qt</source>
-        <translation>Információk a Qt ról</translation>
+        <translation>Tampilkan informasi mengenai Qt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Options...</source>
-        <translation>&amp;Opciók...</translation>
+        <translation>&amp;Pilihan...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Encrypt Wallet...</source>
-        <translation>Tárca &amp;kódolása...</translation>
+        <translation>%Enkripsi Dompet...</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Backup Wallet...</source>
-        <translation>&amp;Bisztonsági másolat készítése a Tárcáról</translation>
+        <translation>&amp;Cadangkan Dompet...</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Change Passphrase...</source>
-        <translation>Jelszó &amp;megváltoztatása...</translation>
+        <translation>&amp;Ubah Kata Kunci...</translation>
     </message>
     <message numerus="yes">
         <location line="+250"/>
         <source>~%n block(s) remaining</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation><numerusform>~%n blok yang tersisah</numerusform></translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Downloaded %1 of %2 blocks of transaction history (%3% done).</source>
-        <translation type="unfinished"/>
+        <translation>%1 dari %2 telah diunduh, blok dari sejarah transaksi (%3% selesai).</translation>
     </message>
     <message>
         <location line="-247"/>
         <source>&amp;Export...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Ekspor...</translation>
     </message>
     <message>
         <location line="-62"/>
         <source>Send coins to a Abjcoin address</source>
-        <translation type="unfinished"/>
+        <translation>Kirim koin ke alamat Abjcoin</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Modify configuration options for Abjcoin</source>
-        <translation type="unfinished"/>
+        <translation>Memodifikasi opsi aturan untuk Abjcoin</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Export the data in the current tab to a file</source>
-        <translation type="unfinished"/>
+        <translation>Mengekspor data dari tab saat ini ke dalam file</translation>
     </message>
     <message>
         <location line="-14"/>
         <source>Encrypt or decrypt wallet</source>
-        <translation type="unfinished"/>
+        <translation>Mengenkripsi atau mendekripsi dompet</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Backup wallet to another location</source>
-        <translation>Biztonsági másolat készítése a Tárcáról egy másik helyre</translation>
+        <translation>Cadangkan dompet ke lokasi lain</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Change the passphrase used for wallet encryption</source>
-        <translation>Tárcakódoló jelszó megváltoztatása</translation>
+        <translation>Ubah kata kunci yang digunakan untuk enkripsi dompet</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Debug window</source>
-        <translation>&amp;Debug ablak</translation>
+        <translation>&amp;Jendela Debug</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Open debugging and diagnostic console</source>
-        <translation>Hibakereső és diagnosztikai konzol megnyitása</translation>
+        <translation>Buka konsol debug dan diagnosa</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>&amp;Verify message...</source>
-        <translation>Üzenet &amp;valódiságának ellenőrzése</translation>
+        <translation>&amp;Verifikasi pesan...</translation>
     </message>
     <message>
         <location line="-200"/>
         <source>Abjcoin</source>
-        <translation type="unfinished"/>
+        <translation>Abjcoin (CoinHitam)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wallet</source>
-        <translation>Tárca</translation>
+        <translation>Dompet</translation>
     </message>
     <message>
         <location line="+178"/>
         <source>&amp;About Abjcoin</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Tentang Abjcoin</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Show / Hide</source>
-        <translation>&amp;Mutat / Elrejt</translation>
+        <translation>&amp;Tunjukkan / Sembunyikan</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Unlock wallet</source>
-        <translation type="unfinished"/>
+        <translation>Buka Dompet</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>&amp;Lock Wallet</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Kunci Dompet</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lock wallet</source>
-        <translation type="unfinished"/>
+        <translation>Kunci dompet</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>&amp;File</source>
-        <translation>&amp;Fájl</translation>
+        <translation>&amp;Berkas</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Settings</source>
-        <translation>&amp;Beállítások</translation>
+        <translation>&amp;Pengaturan</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Help</source>
-        <translation>&amp;Súgó</translation>
+        <translation>&amp;Bantuan</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Tabs toolbar</source>
-        <translation>Fül eszköztár</translation>
+        <translation>Baris tab</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Actions toolbar</source>
-        <translation type="unfinished"/>
+        <translation>Baris tab</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+9"/>
         <source>[testnet]</source>
-        <translation>[teszthálózat]</translation>
+        <translation>[testnet]</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+60"/>
         <source>Abjcoin client</source>
-        <translation type="unfinished"/>
+        <translation>Klien Abjcoin</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
         <source>%n active connection(s) to Abjcoin network</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+40"/>
@@ -578,37 +576,37 @@ Ez a termék tartalmaz az OpenSSL Project által az OpenSSL Toolkit-hez (http://
     <message numerus="yes">
         <location line="-403"/>
         <source>%n second(s) ago</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="-284"/>
         <source>&amp;Unlock Wallet...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Buka Dompet</translation>
     </message>
     <message numerus="yes">
         <location line="+288"/>
         <source>%n minute(s) ago</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation><numerusform>%n menit yang lalu</numerusform></translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n hour(s) ago</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation><numerusform>%n jam yang lalu</numerusform></translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n day(s) ago</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation><numerusform>%n hari yang lalu</numerusform></translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Up to date</source>
-        <translation>Naprakész</translation>
+        <translation>Terbaru</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Catching up...</source>
-        <translation>Frissítés...</translation>
+        <translation>Menyusul...</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -628,12 +626,12 @@ Ez a termék tartalmaz az OpenSSL Project által az OpenSSL Toolkit-hez (http://
     <message>
         <location line="+27"/>
         <source>Sent transaction</source>
-        <translation>Tranzakció elküldve.</translation>
+        <translation>Transaksi terkirim</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Incoming transaction</source>
-        <translation>Beérkező tranzakció</translation>
+        <translation>Transaksi diterima</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -642,10 +640,10 @@ Amount: %2
 Type: %3
 Address: %4
 </source>
-        <translation>Dátum: %1
-Összeg: %2
-Típus: %3
-Cím: %4
+        <translation>Tanggal: %1
+Jumlah: %2
+Jenis: %3
+Alamat: %4
 </translation>
     </message>
     <message>
@@ -663,12 +661,12 @@ Cím: %4
     <message>
         <location line="+18"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>Tárca &lt;b&gt;kódolva&lt;/b&gt; és jelenleg &lt;b&gt;nyitva&lt;/b&gt;.</translation>
+        <translation>Dompet saat ini &lt;b&gt;terenkripsi&lt;/b&gt; dan &lt;b&gt;terbuka&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>Tárca &lt;b&gt;kódolva&lt;/b&gt; és jelenleg &lt;b&gt;zárva&lt;/b&gt;.</translation>
+        <translation>Dompet saat ini &lt;b&gt;terenkripsi&lt;/b&gt; dan &lt;b&gt;terkunci&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -683,7 +681,7 @@ Cím: %4
     <message>
         <location line="+3"/>
         <source>Backup Failed</source>
-        <translation type="unfinished"/>
+        <translation>Back-up Gagal</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -693,27 +691,27 @@ Cím: %4
     <message numerus="yes">
         <location line="+76"/>
         <source>%n second(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation><numerusform>%n detik</numerusform></translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n minute(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation><numerusform>%n menit</numerusform></translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n hour(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation><numerusform>%n jam</numerusform></translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n day(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation><numerusform>%n hari</numerusform></translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Not staking</source>
-        <translation type="unfinished"/>
+        <translation>Lagi tidak staking</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+109"/>
@@ -726,7 +724,7 @@ Cím: %4
     <message>
         <location filename="../clientmodel.cpp" line="+90"/>
         <source>Network Alert</source>
-        <translation>Hálózati figyelmeztetés</translation>
+        <translation>Notifikasi Jaringan</translation>
     </message>
 </context>
 <context>
@@ -739,27 +737,27 @@ Cím: %4
     <message>
         <location line="+31"/>
         <source>Quantity:</source>
-        <translation type="unfinished"/>
+        <translation>Jumlah:</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Bytes:</source>
-        <translation type="unfinished"/>
+        <translation>Bytes:</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Amount:</source>
-        <translation>Összeg:</translation>
+        <translation>Jumlah:</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Priority:</source>
-        <translation type="unfinished"/>
+        <translation>Prioritas:</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Fee:</source>
-        <translation type="unfinished"/>
+        <translation>Biaya:</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -769,17 +767,17 @@ Cím: %4
     <message>
         <location filename="../coincontroldialog.cpp" line="+551"/>
         <source>no</source>
-        <translation type="unfinished"/>
+        <translation>tidak</translation>
     </message>
     <message>
         <location filename="../forms/coincontroldialog.ui" line="+51"/>
         <source>After Fee:</source>
-        <translation type="unfinished"/>
+        <translation>Setelah biaya:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Change:</source>
-        <translation type="unfinished"/>
+        <translation>Perubahan:</translation>
     </message>
     <message>
         <location line="+69"/>
@@ -794,27 +792,27 @@ Cím: %4
     <message>
         <location line="+16"/>
         <source>List mode</source>
-        <translation type="unfinished"/>
+        <translation>mode Daftar</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Amount</source>
-        <translation>Összeg</translation>
+        <translation>Jumlah</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Label</source>
-        <translation type="unfinished"/>
+        <translation>Label</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Address</source>
-        <translation>Cím</translation>
+        <translation>Alamat</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Date</source>
-        <translation>Dátum</translation>
+        <translation>Tanggal</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -824,113 +822,113 @@ Cím: %4
     <message>
         <location line="+3"/>
         <source>Confirmed</source>
-        <translation>Megerősítve</translation>
+        <translation>Terkonfirmasi</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Priority</source>
-        <translation type="unfinished"/>
+        <translation>Prioritas</translation>
     </message>
     <message>
         <location filename="../coincontroldialog.cpp" line="-515"/>
         <source>Copy address</source>
-        <translation>Cím másolása</translation>
+        <translation>Salin alamat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy label</source>
-        <translation>Címke másolása</translation>
+        <translation>Salin label</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+26"/>
         <source>Copy amount</source>
-        <translation>Összeg másolása</translation>
+        <translation>Salin jumlah</translation>
     </message>
     <message>
         <location line="-25"/>
         <source>Copy transaction ID</source>
-        <translation>Tranzakcióazonosító másolása</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+24"/>
         <source>Copy quantity</source>
-        <translation type="unfinished"/>
+        <translation>Salikan jumlah</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Copy fee</source>
-        <translation type="unfinished"/>
+        <translation>Salinkan Biaya</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy after fee</source>
-        <translation type="unfinished"/>
+        <translation>Salinkan setelah biaya</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy bytes</source>
-        <translation type="unfinished"/>
+        <translation>Salinkan bytes</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy priority</source>
-        <translation type="unfinished"/>
+        <translation>Salinkan prioritas</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy low output</source>
-        <translation type="unfinished"/>
+        <translation>Salinkan output rendah</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy change</source>
-        <translation type="unfinished"/>
+        <translation>Salinkan perubahan</translation>
     </message>
     <message>
         <location line="+317"/>
         <source>highest</source>
-        <translation type="unfinished"/>
+        <translation>tertinggi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>high</source>
-        <translation type="unfinished"/>
+        <translation>tinggi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>medium-high</source>
-        <translation type="unfinished"/>
+        <translation>menengah-tinggi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>medium</source>
-        <translation type="unfinished"/>
+        <translation>menengah</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>low-medium</source>
-        <translation type="unfinished"/>
+        <translation>rendah-menengah</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>low</source>
-        <translation type="unfinished"/>
+        <translation>rendah</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>lowest</source>
-        <translation type="unfinished"/>
+        <translation>terendah</translation>
     </message>
     <message>
         <location line="+155"/>
         <source>DUST</source>
-        <translation type="unfinished"/>
+        <translation>DUST</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>yes</source>
-        <translation type="unfinished"/>
+        <translation>ya</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -970,17 +968,17 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+37"/>
         <location line="+66"/>
         <source>(no label)</source>
-        <translation>(nincs címke)</translation>
+        <translation>(tidak ada label)</translation>
     </message>
     <message>
         <location line="-9"/>
         <source>change from %1 (%2)</source>
-        <translation type="unfinished"/>
+        <translation>perubahan dari %1 (%2)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(change)</source>
-        <translation type="unfinished"/>
+        <translation>(perubahan)</translation>
     </message>
 </context>
 <context>
@@ -988,12 +986,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../forms/editaddressdialog.ui" line="+14"/>
         <source>Edit Address</source>
-        <translation>Cím szerkesztése</translation>
+        <translation>Ubah Alamat</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Label</source>
-        <translation>Cím&amp;ke</translation>
+        <translation>&amp;Label</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1003,7 +1001,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+7"/>
         <source>&amp;Address</source>
-        <translation>&amp;Cím</translation>
+        <translation>&amp;Alamat</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1013,27 +1011,27 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../editaddressdialog.cpp" line="+20"/>
         <source>New receiving address</source>
-        <translation>Új fogadó cím</translation>
+        <translation>Alamat menerima baru</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>New sending address</source>
-        <translation>Új küldő cím</translation>
+        <translation>Alamat mengirim baru</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Edit receiving address</source>
-        <translation>Fogadó cím szerkesztése</translation>
+        <translation>Ubah alamat menerima</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Edit sending address</source>
-        <translation>Küldő cím szerkesztése</translation>
+        <translation>Ubah alamat mengirim</translation>
     </message>
     <message>
         <location line="+76"/>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
-        <translation>A megadott &quot;%1&quot; cím már szerepel a címjegyzékben.</translation>
+        <translation>Alamat yang dimasukkan &quot;%1&quot; sudah ada di dalam buku alamat.</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -1043,12 +1041,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+10"/>
         <source>Could not unlock wallet.</source>
-        <translation>Tárca feloldása sikertelen</translation>
+        <translation>Tidak dapat membuka dompet.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>New key generation failed.</source>
-        <translation>Új kulcs generálása sikertelen</translation>
+        <translation>Pembuatan kunci baru gagal.</translation>
     </message>
 </context>
 <context>
@@ -1057,17 +1055,17 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
         <source>Abjcoin-Qt</source>
-        <translation type="unfinished"/>
+        <translation>Abjcoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
         <source>version</source>
-        <translation type="unfinished"/>
+        <translation>versi</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Usage:</source>
-        <translation type="unfinished"/>
+        <translation>Penggunaan:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1100,12 +1098,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../forms/optionsdialog.ui" line="+14"/>
         <source>Options</source>
-        <translation>Opciók</translation>
+        <translation>Pilihan</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>&amp;Main</source>
-        <translation>&amp;Fő</translation>
+        <translation>&amp;Utama</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1115,7 +1113,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+15"/>
         <source>Pay transaction &amp;fee</source>
-        <translation>Tranzakciós &amp;díj fizetése</translation>
+        <translation>Bayar &amp;biaya transaksi</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1150,7 +1148,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+21"/>
         <source>&amp;Network</source>
-        <translation>&amp;Hálózat</translation>
+        <translation>&amp;Jaringan</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1160,7 +1158,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+3"/>
         <source>Map port using &amp;UPnP</source>
-        <translation>&amp;UPnP port-feltérképezés</translation>
+        <translation>Petakan port dengan &amp;UPnP</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1175,7 +1173,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+9"/>
         <source>Proxy &amp;IP:</source>
-        <translation>Proxy &amp;IP:</translation>
+        <translation>IP Proxy:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -1190,52 +1188,52 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+19"/>
         <source>Port of the proxy (e.g. 9050)</source>
-        <translation>Proxy portja (pl.: 9050)</translation>
+        <translation>Port proxy (cth. 9050)</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>SOCKS &amp;Version:</source>
-        <translation>SOCKS &amp;Verzió:</translation>
+        <translation>Versi &amp;SOCKS:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>SOCKS version of the proxy (e.g. 5)</source>
-        <translation>A proxy SOCKS verziója  (pl. 5)</translation>
+        <translation>Versi SOCKS proxy (cth. 5)</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>&amp;Window</source>
-        <translation>&amp;Ablak</translation>
+        <translation>&amp;Jendela</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show only a tray icon after minimizing the window.</source>
-        <translation>Kicsinyítés után csak eszköztár-ikont mutass</translation>
+        <translation>Hanya tampilkan ikon tray setelah meminilisasi jendela</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Minimize to the tray instead of the taskbar</source>
-        <translation>&amp;Kicsinyítés a tálcára az eszköztár helyett</translation>
+        <translation>&amp;Meminilisasi ke tray daripada taskbar</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Quit in the menu.</source>
-        <translation>Az alkalmazásból való kilépés helyett az eszköztárba kicsinyíti az alkalmazást az ablak bezárásakor. Ez esetben az alkalmazás csak a Kilépés menüponttal zárható be.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>M&amp;inimize on close</source>
-        <translation>K&amp;icsinyítés záráskor</translation>
+        <translation>M&amp;eminilisasi saat tutup</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>&amp;Display</source>
-        <translation>&amp;Megjelenítés</translation>
+        <translation>&amp;Tampilan</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>User Interface &amp;language:</source>
-        <translation>Felhasználófelület nye&amp;lve:</translation>
+        <translation>&amp;Bahasa Antarmuka Pengguna:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1245,12 +1243,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+11"/>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>&amp;Mértékegység:</translation>
+        <translation>&amp;Unit untuk menunjukkan jumlah:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Válaszd ki az interfészen és érmék küldésekor megjelenítendő alapértelmezett alegységet.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+9"/>
@@ -1260,7 +1258,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+3"/>
         <source>&amp;Display addresses in transaction list</source>
-        <translation>&amp;Címek megjelenítése a tranzakciólistában</translation>
+        <translation>&amp;Tampilkan alamat dalam daftar transaksi</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1275,12 +1273,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+71"/>
         <source>&amp;OK</source>
-        <translation>&amp;OK</translation>
+        <translation>&amp;YA</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Cancel</source>
-        <translation>Megszakítás</translation>
+        <translation>&amp;Batal</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1290,13 +1288,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../optionsdialog.cpp" line="+55"/>
         <source>default</source>
-        <translation>alapértelmezett</translation>
+        <translation>standar</translation>
     </message>
     <message>
         <location line="+149"/>
         <location line="+9"/>
         <source>Warning</source>
-        <translation type="unfinished"/>
+        <translation>Peringatan</translation>
     </message>
     <message>
         <location line="-9"/>
@@ -1307,7 +1305,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+29"/>
         <source>The supplied proxy address is invalid.</source>
-        <translation>A megadott proxy cím nem érvényes.</translation>
+        <translation>Alamat proxy yang diisi tidak valid.</translation>
     </message>
 </context>
 <context>
@@ -1315,7 +1313,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../forms/overviewpage.ui" line="+14"/>
         <source>Form</source>
-        <translation>Űrlap</translation>
+        <translation>Formulir</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -1326,7 +1324,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-160"/>
         <source>Stake:</source>
-        <translation type="unfinished"/>
+        <translation>Stake:</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1336,7 +1334,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-107"/>
         <source>Wallet</source>
-        <translation>Tárca</translation>
+        <translation>Dompet</translation>
     </message>
     <message>
         <location line="+49"/>
@@ -1346,32 +1344,32 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+16"/>
         <source>Your current spendable balance</source>
-        <translation>Jelenlegi egyenleg</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+71"/>
         <source>Immature:</source>
-        <translation>Éretlen:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
         <source>Mined balance that has not yet matured</source>
-        <translation>Bányászott egyenleg amely még nem érett be.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+20"/>
         <source>Total:</source>
-        <translation>Összesen:</translation>
+        <translation>Total:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Your current total balance</source>
-        <translation>Aktuális egyenleged</translation>
+        <translation>Total saldo anda saat ini</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Legutóbbi tranzakciók&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Transaksi sebelumnya&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="-108"/>
@@ -1387,7 +1385,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location filename="../overviewpage.cpp" line="+113"/>
         <location line="+1"/>
         <source>out of sync</source>
-        <translation>Nincs szinkronban.</translation>
+        <translation>tidak tersinkron</translation>
     </message>
 </context>
 <context>
@@ -1400,27 +1398,27 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+59"/>
         <source>Request Payment</source>
-        <translation type="unfinished"/>
+        <translation>Permintaan Pembayaran</translation>
     </message>
     <message>
         <location line="+56"/>
         <source>Amount:</source>
-        <translation type="unfinished"/>
+        <translation>Jumlah:</translation>
     </message>
     <message>
         <location line="-44"/>
         <source>Label:</source>
-        <translation type="unfinished"/>
+        <translation>Label:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Message:</source>
-        <translation type="unfinished"/>
+        <translation>Pesan:</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>&amp;Save As...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Simpan Sebagai...</translation>
     </message>
     <message>
         <location filename="../qrcodedialog.cpp" line="+62"/>
@@ -1440,12 +1438,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+25"/>
         <source>Save QR Code</source>
-        <translation type="unfinished"/>
+        <translation>Simpan Code QR</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>PNG Images (*.png)</source>
-        <translation type="unfinished"/>
+        <translation>Gambar PNG (*.png)</translation>
     </message>
 </context>
 <context>
@@ -1453,7 +1451,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../forms/rpcconsole.ui" line="+46"/>
         <source>Client name</source>
-        <translation>Kliens néve</translation>
+        <translation>Nama Klien</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1467,37 +1465,37 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+23"/>
         <location filename="../rpcconsole.cpp" line="+348"/>
         <source>N/A</source>
-        <translation>Nem elérhető</translation>
+        <translation>T/S</translation>
     </message>
     <message>
         <location line="-217"/>
         <source>Client version</source>
-        <translation>Kliens verzió</translation>
+        <translation>Versi Klien</translation>
     </message>
     <message>
         <location line="-45"/>
         <source>&amp;Information</source>
-        <translation>&amp;Információ</translation>
+        <translation>&amp;Informasi</translation>
     </message>
     <message>
         <location line="+68"/>
         <source>Using OpenSSL version</source>
-        <translation>Használt OpenSSL verzió</translation>
+        <translation>Menggunakan versi OpenSSL</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Startup time</source>
-        <translation>Bekapcsolás ideje</translation>
+        <translation>Waktu nyala</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Network</source>
-        <translation>Hálózat</translation>
+        <translation>Jaringan</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Number of connections</source>
-        <translation>Kapcsolatok száma</translation>
+        <translation>Jumlah hubungan</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1507,27 +1505,27 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+23"/>
         <source>Block chain</source>
-        <translation>Blokklánc</translation>
+        <translation>Rantai blok</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Current number of blocks</source>
-        <translation>Aktuális blokkok száma</translation>
+        <translation>Jumlah blok terkini</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Estimated total blocks</source>
-        <translation>Becsült összes blokk</translation>
+        <translation>Perkiraan blok total</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Last block time</source>
-        <translation>Utolsó blokk ideje</translation>
+        <translation>Waktu blok terakhir</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>&amp;Open</source>
-        <translation>&amp;Megnyitás</translation>
+        <translation>&amp;Buka</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -1542,17 +1540,17 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+3"/>
         <source>&amp;Show</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Tunjukkan</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>&amp;Console</source>
-        <translation>&amp;Konzol</translation>
+        <translation>&amp;Konsol</translation>
     </message>
     <message>
         <location line="-260"/>
         <source>Build date</source>
-        <translation>Fordítás dátuma</translation>
+        <translation>Tanggal pembuatan</translation>
     </message>
     <message>
         <location line="-104"/>
@@ -1562,12 +1560,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+25"/>
         <source>Abjcoin Core</source>
-        <translation type="unfinished"/>
+        <translation>Inti Abjcoin</translation>
     </message>
     <message>
         <location line="+279"/>
         <source>Debug log file</source>
-        <translation>Debug naplófájl</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
@@ -1577,7 +1575,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+102"/>
         <source>Clear console</source>
-        <translation>Konzol törlése</translation>
+        <translation>Bersihkan konsol</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
@@ -1587,12 +1585,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+1"/>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
-        <translation>Navigálhat a fel és le nyilakkal, és &lt;b&gt;Ctrl-L&lt;/b&gt; -vel törölheti a képernyőt.</translation>
+        <translation>Gunakan panah keatas dan kebawah untuk menampilkan sejarah, dan &lt;b&gt;Ctrl-L&lt;/b&gt; untuk bersihkan layar.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
-        <translation>Írd be azt, hogy &lt;b&gt;help&lt;/b&gt; az elérhető parancsok áttekintéséhez.</translation>
+        <translation>Ketik &lt;b&gt;help&lt;/b&gt; untuk menampilkan perintah tersedia.</translation>
     </message>
 </context>
 <context>
@@ -1607,7 +1605,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>Érmék küldése</translation>
+        <translation>Kirim Koin</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -1627,28 +1625,28 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+19"/>
         <source>Insufficient funds!</source>
-        <translation type="unfinished"/>
+        <translation>Jumlah dana dibutuhkan tidak mencukupi!</translation>
     </message>
     <message>
         <location line="+77"/>
         <source>Quantity:</source>
-        <translation type="unfinished"/>
+        <translation>Jumlah:</translation>
     </message>
     <message>
         <location line="+22"/>
         <location line="+35"/>
         <source>0</source>
-        <translation type="unfinished"/>
+        <translation>0</translation>
     </message>
     <message>
         <location line="-19"/>
         <source>Bytes:</source>
-        <translation type="unfinished"/>
+        <translation>Bytes:</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Amount:</source>
-        <translation>Összeg:</translation>
+        <translation>Jumlah:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -1656,42 +1654,42 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+86"/>
         <location line="+32"/>
         <source>0.00 BC</source>
-        <translation type="unfinished"/>
+        <translation>123.456 BC {0.00 ?}</translation>
     </message>
     <message>
         <location line="-191"/>
         <source>Priority:</source>
-        <translation type="unfinished"/>
+        <translation>Prioritas:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>medium</source>
-        <translation type="unfinished"/>
+        <translation>menengah</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Fee:</source>
-        <translation type="unfinished"/>
+        <translation>Biaya:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Low Output:</source>
-        <translation type="unfinished"/>
+        <translation>Output Rendah:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>no</source>
-        <translation type="unfinished"/>
+        <translation>tidak</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>After Fee:</source>
-        <translation type="unfinished"/>
+        <translation>Setelah Biaya:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Change</source>
-        <translation type="unfinished"/>
+        <translation>Perubahan</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -1701,12 +1699,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+106"/>
         <source>Send to multiple recipients at once</source>
-        <translation>Küldés több címzettnek egyszerre</translation>
+        <translation>Kirim ke beberapa penerima sekaligus</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add &amp;Recipient</source>
-        <translation>&amp;Címzett hozzáadása</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+20"/>
@@ -1716,12 +1714,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+3"/>
         <source>Clear &amp;All</source>
-        <translation>Mindent &amp;töröl</translation>
+        <translation>Hapus %Semua</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Balance:</source>
-        <translation>Egyenleg:</translation>
+        <translation>Saldo:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -1731,12 +1729,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+31"/>
         <source>Confirm the send action</source>
-        <translation>Küldés megerősítése</translation>
+        <translation>Konfirmasi aksi pengiriman</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>S&amp;end</source>
-        <translation>&amp;Küldés</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
@@ -1751,7 +1749,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+1"/>
         <source>Copy amount</source>
-        <translation>Összeg másolása</translation>
+        <translation>Salin jumlah</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1791,7 +1789,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+5"/>
         <source>Confirm send coins</source>
-        <translation>Küldés megerősítése</translation>
+        <translation>Konfirmasi pengiriman koin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1806,27 +1804,27 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+29"/>
         <source>The recipient address is not valid, please recheck.</source>
-        <translation>A címzett címe érvénytelen, kérlek, ellenőrizd.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>The amount to pay must be larger than 0.</source>
-        <translation>A fizetendő összegnek nagyobbnak kell lennie 0-nál.</translation>
+        <translation>Jumlah yang dibayar harus lebih besar dari 0.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>The amount exceeds your balance.</source>
-        <translation>Nincs ennyi bitcoin az egyenlegeden.</translation>
+        <translation>Jumlah melebihi saldo Anda.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>The total exceeds your balance when the %1 transaction fee is included.</source>
-        <translation>A küldeni kívánt összeg és a %1 tranzakciós díj együtt meghaladja az egyenlegeden rendelkezésedre álló összeget.</translation>
+        <translation>Kelebihan total saldo Anda ketika biaya transaksi %1 ditambahkan.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Duplicate address found, can only send to each address once per send operation.</source>
-        <translation>Többször szerepel ugyanaz a cím. Egy küldési műveletben egy címre csak egyszer lehet küldeni.</translation>
+        <translation>Ditemukan alamat ganda, hanya dapat mengirim ke tiap alamat sekali per operasi pengiriman.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1846,7 +1844,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+13"/>
         <source>(no label)</source>
-        <translation>(nincs címke)</translation>
+        <translation>(tidak ada label)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1864,24 +1862,23 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+15"/>
         <source>A&amp;mount:</source>
-        <translation>Összeg:</translation>
+        <translation>J&amp;umlah:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Pay &amp;To:</source>
-        <translation>Címzett:</translation>
+        <translation>Kirim &amp;Ke:</translation>
     </message>
     <message>
         <location line="+24"/>
         <location filename="../sendcoinsentry.cpp" line="+25"/>
         <source>Enter a label for this address to add it to your address book</source>
-        <translation>Milyen címkével kerüljön be ez a cím a címtáradba?
-</translation>
+        <translation>Masukkan label bagi alamat ini untuk menambahkannya ke buku alamat Anda</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Label:</source>
-        <translation>Címke:</translation>
+        <translation>&amp;Label:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -1896,17 +1893,17 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+10"/>
         <source>Alt+A</source>
-        <translation>Alt+A</translation>
+        <translation>Alt+J</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Paste address from clipboard</source>
-        <translation>Cím beillesztése a vágólapról</translation>
+        <translation>Tempel alamat dari salinan</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Alt+P</source>
-        <translation>Alt+P</translation>
+        <translation>Alt+B</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1930,12 +1927,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+13"/>
         <location line="+124"/>
         <source>&amp;Sign Message</source>
-        <translation>Üzenet aláírása...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-118"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Aláírhat a címeivel üzeneteket, amivel bizonyíthatja, hogy a címek az önéi. Vigyázzon, hogy ne írjon alá semmi félreérthetőt, mivel a phising támadásokkal megpróbálhatják becsapni, hogy az azonosságát átírja másokra. Csak olyan részletes állításokat írjon alá, amivel egyetért.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+18"/>
@@ -1952,27 +1949,27 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="-193"/>
         <location line="+203"/>
         <source>Alt+A</source>
-        <translation>Alt+A</translation>
+        <translation>Alt+J</translation>
     </message>
     <message>
         <location line="-193"/>
         <source>Paste address from clipboard</source>
-        <translation>Cím beillesztése a vágólapról</translation>
+        <translation>Tempel alamat dari salinan</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Alt+P</source>
-        <translation>Alt+P</translation>
+        <translation>Alt+B</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Enter the message you want to sign here</source>
-        <translation>Ide írja az aláírandó üzenetet</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+24"/>
         <source>Copy the current signature to the system clipboard</source>
-        <translation>A jelenleg kiválasztott aláírás másolása a rendszer-vágólapra</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+21"/>
@@ -1988,18 +1985,18 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+3"/>
         <location line="+146"/>
         <source>Clear &amp;All</source>
-        <translation>Mindent &amp;töröl</translation>
+        <translation>Hapus %Semua</translation>
     </message>
     <message>
         <location line="-87"/>
         <location line="+70"/>
         <source>&amp;Verify Message</source>
-        <translation>Üzenet ellenőrzése</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-64"/>
         <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
-        <translation>Írja be az aláírás címét, az üzenetet (ügyelve arra, hogy az új-sor, szóköz, tab, stb. karaktereket is pontosan) és az aláírást az üzenet ellenőrzéséhez. Ügyeljen arra, ne gondoljon többet az aláírásról, mint amennyi az aláírt szövegben ténylegesen áll, hogy elkerülje a köztes-ember (man-in-the-middle) támadást.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+21"/>
@@ -2036,7 +2033,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+82"/>
         <location line="+81"/>
         <source>The entered address is invalid.</source>
-        <translation>A megadott cím nem érvényes.</translation>
+        <translation>Alamat yang dimasukkan tidak sesuai.</translation>
     </message>
     <message>
         <location line="-81"/>
@@ -2044,7 +2041,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+73"/>
         <location line="+8"/>
         <source>Please check the address and try again.</source>
-        <translation>Ellenőrizze a címet és próbálja meg újra.</translation>
+        <translation>Silahkan periksa alamat dan coba lagi.</translation>
     </message>
     <message>
         <location line="-81"/>
@@ -2065,23 +2062,23 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+12"/>
         <source>Message signing failed.</source>
-        <translation>Üzenet aláírása nem sikerült.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Message signed.</source>
-        <translation>Üzenet aláírva.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+59"/>
         <source>The signature could not be decoded.</source>
-        <translation>Az aláírást nem sikerült dekódolni.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <location line="+13"/>
         <source>Please check the signature and try again.</source>
-        <translation>Ellenőrizd az aláírást és próbáld újra.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
@@ -2091,12 +2088,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+7"/>
         <source>Message verification failed.</source>
-        <translation>Az üzenet ellenőrzése nem sikerült.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Message verified.</source>
-        <translation>Üzenet ellenőrizve.</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -2104,12 +2101,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../transactiondesc.cpp" line="+19"/>
         <source>Open until %1</source>
-        <translation>Megnyitva %1-ig</translation>
+        <translation>Buka hingga %1</translation>
     </message>
     <message numerus="yes">
         <location line="-2"/>
         <source>Open for %n block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2124,27 +2121,27 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+2"/>
         <source>%1/unconfirmed</source>
-        <translation>%1/megerősítetlen</translation>
+        <translation>%1/tidak terkonfirmasi</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 confirmations</source>
-        <translation>%1 megerősítés</translation>
+        <translation>%1 konfirmasi</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Status</source>
-        <translation>Állapot</translation>
+        <translation>Status</translation>
     </message>
     <message numerus="yes">
         <location line="+7"/>
         <source>, broadcast through %n node(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Date</source>
-        <translation>Dátum</translation>
+        <translation>Tanggal</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2154,31 +2151,31 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+0"/>
         <source>Generated</source>
-        <translation>Legenerálva</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <location line="+17"/>
         <source>From</source>
-        <translation>Űrlap</translation>
+        <translation>Dari</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+22"/>
         <location line="+58"/>
         <source>To</source>
-        <translation>Címzett</translation>
+        <translation>Untuk</translation>
     </message>
     <message>
         <location line="-77"/>
         <location line="+2"/>
         <source>own address</source>
-        <translation>saját cím</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-2"/>
         <source>label</source>
-        <translation>címke</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+37"/>
@@ -2187,17 +2184,17 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+17"/>
         <location line="+30"/>
         <source>Credit</source>
-        <translation>Jóváírás</translation>
+        <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="-102"/>
         <source>matures in %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>not accepted</source>
-        <translation>elutasítva</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+44"/>
@@ -2205,32 +2202,32 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+15"/>
         <location line="+30"/>
         <source>Debit</source>
-        <translation>Terhelés</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-39"/>
         <source>Transaction fee</source>
-        <translation>Tranzakciós díj</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+16"/>
         <source>Net amount</source>
-        <translation>Nettó összeg</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
         <source>Message</source>
-        <translation>Üzenet</translation>
+        <translation>Pesan:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Comment</source>
-        <translation>Megjegyzés</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Transaction ID</source>
-        <translation>Tranzakcióazonosító</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
@@ -2240,42 +2237,42 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+7"/>
         <source>Debug information</source>
-        <translation>Debug információ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
         <source>Transaction</source>
-        <translation>Tranzakció</translation>
+        <translation>Transaksi</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Inputs</source>
-        <translation>Bemenetek</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+23"/>
         <source>Amount</source>
-        <translation>Összeg</translation>
+        <translation>Jumlah</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>true</source>
-        <translation>igaz</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>false</source>
-        <translation>hamis</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-211"/>
         <source>, has not been successfully broadcast yet</source>
-        <translation>, még nem sikerült elküldeni.</translation>
+        <translation>, belum berhasil disiarkan</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>unknown</source>
-        <translation>ismeretlen</translation>
+        <translation>tidak diketahui</translation>
     </message>
 </context>
 <context>
@@ -2283,12 +2280,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../forms/transactiondescdialog.ui" line="+14"/>
         <source>Transaction details</source>
-        <translation>Tranzakció részletei</translation>
+        <translation>Rincian transaksi</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>This pane shows a detailed description of the transaction</source>
-        <translation>Ez a mező a tranzakció részleteit mutatja</translation>
+        <translation>Jendela ini menampilkan deskripsi rinci dari transaksi tersebut</translation>
     </message>
 </context>
 <context>
@@ -2296,37 +2293,37 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../transactiontablemodel.cpp" line="+226"/>
         <source>Date</source>
-        <translation>Dátum</translation>
+        <translation>Tanggal</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Type</source>
-        <translation>Típus</translation>
+        <translation>Jenis</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Address</source>
-        <translation>Cím</translation>
+        <translation>Alamat</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Amount</source>
-        <translation>Összeg</translation>
+        <translation>Jumlah</translation>
     </message>
     <message>
         <location line="+60"/>
         <source>Open until %1</source>
-        <translation>%1-ig megnyitva</translation>
+        <translation>Buka hingga %1</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Confirmed (%1 confirmations)</source>
-        <translation>Megerősítve (%1 megerősítés)</translation>
+        <translation>Terkonfirmasi (%1 konfirmasi)</translation>
     </message>
     <message numerus="yes">
         <location line="-15"/>
         <source>Open for %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2356,67 +2353,67 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+3"/>
         <source>This block was not received by any other nodes and will probably not be accepted!</source>
-        <translation>Ezt a blokkot egyetlen másik csomópont sem kapta meg, így valószínűleg nem lesz elfogadva!</translation>
+        <translation>Blok ini tidak diterima oleh node lainnya dan kemungkinan tidak akan diterima!</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Generated but not accepted</source>
-        <translation>Legenerálva, de még el nem fogadva.</translation>
+        <translation>Terbuat tetapi tidak diterima</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Received with</source>
-        <translation>Erre a címre</translation>
+        <translation>Diterima dengan</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Received from</source>
-        <translation>Erről az</translation>
+        <translation>Diterima dari</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Sent to</source>
-        <translation>Erre a címre</translation>
+        <translation>Terkirim ke</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Payment to yourself</source>
-        <translation>Magadnak kifizetve</translation>
+        <translation>Pembayaran ke Anda sendiri</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Mined</source>
-        <translation>Kibányászva</translation>
+        <translation>Tertambang</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>(n/a)</source>
-        <translation>(nincs)</translation>
+        <translation>(t/s)</translation>
     </message>
     <message>
         <location line="+190"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
-        <translation>Tranzakció állapota. Húzd ide a kurzort, hogy lásd a megerősítések számát.</translation>
+        <translation>Status transaksi. Arahkan ke bagian ini untuk menampilkan jumlah konfrimasi.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Date and time that the transaction was received.</source>
-        <translation>Tranzakció fogadásának dátuma és időpontja.</translation>
+        <translation>Tanggal dan waktu transaksi tersebut diterima.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Type of transaction.</source>
-        <translation>Tranzakció típusa.</translation>
+        <translation>Jenis transaksi.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Destination address of transaction.</source>
-        <translation>A tranzakció címzettjének címe.</translation>
+        <translation>Alamat tujuan dari transaksi.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Amount removed from or added to balance.</source>
-        <translation>Az egyenleghez jóváírt vagy ráterhelt összeg.</translation>
+        <translation>Jumlah terbuang dari atau ditambahkan ke saldo.</translation>
     </message>
 </context>
 <context>
@@ -2425,102 +2422,102 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location filename="../transactionview.cpp" line="+55"/>
         <location line="+16"/>
         <source>All</source>
-        <translation>Mind</translation>
+        <translation>Semua</translation>
     </message>
     <message>
         <location line="-15"/>
         <source>Today</source>
-        <translation>Mai</translation>
+        <translation>Hari ini</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This week</source>
-        <translation>Ezen a héten</translation>
+        <translation>Minggu ini</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This month</source>
-        <translation>Ebben a hónapban</translation>
+        <translation>Bulan ini</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Last month</source>
-        <translation>Múlt hónapban</translation>
+        <translation>Bulan kemarin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This year</source>
-        <translation>Ebben az évben</translation>
+        <translation>Tahun ini</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Range...</source>
-        <translation>Tartomány ...</translation>
+        <translation>Jarak...</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Received with</source>
-        <translation>Erre a címre</translation>
+        <translation>DIterima dengan</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Sent to</source>
-        <translation>Erre a címre</translation>
+        <translation>Terkirim ke</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>To yourself</source>
-        <translation>Magadnak</translation>
+        <translation>Ke Anda sendiri</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mined</source>
-        <translation>Kibányászva</translation>
+        <translation>Ditambang</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Other</source>
-        <translation>Más</translation>
+        <translation>Lainnya</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Enter address or label to search</source>
-        <translation>Írd be a keresendő címet vagy címkét</translation>
+        <translation>Masukkan alamat atau label untuk mencari</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Min amount</source>
-        <translation>Minimális összeg</translation>
+        <translation>Jumlah min</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Copy address</source>
-        <translation>Cím másolása</translation>
+        <translation>Salin alamat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy label</source>
-        <translation>Címke másolása</translation>
+        <translation>Salin label</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy amount</source>
-        <translation>Összeg másolása</translation>
+        <translation>Salin jumlah</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy transaction ID</source>
-        <translation>Tranzakcióazonosító másolása</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit label</source>
-        <translation>Címke szerkesztése</translation>
+        <translation>Ubah label</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show transaction details</source>
-        <translation>Tranzakciós részletek megjelenítése</translation>
+        <translation>Tampilkan rincian transaksi</translation>
     </message>
     <message>
         <location line="+144"/>
@@ -2530,42 +2527,42 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
-        <translation>Vesszővel elválasztott fájl (*.csv)</translation>
+        <translation>Berkas CSV (*.csv)</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Confirmed</source>
-        <translation>Megerősítve</translation>
+        <translation>Terkonfirmasi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Date</source>
-        <translation>Dátum</translation>
+        <translation>Tanggal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Type</source>
-        <translation>Típus</translation>
+        <translation>Jenis</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Label</source>
-        <translation>Címke</translation>
+        <translation>Label</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Address</source>
-        <translation>Cím</translation>
+        <translation>Alamat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Amount</source>
-        <translation>Összeg</translation>
+        <translation>Jumlah</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ID</source>
-        <translation>Azonosító</translation>
+        <translation>ID</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2580,12 +2577,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+100"/>
         <source>Range:</source>
-        <translation>Tartomány:</translation>
+        <translation>Jarak:</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>to</source>
-        <translation>meddig</translation>
+        <translation>ke</translation>
     </message>
 </context>
 <context>
@@ -2606,7 +2603,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+1"/>
         <source>Usage:</source>
-        <translation>Használat:</translation>
+        <translation>Penggunaan:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2616,20 +2613,17 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+1"/>
         <source>List commands</source>
-        <translation>Parancsok kilistázása
-</translation>
+        <translation>Daftar perintah</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Get help for a command</source>
-        <translation>Segítség egy parancsról
-</translation>
+        <translation>Dapatkan bantuan untuk perintah</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Options:</source>
-        <translation>Opciók
-</translation>
+        <translation>Pilihan:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2649,13 +2643,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-1"/>
         <source>Specify data directory</source>
-        <translation>Adatkönyvtár
-</translation>
+        <translation>Tentukan direktori data</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Set database cache size in megabytes (default: 25)</source>
-        <translation>Az adatbázis gyorsítótár mérete megabájtban (alapértelmezés: 25)</translation>
+        <translation>Atur ukuran tembolok dalam megabyte (standar: 25)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2670,17 +2663,17 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+1"/>
         <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation>Maximálisan &lt;n&gt; számú kapcsolat fenntartása a peerekkel (alapértelmezés: 125)</translation>
+        <translation>Mengatur  hubungan paling banyak &lt;n&gt; ke peer (standar: 125)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Connect to a node to retrieve peer addresses, and disconnect</source>
-        <translation>Kapcsolódás egy csomóponthoz a peerek címeinek megszerzése miatt, majd szétkapcsolás</translation>
+        <translation>Hubungkan ke node untuk menerima alamat peer, dan putuskan</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify your own public address</source>
-        <translation>Adja meg az Ön saját nyilvános címét</translation>
+        <translation>Tentukan alamat publik Anda sendiri</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2695,12 +2688,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+5"/>
         <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
-        <translation>Helytelenül viselkedő peerek leválasztási határértéke (alapértelmezés: 100)</translation>
+        <translation>Batas untuk memutuskan peer buruk (standar: 100)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
-        <translation>Helytelenül viselkedő peerek kizárási ideje másodpercben (alapértelmezés: 86400)</translation>
+        <translation>Jumlah kedua untuk menjaga peer buruk dari hubung-ulang (standar: 86400)</translation>
     </message>
     <message>
         <location line="-44"/>
@@ -2730,8 +2723,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-11"/>
         <source>Accept command line and JSON-RPC commands</source>
-        <translation>Parancssoros és JSON-RPC parancsok elfogadása
-</translation>
+        <translation>Menerima perintah baris perintah dan JSON-RPC</translation>
     </message>
     <message>
         <location line="+101"/>
@@ -2756,14 +2748,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-88"/>
         <source>Run in the background as a daemon and accept commands</source>
-        <translation>Háttérben futtatás daemonként és parancsok elfogadása
-</translation>
+        <translation>Berjalan dibelakang sebagai daemin dan menerima perintah</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use the test network</source>
-        <translation>Teszthálózat használata
-</translation>
+        <translation>Gunakan jaringan uji</translation>
     </message>
     <message>
         <location line="-24"/>
@@ -2788,7 +2778,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+11"/>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
-        <translation>Figyelem: a -paytxfee nagyon magas.  Ennyi tranzakciós díjat fogsz fizetni, ha elküldöd a tranzakciót.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+61"/>
@@ -2818,7 +2808,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-62"/>
         <source>Connect only to the specified node(s)</source>
-        <translation>Csatlakozás csak a megadott csomóponthoz</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
@@ -2828,7 +2818,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+94"/>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
-        <translation>Egyik hálózati porton sem sikerül hallgatni. Használja a -listen=0 kapcsolót, ha ezt szeretné.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-90"/>
@@ -2883,7 +2873,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+35"/>
         <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>SSL-opciók: (lásd a Bitcoin Wiki SSL-beállítási instrukcióit)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-74"/>
@@ -2893,7 +2883,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+41"/>
         <source>Send trace/debug info to console instead of debug.log file</source>
-        <translation>trace/debug információ küldése a konzolra a debog.log fájl helyett</translation>
+        <translation>Kirim info lacak/debug ke konsol sebaliknya dari berkas debug.log</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2918,7 +2908,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-42"/>
         <source>Specify connection timeout in milliseconds (default: 5000)</source>
-        <translation>Csatlakozás időkerete milliszekundumban (alapértelmezett: 5000)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+109"/>
@@ -2929,12 +2919,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-80"/>
         <source>Use UPnP to map the listening port (default: 0)</source>
-        <translation>UPnP-használat engedélyezése a figyelő port feltérképezésénél (default: 0)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-1"/>
         <source>Use UPnP to map the listening port (default: 1 when listening)</source>
-        <translation>UPnP-használat engedélyezése a figyelő port feltérképezésénél (default: 1 when listening)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-25"/>
@@ -2944,8 +2934,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+42"/>
         <source>Username for JSON-RPC connections</source>
-        <translation>Felhasználói név JSON-RPC csatlakozásokhoz
-</translation>
+        <translation>Nama pengguna untuk hubungan JSON-RPC</translation>
     </message>
     <message>
         <location line="+47"/>
@@ -2975,8 +2964,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-54"/>
         <source>Password for JSON-RPC connections</source>
-        <translation>Jelszó JSON-RPC csatlakozásokhoz
-</translation>
+        <translation>Kata sandi untuk hubungan JSON-RPC</translation>
     </message>
     <message>
         <location line="-84"/>
@@ -3011,24 +2999,22 @@ for example: alertnotify=echo %%s | mail -s &quot;Abjcoin Alert&quot; admin@foo.
     <message>
         <location line="+16"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
-        <translation>JSON-RPC csatlakozások engedélyezése meghatározott IP-címről
-</translation>
+        <translation>Izinkan hubungan JSON-RPC dari alamat IP yang ditentukan</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
-        <translation>Parancsok küldése &lt;ip&gt; címen működő csomóponthoz (alapértelmezett: 127.0.0.1)
-</translation>
+        <translation>Kirim perintah ke node berjalan pada &lt;ip&gt; (standar: 127.0.0.1)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
-        <translation>Parancs, amit akkor hajt végre, amikor a legjobb blokk megváltozik (%s a cmd-ban lecserélődik a blokk hash-re)</translation>
+        <translation>Menjalankan perintah ketika perubahan blok terbaik (%s dalam cmd digantikan oleh hash blok)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
-        <translation>Parancs, amit akkor hajt végre, amikor egy tárca-tranzakció megváltozik  (%s a parancsban lecserélődik a blokk TxID-re)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
@@ -3048,19 +3034,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Abjcoin Alert&quot; admin@foo.
     <message>
         <location line="+3"/>
         <source>Upgrade wallet to latest format</source>
-        <translation>A Tárca frissítése a legfrissebb formátumra</translation>
+        <translation>Perbarui dompet ke format terbaru</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Set key pool size to &lt;n&gt; (default: 100)</source>
-        <translation>Kulcskarika mérete &lt;n&gt; (alapértelmezett: 100)
-</translation>
+        <translation>Kirim ukuran kolam kunci ke &lt;n&gt; (standar: 100)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rescan the block chain for missing wallet transactions</source>
-        <translation>Blokklánc újraszkennelése hiányzó tárca-tranzakciók után
-</translation>
+        <translation>Pindai ulang rantai-blok untuk transaksi dompet yang hilang</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3080,20 +3064,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Abjcoin Alert&quot; admin@foo.
     <message>
         <location line="+8"/>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
-        <translation>OpenSSL (https) használata JSON-RPC csatalkozásokhoz
-</translation>
+        <translation>Gunakan OpenSSL (https) untuk hubungan JSON-RPC</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Server certificate file (default: server.cert)</source>
-        <translation>Szervertanúsítvány-fájl (alapértelmezett: server.cert)
-</translation>
+        <translation>Berkas sertifikat server (standar: server.cert)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Server private key (default: server.pem)</source>
-        <translation>Szerver titkos kulcsa (alapértelmezett: server.pem)
-</translation>
+        <translation>Kunci pribadi server (standar: server.pem)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3103,7 +3084,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Abjcoin Alert&quot; admin@foo.
     <message>
         <location line="+53"/>
         <source>Error: Wallet unlocked for staking only, unable to create transaction.</source>
-        <translation type="unfinished"/>
+        <translation>Eror: Dompet hanya di-buka hanya untuk staking, transaksi gagal dilaksanakan</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3113,8 +3094,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Abjcoin Alert&quot; admin@foo.
     <message>
         <location line="-158"/>
         <source>This help message</source>
-        <translation>Ez a súgó-üzenet
-</translation>
+        <translation>Pesan bantuan ini</translation>
     </message>
     <message>
         <location line="+95"/>
@@ -3129,12 +3109,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Abjcoin Alert&quot; admin@foo.
     <message>
         <location line="-98"/>
         <source>Abjcoin</source>
-        <translation type="unfinished"/>
+        <translation>Abjcoin</translation>
     </message>
     <message>
         <location line="+140"/>
         <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
-        <translation>A %s nem elérhető ezen a gépen (bind returned error %d, %s)</translation>
+        <translation>Tidak dapat mengikat ke %s dengan komputer ini (ikatan gagal %d, %s)</translation>
     </message>
     <message>
         <location line="-130"/>
@@ -3144,12 +3124,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Abjcoin Alert&quot; admin@foo.
     <message>
         <location line="+3"/>
         <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
-        <translation>DNS-kikeresés engedélyezése az addnode-nál és a connect-nél</translation>
+        <translation>Izinkan peninjauan DNS untuk -addnote, -seednode dan -connect</translation>
     </message>
     <message>
         <location line="+122"/>
         <source>Loading addresses...</source>
-        <translation>Címek betöltése...</translation>
+        <translation>Memuat alamat...</translation>
     </message>
     <message>
         <location line="-15"/>
@@ -3159,7 +3139,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Abjcoin Alert&quot; admin@foo.
     <message>
         <location line="+2"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
-        <translation>Hiba a wallet.dat betöltése közben: meghibásodott tárca</translation>
+        <translation>Gagal memuat wallet.dat: Dompet rusak</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3174,37 +3154,37 @@ for example: alertnotify=echo %%s | mail -s &quot;Abjcoin Alert&quot; admin@foo.
     <message>
         <location line="+1"/>
         <source>Error loading wallet.dat</source>
-        <translation>Hiba az wallet.dat betöltése közben</translation>
+        <translation>Gagal memuat wallet.dat</translation>
     </message>
     <message>
         <location line="-16"/>
         <source>Invalid -proxy address: &apos;%s&apos;</source>
-        <translation>Érvénytelen -proxy cím: &apos;%s&apos;</translation>
+        <translation>Alamat -proxy salah: &apos;%s&apos;</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
-        <translation>Ismeretlen hálózat lett megadva -onlynet: &apos;%s&apos;</translation>
+        <translation>Jaringan tidak diketahui yang ditentukan dalam -onlynet: &apos;%s&apos;</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Unknown -socks proxy version requested: %i</source>
-        <translation>Ismeretlen -socks proxy kérése: %i</translation>
+        <translation>Diminta versi proxy -socks tidak diketahui: %i</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot resolve -bind address: &apos;%s&apos;</source>
-        <translation>Csatlakozási cím (-bind address) feloldása nem sikerült: &apos;%s&apos;</translation>
+        <translation>Tidak dapat menyelesaikan alamat -bind: &apos;%s&apos;</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
-        <translation>Külső cím (-externalip address) feloldása nem sikerült: &apos;%s&apos;</translation>
+        <translation>Tidak dapat menyelesaikan alamat -externalip: &apos;%s&apos;</translation>
     </message>
     <message>
         <location line="-24"/>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
-        <translation>Étvénytelen -paytxfee=&lt;összeg&gt; összeg: &apos;%s&apos;</translation>
+        <translation>Jumlah salah untuk -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
     </message>
     <message>
         <location line="+44"/>
@@ -3214,27 +3194,27 @@ for example: alertnotify=echo %%s | mail -s &quot;Abjcoin Alert&quot; admin@foo.
     <message>
         <location line="+11"/>
         <source>Sending...</source>
-        <translation type="unfinished"/>
+        <translation>Mengirim...</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Invalid amount</source>
-        <translation>Étvénytelen összeg</translation>
+        <translation>Jumlah salah</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Insufficient funds</source>
-        <translation>Nincs elég bitcoinod.</translation>
+        <translation>Saldo tidak mencukupi</translation>
     </message>
     <message>
         <location line="-34"/>
         <source>Loading block index...</source>
-        <translation>Blokkindex betöltése...</translation>
+        <translation>Memuat indeks blok...</translation>
     </message>
     <message>
         <location line="-103"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
-        <translation>Elérendő csomópont megadása and attempt to keep the connection open</translation>
+        <translation>Tambahkan node untuk dihubungkan dan upaya untuk menjaga hubungan tetap terbuka</translation>
     </message>
     <message>
         <location line="+122"/>
@@ -3254,51 +3234,51 @@ for example: alertnotify=echo %%s | mail -s &quot;Abjcoin Alert&quot; admin@foo.
     <message>
         <location line="+25"/>
         <source>Loading wallet...</source>
-        <translation>Tárca betöltése...</translation>
+        <translation>Memuat dompet...</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Cannot downgrade wallet</source>
-        <translation>Nem sikerült a Tárca visszaállítása a korábbi verzióra</translation>
+        <translation>Tidak dapat menurunkan versi dompet</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cannot initialize keypool</source>
-        <translation type="unfinished"/>
+        <translation>initialisasi keypool gagal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cannot write default address</source>
-        <translation>Nem sikerült az alapértelmezett címet írni.</translation>
+        <translation>Tidak dapat menyimpan alamat standar</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rescanning...</source>
-        <translation>Újraszkennelés...</translation>
+        <translation>Memindai ulang...</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Done loading</source>
-        <translation>Betöltés befejezve.</translation>
+        <translation>Memuat selesai</translation>
     </message>
     <message>
         <location line="-167"/>
         <source>To use the %s option</source>
-        <translation>Használd a %s opciót</translation>
+        <translation>Gunakan pilihan %s</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Error</source>
-        <translation>Hiba</translation>
+        <translation>Gagal</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
 %s
 If the file does not exist, create it with owner-readable-only file permissions.</source>
-        <translation>Be kell állítani rpcpassword=&lt;password&gt; a konfigurációs fájlban
+        <translation>Anda harus mengatur rpcpassword=&lt;kata sandi&gt; dalam berkas konfigurasi:
 %s
-Ha a fájl nem létezik, hozd létre &apos;csak a felhasználó által olvasható&apos; fájl engedéllyel</translation>
+Jika berkas tidak ada, buatlah dengan permisi berkas hanya-dapat-dibaca-oleh-pemilik.</translation>
     </message>
 </context>
 </TS>
