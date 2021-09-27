@@ -478,4 +478,154 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     <message>
         <location line="+0"/>
         <source>Wallet</source>
-        <translati
+        <translation>ウォレット</translation>
+    </message>
+    <message>
+        <location line="+178"/>
+        <source>&amp;About Abjcoin</source>
+        <translation>ブラックコインについて</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>&amp;Show / Hide</source>
+        <translation>見る/隠す (&amp;S)</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Unlock wallet</source>
+        <translation>ウォレットをアンロックする</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Lock Wallet</source>
+        <translation>(&amp;L)ウォレットをロックする</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Lock wallet</source>
+        <translation>ウォレットをロックする</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>&amp;File</source>
+        <translation>ファイル(&amp;F)</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&amp;Settings</source>
+        <translation>設定(&amp;S)</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&amp;Help</source>
+        <translation>ヘルプ(&amp;H)</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Tabs toolbar</source>
+        <translation>タブツールバー</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Actions toolbar</source>
+        <translation>活動ツールバー</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+9"/>
+        <source>[testnet]</source>
+        <translation>[testnet]</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+60"/>
+        <source>Abjcoin client</source>
+        <translation>ブラックコインクライアントソフトウェア</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+70"/>
+        <source>%n active connection(s) to Abjcoin network</source>
+        <translation><numerusform>ブラックコインネットワークへの%n アクティブな接続</numerusform></translation>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>Downloaded %1 blocks of transaction history.</source>
+        <translation>処理履歴の%1ブロックをダウンロードしました。</translation>
+    </message>
+    <message>
+        <location line="+413"/>
+        <source>Staking.&lt;br&gt;Your weight is %1&lt;br&gt;Network weight is %2&lt;br&gt;Expected time to earn reward is %3</source>
+        <translation>賭けている。&lt;br&gt;重さは%1&lt;br&gt;ネットワークの重さは%2&lt;br&gt;報酬をもらう時間の推測は%3</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Not staking because wallet is locked</source>
+        <translation>ウォレットをロックされたため、賭けていません</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Not staking because wallet is offline</source>
+        <translation>ウォレットはオフラインで、賭けていません</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Not staking because wallet is syncing</source>
+        <translation>ウォレットは同期最中ため、賭けていません。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Not staking because you don&apos;t have mature coins</source>
+        <translation>コインはまだ成長できていないため、賭けていません。</translation>
+    </message>
+    <message numerus="yes">
+        <location line="-403"/>
+        <source>%n second(s) ago</source>
+        <translation><numerusform>%n 秒前</numerusform></translation>
+    </message>
+    <message>
+        <location line="-284"/>
+        <source>&amp;Unlock Wallet...</source>
+        <translation>&amp;ウォレットをアンロック...</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+288"/>
+        <source>%n minute(s) ago</source>
+        <translation><numerusform>%n 分前</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n hour(s) ago</source>
+        <translation><numerusform>%n 時間前</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n day(s) ago</source>
+        <translation><numerusform>%n 日間前</numerusform></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Up to date</source>
+        <translation>バージョンは最新です</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Catching up...</source>
+        <translation>追跡中...</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Last received block was generated %1.</source>
+        <translation>最新ブロックは%1に生成されました。</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
+        <translation>この処理は大きさの制限を超えている。%1料金を払ったばい、通信可能性です。料金は手続きをするノードへ支払って、ネットワークのサッポートになります。料金を払いますか。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Confirm transaction fee</source>
+        <translation>処理手数料を確認する</translation>
+    </message>
+    <message>
+        <locat
