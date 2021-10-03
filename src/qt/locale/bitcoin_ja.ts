@@ -1263,4 +1263,154 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>額を表示する単位 (&amp;U) :</translation>
     </message>
     <message>
-  
+        <location line="+13"/>
+        <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
+        <translation>インターフェース上の表示とコインの送信で使用する単位を選択します。</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Whether to show Abjcoin addresses in the transaction list or not.</source>
+        <translation>処理の歴史でブラックコインのアドレスを表示する／しない。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Display addresses in transaction list</source>
+        <translation>処理の履歴にアドレスを表示 (&amp;D)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Whether to show coin control features or not.</source>
+        <translation>コインコントロールを表示する／しない。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Display coin &amp;control features (experts only!)</source>
+        <translation>コインコントロールの設定を表示する(有識者のみ！)</translation>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>&amp;OK</source>
+        <translation>&amp;OK</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>&amp;Cancel</source>
+        <translation>キャンセル (&amp;C)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>&amp;Apply</source>
+        <translation>適用する</translation>
+    </message>
+    <message>
+        <location filename="../optionsdialog.cpp" line="+55"/>
+        <source>default</source>
+        <translation>初期値</translation>
+    </message>
+    <message>
+        <location line="+149"/>
+        <location line="+9"/>
+        <source>Warning</source>
+        <translation>警告</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <location line="+9"/>
+        <source>This setting will take effect after restarting Abjcoin.</source>
+        <translation>この設定はブラックコインをリスタートした後に有効する。</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The supplied proxy address is invalid.</source>
+        <translation>プロキシアドレスが無効です。</translation>
+    </message>
+</context>
+<context>
+    <name>OverviewPage</name>
+    <message>
+        <location filename="../forms/overviewpage.ui" line="+14"/>
+        <source>Form</source>
+        <translation>フォーム</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <location line="+231"/>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Abjcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>表示されている情報は時間遅れている。接続したら、ウォレットは自動的にブラックコインネットワークと同期しますが過程は完了してません。</translation>
+    </message>
+    <message>
+        <location line="-160"/>
+        <source>Stake:</source>
+        <translation>賭け金：</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Unconfirmed:</source>
+        <translation>未検証：</translation>
+    </message>
+    <message>
+        <location line="-107"/>
+        <source>Wallet</source>
+        <translation>ウォレット</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Spendable:</source>
+        <translation>支出可能：</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Your current spendable balance</source>
+        <translation>あなたの利用可能残高</translation>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>Immature:</source>
+        <translation>未完成:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Mined balance that has not yet matured</source>
+        <translation>完成していない採掘された残高</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Total:</source>
+        <translation>合計:</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Your current total balance</source>
+        <translation>あなたの現在の残高</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
+        <translation>&lt;b&gt;最近の処理&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location line="-108"/>
+        <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
+        <translation>未確認の合計で、まだ現在の残高に含まれていない。</translation>
+    </message>
+    <message>
+        <location line="-29"/>
+        <source>Total of coins that was staked, and do not yet count toward the current balance</source>
+        <translation>賭けているコインの合計で、まだ現在の残高に含まれていない。</translation>
+    </message>
+    <message>
+        <location filename="../overviewpage.cpp" line="+113"/>
+        <location line="+1"/>
+        <source>out of sync</source>
+        <translation>同期していない</translation>
+    </message>
+</context>
+<context>
+    <name>QRCodeDialog</name>
+    <message>
+        <location filename="../forms/qrcodedialog.ui" line="+14"/>
+        <source>QR Code Dialog</source>
+        <translation>QRコードのダイアログ</translation>
+    </message>
+    <message>
+        <l
