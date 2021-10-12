@@ -2017,4 +2017,154 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</s
+        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>メッセージの署名するアドレス(例：B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>Verify the message to ensure it was signed with the specified Abjcoin address</source>
+        <translation>受け取ったメッセージの署名を確保のため、メッセージを確認する。</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Reset all verify message fields</source>
+        <translation>入力項目の内容をすべて消去します</translation>
+    </message>
+    <message>
+        <location filename="../signverifymessagedialog.cpp" line="+27"/>
+        <location line="+3"/>
+        <source>Enter a Abjcoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>ブラックコインのアドレスを入力(例：B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Click &quot;Sign Message&quot; to generate signature</source>
+        <translation>署名を作成するには&quot;メッセージの署名&quot;をクリック</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Enter Abjcoin signature</source>
+        <translation>ブラックコインのデジタル署名を入力</translation>
+    </message>
+    <message>
+        <location line="+82"/>
+        <location line="+81"/>
+        <source>The entered address is invalid.</source>
+        <translation>不正なアドレスが入力されました。</translation>
+    </message>
+    <message>
+        <location line="-81"/>
+        <location line="+8"/>
+        <location line="+73"/>
+        <location line="+8"/>
+        <source>Please check the address and try again.</source>
+        <translation>アドレスを確かめてからもう一度試してください。</translation>
+    </message>
+    <message>
+        <location line="-81"/>
+        <location line="+81"/>
+        <source>The entered address does not refer to a key.</source>
+        <translation>入力されたアドレスに関連するキーがありません。</translation>
+    </message>
+    <message>
+        <location line="-73"/>
+        <source>Wallet unlock was cancelled.</source>
+        <translation>ウォレットのアンロックはキャンセルされました。</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Private key for the entered address is not available.</source>
+        <translation>入力されたアドレスのプライベート キーが無効です。</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Message signing failed.</source>
+        <translation>メッセージの署名に失敗しました。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Message signed.</source>
+        <translation>メッセージに署名しました。</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>The signature could not be decoded.</source>
+        <translation>署名がデコードできません。</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+13"/>
+        <source>Please check the signature and try again.</source>
+        <translation>署名を確認してからもう一度試してください。</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The signature did not match the message digest.</source>
+        <translation>署名はメッセージ ダイジェストと一致しませんでした。</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Message verification failed.</source>
+        <translation>メッセージの検証に失敗しました。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Message verified.</source>
+        <translation>メッセージは検証されました。</translation>
+    </message>
+</context>
+<context>
+    <name>TransactionDesc</name>
+    <message>
+        <location filename="../transactiondesc.cpp" line="+19"/>
+        <source>Open until %1</source>
+        <translation>ユニット %1 を開く</translation>
+    </message>
+    <message numerus="yes">
+        <location line="-2"/>
+        <source>Open for %n block(s)</source>
+        <translation><numerusform>%n ブロックに開いている</numerusform></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>conflicted</source>
+        <translation>相違</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1/offline</source>
+        <translation>%1/オフライン</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1/unconfirmed</source>
+        <translation>%1/未検証</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 confirmations</source>
+        <translation>%1 確認</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Status</source>
+        <translation>ステータス</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+7"/>
+        <source>, broadcast through %n node(s)</source>
+        <translation><numerusform>%n ノードにブロードキャスト</numerusform></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Date</source>
+        <translation>日付</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Source</source>
+        <translation>ソース</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Generated</sou
