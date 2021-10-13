@@ -2167,4 +2167,169 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+0"/>
-        <source>Generated</sou
+        <source>Generated</source>
+        <translation>生成された</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+17"/>
+        <source>From</source>
+        <translation>送信</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+22"/>
+        <location line="+58"/>
+        <source>To</source>
+        <translation>受信</translation>
+    </message>
+    <message>
+        <location line="-77"/>
+        <location line="+2"/>
+        <source>own address</source>
+        <translation>自分のアドレス</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>label</source>
+        <translation>ラベル</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <location line="+12"/>
+        <location line="+45"/>
+        <location line="+17"/>
+        <location line="+30"/>
+        <source>Credit</source>
+        <translation>クレジット</translation>
+    </message>
+    <message numerus="yes">
+        <location line="-102"/>
+        <source>matures in %n more block(s)</source>
+        <translation><numerusform>%n 以上のブロックが満期</numerusform></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>not accepted</source>
+        <translation>承認されなかった</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+8"/>
+        <location line="+15"/>
+        <location line="+30"/>
+        <source>Debit</source>
+        <translation>引き落とし額</translation>
+    </message>
+    <message>
+        <location line="-39"/>
+        <source>Transaction fee</source>
+        <translation>処理の手数料</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Net amount</source>
+        <translation>正味金額</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Message</source>
+        <translation>メッセージ</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Comment</source>
+        <translation>コメント</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Transaction ID</source>
+        <translation>処理のID</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Generated coins must mature 50 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
+        <translation>コインを費やす前に発現されたコインは50ブロック間成熟しなければなりません。このブロックを発現させたときに、ブロックチェインに足すためにネットワークへ放送しました。ブロックチェインに追加失敗したばい、レベルは「受け入られていない」に変わって、費やせられない状況になります。自分のノードと他のノードと同時に新しいブロックを発現させたときに、時折に起こること。</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Debug information</source>
+        <translation>デバッグ情報</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Transaction</source>
+        <translation>処理</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Inputs</source>
+        <translation>入力</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Amount</source>
+        <translation>総額</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>true</source>
+        <translation>正しい</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>false</source>
+        <translation>正しくない</translation>
+    </message>
+    <message>
+        <location line="-211"/>
+        <source>, has not been successfully broadcast yet</source>
+        <translation>まだブロードキャストが成功していません</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>unknown</source>
+        <translation>未確認</translation>
+    </message>
+</context>
+<context>
+    <name>TransactionDescDialog</name>
+    <message>
+        <location filename="../forms/transactiondescdialog.ui" line="+14"/>
+        <source>Transaction details</source>
+        <translation>処理の詳細</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>This pane shows a detailed description of the transaction</source>
+        <translation>ここでは処理の詳細を表示しています</translation>
+    </message>
+</context>
+<context>
+    <name>TransactionTableModel</name>
+    <message>
+        <location filename="../transactiontablemodel.cpp" line="+226"/>
+        <source>Date</source>
+        <translation>日付</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Type</source>
+        <translation>タイプ</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Address</source>
+        <translation>Helbidea</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Amount</source>
+        <translation>総額</translation>
+    </message>
+    <message>
+        <location line="+60"/>
+        <source>Open until %1</source>
+        <translation>ユニット %1 を開く</translation>
+    </message>
+    <messag
