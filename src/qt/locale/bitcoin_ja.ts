@@ -2503,4 +2503,170 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <
+        <source>Min amount</source>
+        <translation>最小の額</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Copy address</source>
+        <translation>アドレスをコピーする</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy label</source>
+        <translation>ラベルをコピーする</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy amount</source>
+        <translation>総額のコピー</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy transaction ID</source>
+        <translation>処理IDをコピー</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Edit label</source>
+        <translation>ラベルの編集</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show transaction details</source>
+        <translation>処理の詳細を表示</translation>
+    </message>
+    <message>
+        <location line="+144"/>
+        <source>Export Transaction Data</source>
+        <translation>処理のデータを書き出す</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Comma separated file (*.csv)</source>
+        <translation>テキスト CSV (*.csv)</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Confirmed</source>
+        <translation>検証済み</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Date</source>
+        <translation>日付</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type</source>
+        <translation>タイプ</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Label</source>
+        <translation>ラベル</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Address</source>
+        <translation>Helbidea</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Amount</source>
+        <translation>総額</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Error exporting</source>
+        <translation>エラーを書き出す</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Could not write to file %1.</source>
+        <translation>ファイルを書き込めなかった。%1</translation>
+    </message>
+    <message>
+        <location line="+100"/>
+        <source>Range:</source>
+        <translation>期間:</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>to</source>
+        <translation>から</translation>
+    </message>
+</context>
+<context>
+    <name>WalletModel</name>
+    <message>
+        <location filename="../walletmodel.cpp" line="+206"/>
+        <source>Sending...</source>
+        <translation>通信中...</translation>
+    </message>
+</context>
+<context>
+    <name>bitcoin-core</name>
+    <message>
+        <location filename="../bitcoinstrings.cpp" line="+33"/>
+        <source>Abjcoin version</source>
+        <translation>ブラックコインバージョン</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Usage:</source>
+        <translation>使用法:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Send command to -server or abjcoind</source>
+        <translation>-server か abjcoindへコマンドを送る。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>List commands</source>
+        <translation>コマンド一覧</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Get help for a command</source>
+        <translation>コマンドのヘルプ</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Options:</source>
+        <translation>オプション:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Specify configuration file (default: abjcoin.conf)</source>
+        <translation>設定ファイルを特定する (デファルト: abjcoin.conf)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Specify pid file (default: abjcoind.pid)</source>
+        <translation>pid ファイルを特定する (デフォルト: abjcoind.pid)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Specify wallet file (within data directory)</source>
+        <translation>ウォレットのファイルを指定　(データ・ディレクトリの中に)</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Specify data directory</source>
+        <translation>データ ディレクトリの指定</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Set database cache size in megabytes (default: 25)</source>
+        <translation>データベースのキャッシュサイズをメガバイトで設定 (初期値: 25)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Set database disk log size in megabytes (default: 100)</so
