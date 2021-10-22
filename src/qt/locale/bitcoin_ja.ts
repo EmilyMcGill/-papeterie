@@ -3272,4 +3272,41 @@ rpcpassword=%s
     <message>
         <location line="+1"/>
         <source>Cannot initialize keypool</source>
-        <
+        <translation>キースペースをイニシャライズをする</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot write default address</source>
+        <translation>初期値のアドレスを書き込むことができません</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rescanning...</source>
+        <translation>再スキャン中...</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Done loading</source>
+        <translation>読み込み完了</translation>
+    </message>
+    <message>
+        <location line="-167"/>
+        <source>To use the %s option</source>
+        <translation>%s オプションを使うには</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Error</source>
+        <translation>エラー</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
+%s
+If the file does not exist, create it with owner-readable-only file permissions.</source>
+        <translation>rpcpassword=&lt;password&gt; を設定ファイルでセットしてください:
+%s
+ファイルが無い場合は、オーナーだけが読み取れる権限でファイルを作成してください。</translation>
+    </message>
+</context>
+</TS>
