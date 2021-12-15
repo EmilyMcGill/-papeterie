@@ -186,4 +186,114 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
         <source>For staking only</source>
         <translation type="unfinished"/>
     </message>
-    <message
+    <message>
+        <location filename="../askpassphrasedialog.cpp" line="+35"/>
+        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <translation>Insero novam tesseram cassidili.&lt;br/&gt;Sodes tessera &lt;b&gt;10 pluriumve fortuitarum litterarum&lt;/b&gt; utere aut &lt;b&gt;octo pluriumve verborum&lt;/b&gt;.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Encrypt wallet</source>
+        <translation>Cifra cassidile</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <translation>Huic operationi necesse est tessera cassidili tuo ut cassidile reseret.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Unlock wallet</source>
+        <translation>Resera cassidile</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
+        <translation>Huic operationi necesse est tessera cassidili tuo ut cassidile decifret.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Decrypt wallet</source>
+        <translation>Decifra cassidile</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Change passphrase</source>
+        <translation>Muta tesseram</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter the old and new passphrase to the wallet.</source>
+        <translation>Insero veterem novamque tesseram cassidili.</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Confirm wallet encryption</source>
+        <translation>Confirma cifrationem cassidilis</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Are you sure you wish to encrypt your wallet?</source>
+        <translation>Certusne es te velle tuum cassidile cifrare?</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <translation>GRAVE: Oportet ulla prioria conservata quae fecisti de plica tui cassidilis reponi a nove generata cifrata plica cassidilis.  Propter securitatem, prioria conservata de plica non cifrata cassidilis inutilia fiet simul atque incipis uti novo cifrato cassidili.</translation>
+    </message>
+    <message>
+        <location line="+103"/>
+        <location line="+24"/>
+        <source>Warning: The Caps Lock key is on!</source>
+        <translation>Monitio: Litterae ut capitales seratae sunt!</translation>
+    </message>
+    <message>
+        <location line="-133"/>
+        <location line="+60"/>
+        <source>Wallet encrypted</source>
+        <translation>Cassidile cifratum</translation>
+    </message>
+    <message>
+        <location line="-58"/>
+        <source>Abjcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+7"/>
+        <location line="+44"/>
+        <location line="+6"/>
+        <source>Wallet encryption failed</source>
+        <translation>Cassidile cifrare abortum est</translation>
+    </message>
+    <message>
+        <location line="-56"/>
+        <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
+        <translation>Cassidile cifrare abortum est propter internum errorem.  Tuum cassidile cifratum non est.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+50"/>
+        <source>The supplied passphrases do not match.</source>
+        <translation>Tesserae datae non eaedem sunt.</translation>
+    </message>
+    <message>
+        <location line="-38"/>
+        <source>Wallet unlock failed</source>
+        <translation>Cassidile reserare abortum est.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+12"/>
+        <location line="+19"/>
+        <source>The passphrase entered for the wallet decryption was incorrect.</source>
+        <translation>Tessera inserta pro cassidilis decifrando prava erat.</translation>
+    </message>
+    <message>
+        <location line="-20"/>
+       
