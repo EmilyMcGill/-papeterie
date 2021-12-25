@@ -1093,3 +1093,143 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <source>Show splash screen on startup (default: 1)</source>
         <translation type="unfinished"/>
     </message>
+</context>
+<context>
+    <name>OptionsDialog</name>
+    <message>
+        <location filename="../forms/optionsdialog.ui" line="+14"/>
+        <source>Options</source>
+        <translation>Optiones</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>&amp;Main</source>
+        <translation>&amp;Princeps</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Pay transaction &amp;fee</source>
+        <translation>Solve &amp;mercedem transactionis</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Reserved amount does not participate in staking and is therefore spendable at any time.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Reserve</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Automatically start Abjcoin after logging in to the system.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Start Abjcoin on system login</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Detach databases at shutdown</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>&amp;Network</source>
+        <translation>&amp;Rete</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Automatically open the Abjcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Map port using &amp;UPnP</source>
+        <translation>Designa portam utendo &amp;UPnP</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Connect to the Abjcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Connect through SOCKS proxy:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Proxy &amp;IP:</source>
+        <translation>&amp;IP vicarii:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>IP address of the proxy (e.g. 127.0.0.1)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>&amp;Port:</source>
+        <translation>&amp;Porta:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Port of the proxy (e.g. 9050)</source>
+        <translation>Porta vicarii (e.g. 9050)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>SOCKS &amp;Version:</source>
+        <translation>SOCKS &amp;Versio:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>SOCKS version of the proxy (e.g. 5)</source>
+        <translation>SOCKS versio vicarii (e.g. 5)</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>&amp;Window</source>
+        <translation>&amp;Fenestra</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Show only a tray icon after minimizing the window.</source>
+        <translation>Monstra tantum iconem in tabella systematis postquam fenestram minifactam est.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Minimize to the tray instead of the taskbar</source>
+        <translation>&amp;Minifac in tabellam systematis potius quam applicationum</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Quit in the menu.</source>
+        <translation>Minifac potius quam exire applicatione quando fenestra clausa sit.  Si haec optio activa est, applicatio clausa erit tantum postquam selegeris Exi in menu.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>M&amp;inimize on close</source>
+        <translation>M&amp;inifac ad claudendum</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>&amp;Display</source>
+        <translation>&amp;UI</translation>
+    </message>
+    <message>
+        <location line="
