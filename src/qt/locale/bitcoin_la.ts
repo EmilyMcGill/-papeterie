@@ -2726,4 +2726,111 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Accipe terminalis et JSON-RPC mandata.</translation>
     </message>
-    
+    <message>
+        <location line="+101"/>
+        <source>Error: Transaction creation failed  </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Error: Wallet locked, unable to create transaction  </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-8"/>
+        <source>Importing blockchain data file.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Importing bootstrap blockchain data file.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-88"/>
+        <source>Run in the background as a daemon and accept commands</source>
+        <translation>Operare infere sicut daemon et mandata accipe</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use the test network</source>
+        <translation>Utere rete experimentale</translation>
+    </message>
+    <message>
+        <location line="-24"/>
+        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
+        <translation>Accipe conexiones externas (praedefinitum: 1 nisi -proxy neque -connect)</translation>
+    </message>
+    <message>
+        <location line="-38"/>
+        <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
+        <translation>Error erat dum initians portam RPC %u pro auscultando in IPv6, labens retrorsum ad IPv4: %s</translation>
+    </message>
+    <message>
+        <location line="+117"/>
+        <source>Error initializing database environment %s! To recover, BACKUP THAT DIRECTORY, then remove everything from it except for wallet.dat.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-20"/>
+        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
+        <translation>Monitio: -paytxfee constitutum valde magnum!  Hoc est merces transactionis solves si mittis transactionem.</translation>
+    </message>
+    <message>
+        <location line="+61"/>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Abjcoin will not work properly.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-31"/>
+        <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
+        <translation>Monitio: error legendo wallet.dat!  Omnes claves recte lectae, sed data transactionum vel libri inscriptionum fortasse desint vel prava sint.</translation>
+    </message>
+    <message>
+        <location line="-18"/>
+        <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
+        <translation>Monitio: wallet.data corrupta, data salvata!  Originalis wallet.dat salvata ut wallet.{timestamp}.bak in %s; si pendendum tuum vel transactiones pravae sunt, oportet ab conservato restituere.</translation>
+    </message>
+    <message>
+        <location line="-30"/>
+        <source>Attempt to recover private keys from a corrupt wallet.dat</source>
+        <translation>Conare recipere claves privatas de corrupto wallet.dat</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Block creation options:</source>
+        <translation>Optiones creandi frustorum:</translation>
+    </message>
+    <message>
+        <location line="-62"/>
+        <source>Connect only to the specified node(s)</source>
+        <translation>Conecte sole ad nodos specificatos (vel nodum specificatum)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
+        <translation>Discooperi propriam inscriptionem IP (praedefinitum: 1 quando auscultans et nullum -externalip)</translation>
+    </message>
+    <message>
+        <location line="+94"/>
+        <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
+        <translation>Non potuisse auscultare in ulla porta.  Utere -listen=0 si hoc vis.</translation>
+    </message>
+    <message>
+        <location line="-90"/>
+        <source>Find peers using DNS lookup (default: 1)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Sync checkpoints policy (default: strict)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+83"/>
+        <source>Invalid -tor a
