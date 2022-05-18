@@ -724,4 +724,181 @@ Adresse: %4
 <context>
     <name>ClientModel</name>
     <message>
-        <location filename="../
+        <location filename="../clientmodel.cpp" line="+90"/>
+        <source>Network Alert</source>
+        <translation>Nettverksvarsel</translation>
+    </message>
+</context>
+<context>
+    <name>CoinControlDialog</name>
+    <message>
+        <location filename="../forms/coincontroldialog.ui" line="+14"/>
+        <source>Coin Control</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Quantity:</source>
+        <translation>Mengde:</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Bytes:</source>
+        <translation>Bytes:</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Amount:</source>
+        <translation>Beløp:</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Priority:</source>
+        <translation>Prioritet:</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Fee:</source>
+        <translation>Avgift:</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Low Output:</source>
+        <translation>Lav Utdata:</translation>
+    </message>
+    <message>
+        <location filename="../coincontroldialog.cpp" line="+551"/>
+        <source>no</source>
+        <translation>nei</translation>
+    </message>
+    <message>
+        <location filename="../forms/coincontroldialog.ui" line="+51"/>
+        <source>After Fee:</source>
+        <translation>Etter Avgift:</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Change:</source>
+        <translation>Endring:</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>(un)select all</source>
+        <translation>Fjern alt valgt</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Tree mode</source>
+        <translation>Tre modus</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>List mode</source>
+        <translation>Liste modus</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Amount</source>
+        <translation>Beløp</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Label</source>
+        <translation>Merkelapp</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Address</source>
+        <translation>Adresse</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Date</source>
+        <translation>Dato</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Confirmations</source>
+        <translation>Bekreftelser</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Confirmed</source>
+        <translation>Bekreftet</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Priority</source>
+        <translation>Prioritet</translation>
+    </message>
+    <message>
+        <location filename="../coincontroldialog.cpp" line="-515"/>
+        <source>Copy address</source>
+        <translation>Kopier adresse</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy label</source>
+        <translation>Kopier merkelapp</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+26"/>
+        <source>Copy amount</source>
+        <translation>Kopiér beløp</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <source>Copy transaction ID</source>
+        <translation>Kopier transaksjons-ID</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Copy quantity</source>
+        <translation>Kopier mengde</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Copy fee</source>
+        <translation>Kopier gebyr</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy after fee</source>
+        <translation>Kopier etter gebyr</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy bytes</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy priority</source>
+        <translation>Kopier prioritet</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy low output</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy change</source>
+        <translation>Kopier veksel</translation>
+    </message>
+    <message>
+        <location line="+317"/>
+        <source>highest</source>
+        <translation>høyest</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>high</source>
+        <translation>høy</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>medium-high</source>
+        <translation>medium-høy</translation>
+    </mes
