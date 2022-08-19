@@ -972,4 +972,159 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-9"/>
-        <source>change from %1 (%
+        <source>change from %1 (%2)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>(change)</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>EditAddressDialog</name>
+    <message>
+        <location filename="../forms/editaddressdialog.ui" line="+14"/>
+        <source>Edit Address</source>
+        <translation>Alilan ing Address</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>&amp;Label</source>
+        <translation>&amp;Label</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>The label associated with this address book entry</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>&amp;Address</source>
+        <translation>&amp;Address</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>The address associated with this address book entry. This can only be modified for sending addresses.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../editaddressdialog.cpp" line="+20"/>
+        <source>New receiving address</source>
+        <translation>Bayung address king pamagtanggap</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>New sending address</source>
+        <translation>Bayung address king pamagpadala</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Edit receiving address</source>
+        <translation>Alilan ya ing address king pamagpadala</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Edit sending address</source>
+        <translation>Alilan ya ing address king pamagpadala</translation>
+    </message>
+    <message>
+        <location line="+76"/>
+        <source>The entered address &quot;%1&quot; is already in the address book.</source>
+        <translation>Ing pepalub yung address &quot;%1&quot; ati na yu king aklat dareng address</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>The entered address &quot;%1&quot; is not a valid Abjcoin address.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Could not unlock wallet.</source>
+        <translation>Ali ya bisang mag-unlock ing wallet</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>New key generation failed.</source>
+        <translation>Memali ya ing pamangaua king key</translation>
+    </message>
+</context>
+<context>
+    <name>GUIUtil::HelpMessageBox</name>
+    <message>
+        <location filename="../guiutil.cpp" line="+420"/>
+        <location line="+12"/>
+        <source>Abjcoin-Qt</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-12"/>
+        <source>version</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Usage:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>command-line options</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>UI options</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Set language, for example &quot;de_DE&quot; (default: system locale)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Start minimized</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show splash screen on startup (default: 1)</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>OptionsDialog</name>
+    <message>
+        <location filename="../forms/optionsdialog.ui" line="+14"/>
+        <source>Options</source>
+        <translation>Pipamilian</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>&amp;Main</source>
+        <translation>&amp;Pun</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Pay transaction &amp;fee</source>
+        <translation>Mamayad &amp;bayad para king transaksion </translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Reserved amount does not participate in staking and is therefore spendable at any time.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Reserve</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Automatically start Abjcoin after logging in to the system.</
