@@ -214,4 +214,123 @@ Ing produktung ini atin yang makayabeng software a gewa dareng OpenSSL Project p
         <location line="+5"/>
         <source>Decrypt wallet</source>
         <translation>I-decrypt ya ing wallet</translation>
-    </messag
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Change passphrase</source>
+        <translation>Alilan ya ing passphrase</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter the old and new passphrase to the wallet.</source>
+        <translation>Palub ye ing luma ampo ing bayung passphrase king wallet.</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Confirm wallet encryption</source>
+        <translation>Kumpirman ya ing wallet encryption</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Are you sure you wish to encrypt your wallet?</source>
+        <translation>Siguradu na kang buri meng i-encrypt ing kekang wallet?</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <translation>Mayalaga: Reng milabas a backups a gewa mu gamit ing wallet file mu dapat lamung mialilan bayung gawang encrypted wallet file. Para keng seguridad , reng milabas a backups dareng ali maka encrypt a wallet file ma-ala nala istung inumpisan mu nalang gamitan reng bayu, at me encrypt a wallet. </translation>
+    </message>
+    <message>
+        <location line="+103"/>
+        <location line="+24"/>
+        <source>Warning: The Caps Lock key is on!</source>
+        <translation>Kapabaluan: Makabuklat ya ing Caps Lock key!</translation>
+    </message>
+    <message>
+        <location line="-133"/>
+        <location line="+60"/>
+        <source>Wallet encrypted</source>
+        <translation>Me-encrypt ne ing wallet</translation>
+    </message>
+    <message>
+        <location line="-58"/>
+        <source>Abjcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+7"/>
+        <location line="+44"/>
+        <location line="+6"/>
+        <source>Wallet encryption failed</source>
+        <translation>Memali ya ing pamag-encrypt king wallet </translation>
+    </message>
+    <message>
+        <location line="-56"/>
+        <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
+        <translation>Memali ya ing encryption uli na ning ausan dang internal error. E ya me-encrypt ing wallet yu.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+50"/>
+        <source>The supplied passphrases do not match.</source>
+        <translation>E la mitutugma ring mibieng passphrase</translation>
+    </message>
+    <message>
+        <location line="-38"/>
+        <source>Wallet unlock failed</source>
+        <translation>Memali ya ing pamag-unlock king wallet </translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+12"/>
+        <location line="+19"/>
+        <source>The passphrase entered for the wallet decryption was incorrect.</source>
+        <translation>E ya istu ing passphrase a pepalub da para king wallet decryption</translation>
+    </message>
+    <message>
+        <location line="-20"/>
+        <source>Wallet decryption failed</source>
+        <translation>Me-mali ya ing pamag-decrypt king wallet</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Wallet passphrase was successfully changed.</source>
+        <translation>Mi-alilan ne ing passphrase na ning wallet.</translation>
+    </message>
+</context>
+<context>
+    <name>BitcoinGUI</name>
+    <message>
+        <location filename="../bitcoingui.cpp" line="+280"/>
+        <source>Sign &amp;message...</source>
+        <translation>I-sign ing &amp;mensayi</translation>
+    </message>
+    <message>
+        <location line="+242"/>
+        <source>Synchronizing with network...</source>
+        <translation>Mag-sychronize ne king network...</translation>
+    </message>
+    <message>
+        <location line="-308"/>
+        <source>&amp;Overview</source>
+        <translation>&amp;Overview</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show general overview of wallet</source>
+        <translation>Ipakit ing kabuuang lawe ning wallet</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>&amp;Transactions</source>
+        <translation>&amp;Transaksion</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Browse transaction histo
