@@ -1877,4 +1877,132 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+9"/>
-        <source>&amp;Label:<
+        <source>&amp;Label:</source>
+        <translation>&amp;Label:</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>The address to send the payment to  (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Choose address from address book</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Paste address from clipboard</source>
+        <translation>Idikit ing address menibat king clipboard</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Remove this recipient</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../sendcoinsentry.cpp" line="+1"/>
+        <source>Enter a Abjcoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>SignVerifyMessageDialog</name>
+    <message>
+        <location filename="../forms/signverifymessagedialog.ui" line="+14"/>
+        <source>Signatures - Sign / Verify a Message</source>
+        <translation>Pirma - Pirman / I-beripika ing mensayi</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+124"/>
+        <source>&amp;Sign Message</source>
+        <translation>&amp;Pirman ing Mensayi</translation>
+    </message>
+    <message>
+        <location line="-118"/>
+        <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Maliari kang mamirmang mensayi king kekang address bilang patune na keka ya ini. Mimingat mu king pamag-pirmang  e malino uling mapalyari kang mabiktimang phishing attack a manloku keka na pirman me ing sarili mu para king karela. Only sign fully-detailed statements you agree to.</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+203"/>
+        <source>Choose an address from the address book</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-193"/>
+        <location line="+203"/>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <location line="-193"/>
+        <source>Paste address from clipboard</source>
+        <translation>Idikit ing address menibat clipboard</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Enter the message you want to sign here</source>
+        <translation>Ipalub ing mensayi a buri mung pirman keni</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Copy the current signature to the system clipboard</source>
+        <translation>Kopyan ing kasalungsungan pirma king system clipboard</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Sign the message to prove you own this Abjcoin address</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Reset all sign message fields</source>
+        <translation>Ibalik keng dati reng ngan fields keng pamamirmang mensayi</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+146"/>
+        <source>Clear &amp;All</source>
+        <translation>I-Clear &amp;Eganagana</translation>
+    </message>
+    <message>
+        <location line="-87"/>
+        <location line="+70"/>
+        <source>&amp;Verify Message</source>
+        <translation>&amp;Beripikan ing Mensayi</translation>
+    </message>
+    <message>
+        <location line="-64"/>
+        <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>Verify the message to ensure it was signed
