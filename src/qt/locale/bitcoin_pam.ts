@@ -3134,4 +3134,145 @@ for example: alertnotify=echo %%s | mail -s &quot;Abjcoin Alert&quot; admin@foo.
     <message>
         <location line="-15"/>
         <source>Error loading blkindex.dat</source>
-        <translation type="un
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Error loading wallet.dat: Wallet corrupted</source>
+        <translation>Me-mali ya ing pamag-load king wallet.dat: Me-corrupt ya ing wallet</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Error loading wallet.dat: Wallet requires newer version of Abjcoin</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wallet needed to be rewritten: restart Abjcoin to complete</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Error loading wallet.dat</source>
+        <translation>Me-mali ya ing pamag-load king wallet.dat</translation>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>Invalid -proxy address: &apos;%s&apos;</source>
+        <translation>Ali katanggap-tanggap a -proxy addresss: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
+        <translation>E kilalang network ing mepili king -onlynet: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Unknown -socks proxy version requested: %i</source>
+        <translation>E kilalang -socks proxy version requested: %i</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot resolve -bind address: &apos;%s&apos;</source>
+        <translation>Eya me-resolve ing -bind address: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
+        <translation>Eya me-resolve ing -externalip address: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="-24"/>
+        <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
+        <translation>Eya maliari ing alaga keng -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <source>Error: could not start node</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Sending...</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Invalid amount</source>
+        <translation>Ing alaga e ya katanggap-tanggap</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Insufficient funds</source>
+        <translation>Kulang a pondo</translation>
+    </message>
+    <message>
+        <location line="-34"/>
+        <source>Loading block index...</source>
+        <translation>Lo-load dane ing block index...</translation>
+    </message>
+    <message>
+        <location line="-103"/>
+        <source>Add a node to connect to and attempt to keep the connection open</source>
+        <translation>Magdagdag a node ban kumunekta at subuknan apanatili yang makabuklat ing koneksion</translation>
+    </message>
+    <message>
+        <location line="+122"/>
+        <source>Unable to bind to %s on this computer. Abjcoin is probably already running.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-97"/>
+        <source>Fee per KB to add to transactions you send</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+55"/>
+        <source>Invalid amount for -mininput=&lt;amount&gt;: &apos;%s&apos;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Loading wallet...</source>
+        <translation>Lo-load dane ing wallet...</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Cannot downgrade wallet</source>
+        <translation>Ali ya magsilbing i-downgrade ing wallet</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot initialize keypool</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot write default address</source>
+        <translation>Eya misulat ing default address</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rescanning...</source>
+        <translation>I-scan deng pasibayu...</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Done loading</source>
+        <translation>Yari ne ing pamag-load</translation>
+    </message>
+    <message>
+        <location line="-167"/>
+        <source>To use the %s option</source>
+        <translation>Para agamit ing %s a pimamilian</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Error</source>
+        <translation>Mali</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
+%s
+If the file does
