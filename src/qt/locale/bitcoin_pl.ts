@@ -1600,4 +1600,176 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>SendCoinsDialog</name>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
-   
+        <location filename="../sendcoinsdialog.cpp" line="+182"/>
+        <location line="+5"/>
+        <location line="+5"/>
+        <location line="+5"/>
+        <location line="+6"/>
+        <location line="+5"/>
+        <location line="+5"/>
+        <source>Send Coins</source>
+        <translation>Wyślij Monety</translation>
+    </message>
+    <message>
+        <location line="+76"/>
+        <source>Coin Control Features</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Inputs...</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>automatically selected</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Insufficient funds!</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>Quantity:</source>
+        <translation>Ilość:</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+35"/>
+        <source>0</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-19"/>
+        <source>Bytes:</source>
+        <translation>Bajtów:</translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Amount:</source>
+        <translation>Kwota:</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+86"/>
+        <location line="+86"/>
+        <location line="+32"/>
+        <source>0.00 BC</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-191"/>
+        <source>Priority:</source>
+        <translation>Priorytet:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>medium</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Fee:</source>
+        <translation>Opłata:</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Low Output:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>no</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>After Fee:</source>
+        <translation>Po opłacie:</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Change</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>custom change address</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>Send to multiple recipients at once</source>
+        <translation>Wyślij do wielu odbiorców na raz</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Add &amp;Recipient</source>
+        <translation>Dodaj Odbio&amp;rce</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Remove all transaction fields</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Clear &amp;All</source>
+        <translation>Wyczyść &amp;wszystko</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Balance:</source>
+        <translation>Saldo:</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>123.456 BC</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Confirm the send action</source>
+        <translation>Potwierdź akcję wysyłania</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>S&amp;end</source>
+        <translation>Wy&amp;syłka</translation>
+    </message>
+    <message>
+        <location filename="../sendcoinsdialog.cpp" line="-173"/>
+        <source>Enter a Abjcoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Copy quantity</source>
+        <translation>Skopiuj ilość</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy amount</source>
+        <translation>Kopiuj kwotę</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy fee</source>
+        <translation>Skopiuj opłatę</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy after fee</source>
+        <translation>Skopiuj ilość po opłacie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy bytes</source>
+        <translation>Skopiuj ilość bajtów</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy priority</source>
+      
