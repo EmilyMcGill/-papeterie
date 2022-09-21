@@ -1029,4 +1029,132 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location filename="../editaddressdialog.cpp" line="+20"/>
-        <source>New receiving addre
+        <source>New receiving address</source>
+        <translation>Ny mottagaradress</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>New sending address</source>
+        <translation>Ny avsändaradress</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Edit receiving address</source>
+        <translation>Redigera mottagaradress</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Edit sending address</source>
+        <translation>Redigera avsändaradress</translation>
+    </message>
+    <message>
+        <location line="+76"/>
+        <source>The entered address &quot;%1&quot; is already in the address book.</source>
+        <translation>Den angivna adressen &quot;%1&quot; finns redan i adressboken.</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>The entered address &quot;%1&quot; is not a valid Abjcoin address.</source>
+        <translation>Den inslagna adressen &quot;%1&quot; är inte en giltig Abjcoin adress.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Could not unlock wallet.</source>
+        <translation>Plånboken kunde inte låsas upp.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>New key generation failed.</source>
+        <translation>Misslyckades med generering av ny nyckel.</translation>
+    </message>
+</context>
+<context>
+    <name>GUIUtil::HelpMessageBox</name>
+    <message>
+        <location filename="../guiutil.cpp" line="+420"/>
+        <location line="+12"/>
+        <source>Abjcoin-Qt</source>
+        <translation>Abjcoin-Qt</translation>
+    </message>
+    <message>
+        <location line="-12"/>
+        <source>version</source>
+        <translation>version</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Usage:</source>
+        <translation>Användning:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>command-line options</source>
+        <translation>Command-line alternativ</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>UI options</source>
+        <translation>UI alternativ</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Set language, for example &quot;de_DE&quot; (default: system locale)</source>
+        <translation>Ställ in språk, t.ex. &quot;de_DE&quot; (förval: systemets språk)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Start minimized</source>
+        <translation>Starta som minimerad</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show splash screen on startup (default: 1)</source>
+        <translation>Visa startscreen vid start (förval: 1)</translation>
+    </message>
+</context>
+<context>
+    <name>OptionsDialog</name>
+    <message>
+        <location filename="../forms/optionsdialog.ui" line="+14"/>
+        <source>Options</source>
+        <translation>Alternativ</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>&amp;Main</source>
+        <translation>&amp;Allmänt</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended.</source>
+        <translation>Valfri transaktionsavgift per kB som försäkrar att transaktionen behandlas snabbt. De flesta transaktionerna är 1 kB. En avgift på 0,01 är rekommenderad.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Pay transaction &amp;fee</source>
+        <translation>Betala överförings&amp;avgift</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Reserved amount does not participate in staking and is therefore spendable at any time.</source>
+        <translation>Reserverad mängd deltar inte i stake-processen och kan därför spenderas när som helst.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Reserve</source>
+        <translation>Reservera</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Automatically start Abjcoin after logging in to the system.</source>
+        <translation>Starta Abjcoin automatiskt vid inloggning.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Start Abjcoin on system login</source>
+        <translation>&amp;Starta Abjcoin vid inloggning</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</source>
+        <translation>Koppla ifrån block och adress-databaserna vid nedstängning. Detta betyder att det kan flyttas till en annan datamapp men saktar ner avstängningen. Plånboken är allti
