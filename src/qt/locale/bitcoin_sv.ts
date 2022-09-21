@@ -873,4 +873,160 @@ Adress: %4
     <message>
         <location line="+1"/>
         <source>Copy bytes</source>
-        
+        <translation>Kopiera bytes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy priority</source>
+        <translation>Kopiera prioritet</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy low output</source>
+        <translation>Kopiera låg utskrift</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy change</source>
+        <translation>Kopiera förändringarna</translation>
+    </message>
+    <message>
+        <location line="+317"/>
+        <source>highest</source>
+        <translation>högst</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>high</source>
+        <translation>hög</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>medium-high</source>
+        <translation>medium-hög</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>medium</source>
+        <translation>medium</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>low-medium</source>
+        <translation>låg-medium</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>low</source>
+        <translation>låg</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>lowest</source>
+        <translation>lägsta</translation>
+    </message>
+    <message>
+        <location line="+155"/>
+        <source>DUST</source>
+        <translation>STOFT</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>yes</source>
+        <translation>ja</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>This label turns red, if the transaction size is bigger than 10000 bytes.
+
+ This means a fee of at least %1 per kb is required.
+
+ Can vary +/- 1 Byte per input.</source>
+        <translation>Denna label blir röd, om storleken på transaktionen är över 10000 bytes.
+
+ Detta betyder att en avgift på %1 per kb måste betalas.
+
+ Kan variera +/- 1 Byte per ingång.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Transactions with higher priority get more likely into a block.
+
+This label turns red, if the priority is smaller than &quot;medium&quot;.
+
+ This means a fee of at least %1 per kb is required.</source>
+        <translation>Transaktioner med en högre prioritet har en större sannolikhet att bli adderat till ett block.
+
+Denna label blir röd, om prioriteten är lägre än &quot;medium&quot;.
+
+Detta betyder att en avgift på minst %1 krävs.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This label turns red, if any recipient receives an amount smaller than %1.
+
+ This means a fee of at least %2 is required. 
+
+ Amounts below 0.546 times the minimum relay fee are shown as DUST.</source>
+        <translation>Denna label blir röd, om en mottagare får en mängd mindre än %1
+
+Detta betyder att en avgift på minst %2 krävs.
+
+Mängder under 0,546 gånger minimiavgiften visas som DUST.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This label turns red, if the change is smaller than %1.
+
+ This means a fee of at least %2 is required.</source>
+        <translation>Denna label blir röd, om ändringen är mindre än %1.
+
+Detta betyder att en avgift på minst %2 krävs.</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <location line="+66"/>
+        <source>(no label)</source>
+        <translation>(Ingen etikett)</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>change from %1 (%2)</source>
+        <translation>ändra från %1(%2)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>(change)</source>
+        <translation>(ändra)</translation>
+    </message>
+</context>
+<context>
+    <name>EditAddressDialog</name>
+    <message>
+        <location filename="../forms/editaddressdialog.ui" line="+14"/>
+        <source>Edit Address</source>
+        <translation>Redigera Adress</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>&amp;Label</source>
+        <translation>&amp;Etikett</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>The label associated with this address book entry</source>
+        <translation>Namnet som kopplats till denna Abjcoin-adress</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>&amp;Address</source>
+        <translation>&amp;Adress</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>The address associated with this address book entry. This can only be modified for sending addresses.</source>
+        <translation>Adressen är kopplad till detta inlägg i adressboken. Denna kan endast ändras för skickande adresser.</translation>
+    </message>
+    <message>
+        <location filename="../editaddressdialog.cpp" line="+20"/>
+        <source>New receiving addre
