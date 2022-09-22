@@ -1157,4 +1157,124 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <message>
         <location line="+7"/>
         <source>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</source>
-        <translation>Koppla ifrån block och adress-databaserna vid nedstängning. Detta betyder att det kan flyttas till en annan datamapp men saktar ner avstängningen. Plånboken är allti
+        <translation>Koppla ifrån block och adress-databaserna vid nedstängning. Detta betyder att det kan flyttas till en annan datamapp men saktar ner avstängningen. Plånboken är alltid frånkopplad.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Detach databases at shutdown</source>
+        <translation>Koppla bort &amp;databaserna vid nedkörning</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>&amp;Network</source>
+        <translation>&amp;Nätverk</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Automatically open the Abjcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Öppna automatiskt Abjcoin klientens port på routern. Detta fungerar endast om din router stödjer UPnP och det är aktiverat.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Map port using &amp;UPnP</source>
+        <translation>Tilldela port med hjälp av &amp;UPnP</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Connect to the Abjcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Anslut till Abjcoin nätverket via en SOCKS proxy (t.ex. när du ansluter genom Tor).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Connect through SOCKS proxy:</source>
+        <translation>&amp;Anslut genom en SOCKS proxy:</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Proxy &amp;IP:</source>
+        <translation>Proxy-&amp;IP: </translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>IP address of the proxy (e.g. 127.0.0.1)</source>
+        <translation>Proxyns IP-adress (t.ex. 127.0.0.1)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>&amp;Port:</source>
+        <translation>&amp;Port: </translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Port of the proxy (e.g. 9050)</source>
+        <translation>Proxyns port (t.ex. 9050)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>SOCKS &amp;Version:</source>
+        <translation>SOCKS &amp;Version:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>SOCKS version of the proxy (e.g. 5)</source>
+        <translation>SOCKS version av proxyn (t.ex. 5)</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>&amp;Window</source>
+        <translation>&amp;Fönster</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Show only a tray icon after minimizing the window.</source>
+        <translation>Visa endast en systemfältsikon vid minimering.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Minimize to the tray instead of the taskbar</source>
+        <translation>&amp;Minimera till systemfältet istället för aktivitetsfältet</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Quit in the menu.</source>
+        <translation>Minimera applikationen istället för att stänga ner den när fönstret stängs. Detta innebär att programmet fotrsätter att köras tills du väljer Avsluta i menyn.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>M&amp;inimize on close</source>
+        <translation>M&amp;inimera vid stängning</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>&amp;Display</source>
+        <translation>&amp;Visa</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>User Interface &amp;language:</source>
+        <translation>Användargränssnittets &amp;språk: </translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>The user interface language can be set here. This setting will take effect after restarting Abjcoin.</source>
+        <translation>Användargränssnittets språk kan ställas in här. Inställningen börjar gälla efter omstart av Abjcoin.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>&amp;Unit to show amounts in:</source>
+        <translation>&amp;Måttenhet att visa belopp i: </translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
+        <translation>Välj en måttenhet att visa när du skickar mynt.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Whether to show Abjcoin addresses in the transaction list or not.</source>
+        <translation>Om Abjcoin adresser skall visas i transaktionslistan eller inte.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Display addresses in transaction list</source>
+        <translation>&amp;Visa adresser i transaktionslistan</
