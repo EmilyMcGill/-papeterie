@@ -2044,4 +2044,171 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+8"/>
         <location line="+73"/>
         <location line="+8"/>
-   
+        <source>Please check the address and try again.</source>
+        <translation>請檢查位址是否正確後再試一次。</translation>
+    </message>
+    <message>
+        <location line="-81"/>
+        <location line="+81"/>
+        <source>The entered address does not refer to a key.</source>
+        <translation>輸入的位址沒有對應到你的任何密鑰。</translation>
+    </message>
+    <message>
+        <location line="-73"/>
+        <source>Wallet unlock was cancelled.</source>
+        <translation>錢包解鎖已取消。</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Private key for the entered address is not available.</source>
+        <translation>沒有對應輸入位址的密鑰。</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Message signing failed.</source>
+        <translation>訊息簽署失敗。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Message signed.</source>
+        <translation>訊息簽署好了。</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>The signature could not be decoded.</source>
+        <translation>沒辦法把這個簽章解碼。</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+13"/>
+        <source>Please check the signature and try again.</source>
+        <translation>請檢查簽章是否正確後再試一次。</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The signature did not match the message digest.</source>
+        <translation>這個簽章跟訊息的數位摘要不符。</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Message verification failed.</source>
+        <translation>訊息驗證失敗。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Message verified.</source>
+        <translation>訊息驗證沒錯。</translation>
+    </message>
+</context>
+<context>
+    <name>TransactionDesc</name>
+    <message>
+        <location filename="../transactiondesc.cpp" line="+19"/>
+        <source>Open until %1</source>
+        <translation>要到 %1 才確定</translation>
+    </message>
+    <message numerus="yes">
+        <location line="-2"/>
+        <source>Open for %n block(s)</source>
+        <translation type="unfinished"><numerusform></numerusform></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>conflicted</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1/offline</source>
+        <translation>%1/離線中</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1/unconfirmed</source>
+        <translation>%1/未確定</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 confirmations</source>
+        <translation>%1 次確認</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Status</source>
+        <translation>狀態</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+7"/>
+        <source>, broadcast through %n node(s)</source>
+        <translation><numerusform>，已公告給 %n 個節點</numerusform></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Date</source>
+        <translation>日期</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Source</source>
+        <translation>來源</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Generated</source>
+        <translation>生產出來</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+17"/>
+        <source>From</source>
+        <translation>來源</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+22"/>
+        <location line="+58"/>
+        <source>To</source>
+        <translation>目的</translation>
+    </message>
+    <message>
+        <location line="-77"/>
+        <location line="+2"/>
+        <source>own address</source>
+        <translation>自己的位址</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>label</source>
+        <translation>標記</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <location line="+12"/>
+        <location line="+45"/>
+        <location line="+17"/>
+        <location line="+30"/>
+        <source>Credit</source>
+        <translation>入帳</translation>
+    </message>
+    <message numerus="yes">
+        <location line="-102"/>
+        <source>matures in %n more block(s)</source>
+        <translation><numerusform>再等 %n 個區塊生出來後成熟</numerusform></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>not accepted</source>
+        <translation>不被接受</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+8"/>
+        <location line="+15"/>
+        <location line="+30"/>
+        <source>Debit</source>
+        <translation>出帳</translation>
+    </message>
+    <message>
+        <location line="-39"/>
+        <source>Transaction fee</source>
+        <translatio
