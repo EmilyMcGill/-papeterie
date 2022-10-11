@@ -2832,4 +2832,141 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+5"/>
-        <source>Sync checkpoints policy (def
+        <source>Sync checkpoints policy (default: strict)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+83"/>
+        <source>Invalid -tor address: &apos;%s&apos;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-82"/>
+        <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
+        <translation>每個連線的接收緩衝區大小上限為 &lt;n&gt;*1000 個位元組(預設值: 5000)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 1000)</source>
+        <translation>每個連線的傳送緩衝區大小上限為 &lt;n&gt;*1000 位元組(預設值: 1000)</translation>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
+        <translation>只和 &lt;net&gt; 網路上的節點連線(IPv4, IPv6, 或 Tor)</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Output extra debugging information. Implies all other -debug* options</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Output extra network debugging information</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Prepend debug output with timestamp</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
+        <translation>SSL 選項: (SSL 設定程序請見 Bitcoin Wiki)</translation>
+    </message>
+    <message>
+        <location line="-74"/>
+        <source>Select the version of socks proxy to use (4-5, default: 5)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Send trace/debug info to console instead of debug.log file</source>
+        <translation>在終端機顯示追蹤或除錯資訊，而不是寫到檔案 debug.log 中</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Send trace/debug info to debugger</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Set maximum block size in bytes (default: 250000)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Set minimum block size in bytes (default: 0)</source>
+        <translation>設定區塊大小下限成多少位元組(預設值: 0)</translation>
+    </message>
+    <message>
+        <location line="-29"/>
+        <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
+        <translation>客戶端軟體啓動時把 debug.log 檔縮小(預設值: 當沒有 -debug 時為 1)</translation>
+    </message>
+    <message>
+        <location line="-42"/>
+        <source>Specify connection timeout in milliseconds (default: 5000)</source>
+        <translation>指定連線在幾毫秒後逾時(預設值: 5000)</translation>
+    </message>
+    <message>
+        <location line="+109"/>
+        <source>Unable to sign checkpoint, wrong checkpointkey?
+</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-80"/>
+        <source>Use UPnP to map the listening port (default: 0)</source>
+        <translation>是否要使用通用即插即用(UPnP)協定，來設定聽候連線的通訊埠的對應(預設值: 0)</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Use UPnP to map the listening port (default: 1 when listening)</source>
+        <translation>是否要使用通用即插即用(UPnP)協定，來設定聽候連線的通訊埠的對應(預設值: 當有聽候連線時為 1)</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Username for JSON-RPC connections</source>
+        <translation>JSON-RPC 連線使用者名稱</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Verifying database integrity...</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+57"/>
+        <source>WARNING: syncronized checkpoint violation detected, but skipped!</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Warning: Disk space is low!</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Warning: This version is obsolete, upgrade required!</source>
+        <translation>警告: 這個版本已經被淘汰了，必須要升級！</translation>
+    </message>
+    <message>
+        <location line="-48"/>
+        <source>wallet.dat corrupt, salvage failed</source>
+        <translation>錢包檔 weallet.dat 壞掉了，拯救失敗</translation>
+    </message>
+    <message>
+        <location line="-54"/>
+        <source>Password for JSON-RPC connections</source>
+        <
