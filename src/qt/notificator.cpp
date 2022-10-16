@@ -239,4 +239,66 @@ void Notificator::notifyGrowl(Class cls, const QString &title, const QString &te
         "end tell"
     );
 
-    QString notificationApp(QApplication::appli
+    QString notificationApp(QApplication::applicationName());
+    if (notificationApp.isEmpty())
+        notificationApp = "Application";
+
+    QPixmap notificationIconPixmap;
+    if (icon.isNull()) { // If no icon specified, set icon based on class
+        QStyle::StandardPixmap sicon = QStyle::SP_MessageBoxQuestion;
+        switch (cls)
+        {
+        case Information: sicon = QStyle::SP_MessageBoxInformation; break;
+        case Warning: sicon = QStyle::SP_MessageBoxWarning; break;
+        case Critical: sicon = QStyle::SP_MessageBoxCritical; break;
+        }
+        notificationIconPixmap = QApplication::style()->standardPixmap(sicon);
+    }
+    else {
+        QSize size = icon.actualSize(QSize(48, 48));
+        notificationIconPixmap = icon.pixmap(size);
+    }
+
+    QString notificationIcon;
+    QTemporaryFile notificationIconFile;
+    if (!notificationIconPixmap.isNull() && notificationIconFile.open()) {
+        QImageWriter writer(&notificationIconFile, "PNG");
+        if (writer.write(notificationIconPixmap.toImage()))
+            notificationIcon = QString(" image from location \"file://%1\"").arg(notificationIconFile.fileName());
+    }
+
+    QString quotedTitle(title), quotedText(text);
+    quotedTitle.replace("\\", "\\\\").replace("\"", "\\");
+    quotedText.replace("\\", "\\\\").replace("\"", "\\");
+    QString growlApp(this->mode == Notificator::Growl13 ? "Growl" : "GrowlHelperApp");
+    qt_mac_execute_apple_script(script.arg(notificationApp, quotedTitle, quotedText, notificationIcon, growlApp), 0);
+}
+#endif
+
+void Notificator::notify(Class cls, const QString &title, const QString &text, const QIcon &icon, int millisTimeout)
+{
+    switch(mode)
+    {
+#ifdef USE_DBUS
+    case Freedesktop:
+        notifyDBus(cls, title, text, icon, millisTimeout);
+        break;
+#endif
+    case QSystemTray:
+        notifySystray(cls, title, text, icon, millisTimeout);
+        break;
+#ifdef Q_OS_MAC
+    case Growl12:
+    case Growl13:
+        notifyGrowl(cls, title, text, icon);
+        break;
+#endif
+    default:
+        if(cls == Critical)
+        {
+            // Fall back to old fashioned pop-up dialog if critical and no other notification available
+            QMessageBox::critical(parent, title, text, QMessageBox::Ok, QMessageBox::Ok);
+        }
+        break;
+    }
+}
