@@ -3094,4 +3094,150 @@ for example: alertnotify=echo %%s | mail -s &quot;Abjcoin Alert&quot; admin@foo.
     <message>
         <location line="+18"/>
         <source>WARNING: Invalid checkpoint found! Displayed transactions may not be correct! You may need to upgrade, or notify developers.</source>
-        <translation type="unfinished
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-158"/>
+        <source>This help message</source>
+        <translation>這些說明訊息</translation>
+    </message>
+    <message>
+        <location line="+95"/>
+        <source>Wallet %s resides outside data directory %s.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot obtain a lock on data directory %s.  Abjcoin is probably already running.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-98"/>
+        <source>Abjcoin</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+140"/>
+        <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
+        <translation>沒辦法和這台電腦上的 %s 繫結(回傳錯誤 %d, %s)</translation>
+    </message>
+    <message>
+        <location line="-130"/>
+        <source>Connect through socks proxy</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
+        <translation>允許對 -addnode, -seednode, -connect 的參數使用域名查詢 </translation>
+    </message>
+    <message>
+        <location line="+122"/>
+        <source>Loading addresses...</source>
+        <translation>正在載入位址資料...</translation>
+    </message>
+    <message>
+        <location line="-15"/>
+        <source>Error loading blkindex.dat</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Error loading wallet.dat: Wallet corrupted</source>
+        <translation>載入檔案 wallet.dat 時發生錯誤: 錢包損毀了</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Error loading wallet.dat: Wallet requires newer version of Abjcoin</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wallet needed to be rewritten: restart Abjcoin to complete</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Error loading wallet.dat</source>
+        <translation>載入錢包檔 wallet.dat 時發生錯誤</translation>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>Invalid -proxy address: &apos;%s&apos;</source>
+        <translation>無效的 -proxy 位址: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
+        <translation>在 -onlynet 指定了不明的網路別: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Unknown -socks proxy version requested: %i</source>
+        <translation>在 -socks 指定了不明的代理協定版本: %i</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot resolve -bind address: &apos;%s&apos;</source>
+        <translation>沒辦法解析 -bind 位址: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
+        <translation>沒辦法解析 -externalip 位址: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="-24"/>
+        <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
+        <translation>設定 -paytxfee=&lt;金額&gt; 的金額無效: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <source>Error: could not start node</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Sending...</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Invalid amount</source>
+        <translation>無效的金額</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Insufficient funds</source>
+        <translation>累積金額不足</translation>
+    </message>
+    <message>
+        <location line="-34"/>
+        <source>Loading block index...</source>
+        <translation>正在載入區塊索引...</translation>
+    </message>
+    <message>
+        <location line="-103"/>
+        <source>Add a node to connect to and attempt to keep the connection open</source>
+        <translation>增加一個要連線的節線，並試著保持對它的連線暢通</translation>
+    </message>
+    <message>
+        <location line="+122"/>
+        <source>Unable to bind to %s on this computer. Abjcoin is probably already running.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-97"/>
+        <source>Fee per KB to add to transactions you send</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+55"/>
+        <source>Invalid amount for -mininput=&lt;amount&gt;: &apos;%s&apos;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Loading wallet...</source>
+        <translation>正在載入錢包資料...</translation>
+    </
