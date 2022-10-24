@@ -191,4 +191,84 @@ void SignVerifyMessageDialog::on_verifyMessageButton_VM_clicked()
     {
         ui->addressIn_VM->setValid(false);
         ui->statusLabel_VM->setStyleSheet("QLabel { color: red; }");
-        ui->statusLabel_VM->setText(tr("
+        ui->statusLabel_VM->setText(tr("The entered address is invalid.") + QString(" ") + tr("Please check the address and try again."));
+        return;
+    }
+    CKeyID keyID;
+    if (!addr.GetKeyID(keyID))
+    {
+        ui->addressIn_VM->setValid(false);
+        ui->statusLabel_VM->setStyleSheet("QLabel { color: red; }");
+        ui->statusLabel_VM->setText(tr("The entered address does not refer to a key.") + QString(" ") + tr("Please check the address and try again."));
+        return;
+    }
+
+    bool fInvalid = false;
+    std::vector<unsigned char> vchSig = DecodeBase64(ui->signatureIn_VM->text().toStdString().c_str(), &fInvalid);
+
+    if (fInvalid)
+    {
+        ui->signatureIn_VM->setValid(false);
+        ui->statusLabel_VM->setStyleSheet("QLabel { color: red; }");
+        ui->statusLabel_VM->setText(tr("The signature could not be decoded.") + QString(" ") + tr("Please check the signature and try again."));
+        return;
+    }
+
+    CDataStream ss(SER_GETHASH, 0);
+    ss << strMessageMagic;
+    ss << ui->messageIn_VM->document()->toPlainText().toStdString();
+
+    CKey key;
+    if (!key.SetCompactSignature(Hash(ss.begin(), ss.end()), vchSig))
+    {
+        ui->signatureIn_VM->setValid(false);
+        ui->statusLabel_VM->setStyleSheet("QLabel { color: red; }");
+        ui->statusLabel_VM->setText(tr("The signature did not match the message digest.") + QString(" ") + tr("Please check the signature and try again."));
+        return;
+    }
+
+    if (!(CBitcoinAddress(key.GetPubKey().GetID()) == addr))
+    {
+        ui->statusLabel_VM->setStyleSheet("QLabel { color: red; }");
+        ui->statusLabel_VM->setText(QString("<nobr>") + tr("Message verification failed.") + QString("</nobr>"));
+        return;
+    }
+
+    ui->statusLabel_VM->setStyleSheet("QLabel { color: green; }");
+    ui->statusLabel_VM->setText(QString("<nobr>") + tr("Message verified.") + QString("</nobr>"));
+}
+
+void SignVerifyMessageDialog::on_clearButton_VM_clicked()
+{
+    ui->addressIn_VM->clear();
+    ui->signatureIn_VM->clear();
+    ui->messageIn_VM->clear();
+    ui->statusLabel_VM->clear();
+
+    ui->addressIn_VM->setFocus();
+}
+
+bool SignVerifyMessageDialog::eventFilter(QObject *object, QEvent *event)
+{
+    if (event->type() == QEvent::MouseButtonPress || event->type() == QEvent::FocusIn)
+    {
+        if (ui->tabWidget->currentIndex() == 0)
+        {
+            /* Clear status message on focus change */
+            ui->statusLabel_SM->clear();
+
+            /* Select generated signature */
+            if (object == ui->signatureOut_SM)
+            {
+                ui->signatureOut_SM->selectAll();
+                return true;
+            }
+        }
+        else if (ui->tabWidget->currentIndex() == 1)
+        {
+            /* Clear status message on focus change */
+            ui->statusLabel_VM->clear();
+        }
+    }
+    return QDialog::eventFilter(object, event);
+}
