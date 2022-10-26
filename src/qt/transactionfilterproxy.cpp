@@ -52,4 +52,47 @@ bool TransactionFilterProxy::filterAcceptsRow(int sourceRow, const QModelIndex &
 void TransactionFilterProxy::setDateRange(const QDateTime &from, const QDateTime &to)
 {
     this->dateFrom = from;
-    this->dateTo
+    this->dateTo = to;
+    invalidateFilter();
+}
+
+void TransactionFilterProxy::setAddressPrefix(const QString &addrPrefix)
+{
+    this->addrPrefix = addrPrefix;
+    invalidateFilter();
+}
+
+void TransactionFilterProxy::setTypeFilter(quint32 modes)
+{
+    this->typeFilter = modes;
+    invalidateFilter();
+}
+
+void TransactionFilterProxy::setMinAmount(qint64 minimum)
+{
+    this->minAmount = minimum;
+    invalidateFilter();
+}
+
+void TransactionFilterProxy::setLimit(int limit)
+{
+    this->limitRows = limit;
+}
+
+void TransactionFilterProxy::setShowInactive(bool showInactive)
+{
+    this->showInactive = showInactive;
+    invalidateFilter();
+}
+
+int TransactionFilterProxy::rowCount(const QModelIndex &parent) const
+{
+    if(limitRows != -1)
+    {
+        return std::min(QSortFilterProxyModel::rowCount(parent), limitRows);
+    }
+    else
+    {
+        return QSortFilterProxyModel::rowCount(parent);
+    }
+}
