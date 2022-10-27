@@ -103,3 +103,30 @@ public:
 
     /** @name Immutable transaction attributes
       @{*/
+    uint256 hash;
+    qint64 time;
+    Type type;
+    std::string address;
+    qint64 debit;
+    qint64 credit;
+    /**@}*/
+
+    /** Subtransaction index, for sort key */
+    int idx;
+
+    /** Status: can change with block chain update */
+    TransactionStatus status;
+
+    /** Return the unique identifier for this transaction (part) */
+    std::string getTxID();
+
+    /** Update status from core wallet tx.
+     */
+    void updateStatus(const CWalletTx &wtx);
+
+    /** Return whether a status update is needed.
+     */
+    bool statusUpdateNeeded();
+};
+
+#endif // TRANSACTIONRECORD_H
