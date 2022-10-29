@@ -64,4 +64,20 @@ private slots:
     void copyAddress();
     void editLabel();
     void copyLabel();
-    void
+    void copyAmount();
+    void copyTxID();
+
+signals:
+    void doubleClicked(const QModelIndex&);
+
+public slots:
+    void chooseDate(int idx);
+    void chooseType(int idx);
+    void changedPrefix(const QString &prefix);
+    void changedAmount(const QString &amount);
+    void exportClicked();
+    void focusTransaction(const QModelIndex&);
+
+};
+
+#endif // TRANSACTIONVIEW_H
