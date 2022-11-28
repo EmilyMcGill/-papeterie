@@ -291,4 +291,141 @@ Value getwork(const Array& params, bool fHelp)
         pblock->UpdateTime(pindexPrev);
         pblock->nNonce = 0;
 
-        // Upd
+        // Update nExtraNonce
+        static unsigned int nExtraNonce = 0;
+        IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
+
+        // Save
+        mapNewBlock[pblock->hashMerkleRoot] = make_pair(pblock, pblock->vtx[0].vin[0].scriptSig);
+
+        // Pre-build hash buffers
+        char pmidstate[32];
+        char pdata[128];
+        char phash1[64];
+        FormatHashBuffers(pblock, pmidstate, pdata, phash1);
+
+        uint256 hashTarget = CBigNum().SetCompact(pblock->nBits).getuint256();
+
+        Object result;
+        result.push_back(Pair("midstate", HexStr(BEGIN(pmidstate), END(pmidstate)))); // deprecated
+        result.push_back(Pair("data",     HexStr(BEGIN(pdata), END(pdata))));
+        result.push_back(Pair("hash1",    HexStr(BEGIN(phash1), END(phash1)))); // deprecated
+        result.push_back(Pair("target",   HexStr(BEGIN(hashTarget), END(hashTarget))));
+        return result;
+    }
+    else
+    {
+        // Parse parameters
+        vector<unsigned char> vchData = ParseHex(params[0].get_str());
+        if (vchData.size() != 128)
+            throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter");
+        CBlock* pdata = (CBlock*)&vchData[0];
+
+        // Byte reverse
+        for (int i = 0; i < 128/4; i++)
+            ((unsigned int*)pdata)[i] = ByteReverse(((unsigned int*)pdata)[i]);
+
+        // Get saved block
+        if (!mapNewBlock.count(pdata->hashMerkleRoot))
+            return false;
+        CBlock* pblock = mapNewBlock[pdata->hashMerkleRoot].first;
+
+        pblock->nTime = pdata->nTime;
+        pblock->nNonce = pdata->nNonce;
+        pblock->vtx[0].vin[0].scriptSig = mapNewBlock[pdata->hashMerkleRoot].second;
+        pblock->hashMerkleRoot = pblock->BuildMerkleTree();
+
+        return CheckWork(pblock, *pwalletMain, reservekey);
+    }
+}
+
+
+Value getblocktemplate(const Array& params, bool fHelp)
+{
+    if (fHelp || params.size() > 1)
+        throw runtime_error(
+            "getblocktemplate [params]\n"
+            "Returns data needed to construct a block to work on:\n"
+            "  \"version\" : block version\n"
+            "  \"previousblockhash\" : hash of current highest block\n"
+            "  \"transactions\" : contents of non-coinbase transactions that should be included in the next block\n"
+            "  \"coinbaseaux\" : data that should be included in coinbase\n"
+            "  \"coinbasevalue\" : maximum allowable input to coinbase transaction, including the generation award and transaction fees\n"
+            "  \"target\" : hash target\n"
+            "  \"mintime\" : minimum timestamp appropriate for next block\n"
+            "  \"curtime\" : current timestamp\n"
+            "  \"mutable\" : list of ways the block template may be changed\n"
+            "  \"noncerange\" : range of valid nonces\n"
+            "  \"sigoplimit\" : limit of sigops in blocks\n"
+            "  \"sizelimit\" : limit of block size\n"
+            "  \"bits\" : compressed target of next block\n"
+            "  \"height\" : height of the next block\n"
+            "See https://en.bitcoin.it/wiki/BIP_0022 for full specification.");
+
+    std::string strMode = "template";
+    if (params.size() > 0)
+    {
+        const Object& oparam = params[0].get_obj();
+        const Value& modeval = find_value(oparam, "mode");
+        if (modeval.type() == str_type)
+            strMode = modeval.get_str();
+        else if (modeval.type() == null_type)
+        {
+            /* Do nothing */
+        }
+        else
+            throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid mode");
+    }
+
+    if (strMode != "template")
+        throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid mode");
+
+    if (vNodes.empty())
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Abjcoin is not connected!");
+
+    if (IsInitialBlockDownload())
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Abjcoin is downloading blocks...");
+
+    if (pindexBest->nHeight >= LAST_POW_BLOCK)
+        throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");
+
+    static CReserveKey reservekey(pwalletMain);
+
+    // Update block
+    static unsigned int nTransactionsUpdatedLast;
+    static CBlockIndex* pindexPrev;
+    static int64_t nStart;
+    static CBlock* pblock;
+    if (pindexPrev != pindexBest ||
+        (nTransactionsUpdated != nTransactionsUpdatedLast && GetTime() - nStart > 5))
+    {
+        // Clear pindexPrev so future calls make a new block, despite any failures from here on
+        pindexPrev = NULL;
+
+        // Store the pindexBest used before CreateNewBlock, to avoid races
+        nTransactionsUpdatedLast = nTransactionsUpdated;
+        CBlockIndex* pindexPrevNew = pindexBest;
+        nStart = GetTime();
+
+        // Create new block
+        if(pblock)
+        {
+            delete pblock;
+            pblock = NULL;
+        }
+        pblock = CreateNewBlock(pwalletMain);
+        if (!pblock)
+            throw JSONRPCError(RPC_OUT_OF_MEMORY, "Out of memory");
+
+        // Need to update only after we know CreateNewBlock succeeded
+        pindexPrev = pindexPrevNew;
+    }
+
+    // Update nTime
+    pblock->UpdateTime(pindexPrev);
+    pblock->nNonce = 0;
+
+    Array transactions;
+    map<uint256, int64_t> setTxIndex;
+    int i = 0;
+    CTxDB txdb("
