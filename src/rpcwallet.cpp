@@ -601,4 +601,152 @@ Value getbalance(const Array& params, bool fHelp)
 
     int64_t nBalance = GetAccountBalance(strAccount, nMinDepth);
 
-    return Valu
+    return ValueFromAmount(nBalance);
+}
+
+
+Value movecmd(const Array& params, bool fHelp)
+{
+    if (fHelp || params.size() < 3 || params.size() > 5)
+        throw runtime_error(
+            "move <fromaccount> <toaccount> <amount> [minconf=1] [comment]\n"
+            "Move from one account in your wallet to another.");
+
+    accountingDeprecationCheck();
+
+    string strFrom = AccountFromValue(params[0]);
+    string strTo = AccountFromValue(params[1]);
+    int64_t nAmount = AmountFromValue(params[2]);
+
+    if (params.size() > 3)
+        // unused parameter, used to be nMinDepth, keep type-checking it though
+        (void)params[3].get_int();
+    string strComment;
+    if (params.size() > 4)
+        strComment = params[4].get_str();
+
+    CWalletDB walletdb(pwalletMain->strWalletFile);
+    if (!walletdb.TxnBegin())
+        throw JSONRPCError(RPC_DATABASE_ERROR, "database error");
+
+    int64_t nNow = GetAdjustedTime();
+
+    // Debit
+    CAccountingEntry debit;
+    debit.nOrderPos = pwalletMain->IncOrderPosNext(&walletdb);
+    debit.strAccount = strFrom;
+    debit.nCreditDebit = -nAmount;
+    debit.nTime = nNow;
+    debit.strOtherAccount = strTo;
+    debit.strComment = strComment;
+    walletdb.WriteAccountingEntry(debit);
+
+    // Credit
+    CAccountingEntry credit;
+    credit.nOrderPos = pwalletMain->IncOrderPosNext(&walletdb);
+    credit.strAccount = strTo;
+    credit.nCreditDebit = nAmount;
+    credit.nTime = nNow;
+    credit.strOtherAccount = strFrom;
+    credit.strComment = strComment;
+    walletdb.WriteAccountingEntry(credit);
+
+    if (!walletdb.TxnCommit())
+        throw JSONRPCError(RPC_DATABASE_ERROR, "database error");
+
+    return true;
+}
+
+
+Value sendfrom(const Array& params, bool fHelp)
+{
+    if (fHelp || params.size() < 3 || params.size() > 6)
+        throw runtime_error(
+            "sendfrom <fromaccount> <toabjcoinaddress> <amount> [minconf=1] [comment] [comment-to]\n"
+            "<amount> is a real and is rounded to the nearest 0.000001"
+            + HelpRequiringPassphrase());
+
+    string strAccount = AccountFromValue(params[0]);
+    CBitcoinAddress address(params[1].get_str());
+    if (!address.IsValid())
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Abjcoin address");
+    int64_t nAmount = AmountFromValue(params[2]);
+
+    int nMinDepth = 1;
+    if (params.size() > 3)
+        nMinDepth = params[3].get_int();
+
+    CWalletTx wtx;
+    wtx.strFromAccount = strAccount;
+    if (params.size() > 4 && params[4].type() != null_type && !params[4].get_str().empty())
+        wtx.mapValue["comment"] = params[4].get_str();
+    if (params.size() > 5 && params[5].type() != null_type && !params[5].get_str().empty())
+        wtx.mapValue["to"]      = params[5].get_str();
+
+    EnsureWalletIsUnlocked();
+
+    // Check funds
+    int64_t nBalance = GetAccountBalance(strAccount, nMinDepth);
+    if (nAmount > nBalance)
+        throw JSONRPCError(RPC_WALLET_INSUFFICIENT_FUNDS, "Account has insufficient funds");
+
+    // Send
+    string strError = pwalletMain->SendMoneyToDestination(address.Get(), nAmount, wtx);
+    if (strError != "")
+        throw JSONRPCError(RPC_WALLET_ERROR, strError);
+
+    return wtx.GetHash().GetHex();
+}
+
+
+Value sendmany(const Array& params, bool fHelp)
+{
+    if (fHelp || params.size() < 2 || params.size() > 4)
+        throw runtime_error(
+            "sendmany <fromaccount> {address:amount,...} [minconf=1] [comment]\n"
+            "amounts are double-precision floating point numbers"
+            + HelpRequiringPassphrase());
+
+    string strAccount = AccountFromValue(params[0]);
+    Object sendTo = params[1].get_obj();
+    int nMinDepth = 1;
+    if (params.size() > 2)
+        nMinDepth = params[2].get_int();
+
+    CWalletTx wtx;
+    wtx.strFromAccount = strAccount;
+    if (params.size() > 3 && params[3].type() != null_type && !params[3].get_str().empty())
+        wtx.mapValue["comment"] = params[3].get_str();
+
+    set<CBitcoinAddress> setAddress;
+    vector<pair<CScript, int64_t> > vecSend;
+
+    int64_t totalAmount = 0;
+    BOOST_FOREACH(const Pair& s, sendTo)
+    {
+        CBitcoinAddress address(s.name_);
+        if (!address.IsValid())
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid Abjcoin address: ")+s.name_);
+
+        if (setAddress.count(address))
+            throw JSONRPCError(RPC_INVALID_PARAMETER, string("Invalid parameter, duplicated address: ")+s.name_);
+        setAddress.insert(address);
+
+        CScript scriptPubKey;
+        scriptPubKey.SetDestination(address.Get());
+        int64_t nAmount = AmountFromValue(s.value_);
+
+        totalAmount += nAmount;
+
+        vecSend.push_back(make_pair(scriptPubKey, nAmount));
+    }
+
+    EnsureWalletIsUnlocked();
+
+    // Check funds
+    int64_t nBalance = GetAccountBalance(strAccount, nMinDepth);
+    if (totalAmount > nBalance)
+        throw JSONRPCError(RPC_WALLET_INSUFFICIENT_FUNDS, "Account has insufficient funds");
+
+    // Send
+    CReserveKey keyChange(pwalletMai
