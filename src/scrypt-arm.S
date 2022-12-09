@@ -325,4 +325,231 @@
 	eor	r5, r5, lr, ror #14; \
 	ldr	lr, [sp, #12*4]; \
 	add	r8, r8, r12; \
-	str	r11, [s
+	str	r11, [sp, #10*4]; \
+	add	lr, lr, r0; \
+	str	r12, [sp, #15*4]; \
+	eor	r3, r3, r8, ror #25; \
+	add	r8, r5, r1; \
+	eor	r4, r4, lr, ror #25; \
+	add	lr, r11, r6; \
+	str	r9, [sp, #9*4]; \
+	eor	r9, r9, r8, ror #25; \
+	str	r10, [sp, #14*4]; \
+	eor	r10, r10, lr, ror #25; \
+	salsa8_core_doubleround_body(); \
+	ldr	r11, [sp, #10*4]; \
+	add	r8, r9, r8; \
+	ldr	r12, [sp, #15*4]; \
+	add	lr, r10, lr; \
+	str	r9, [sp, #9*4]; \
+	eor	r11, r11, r8, ror #14; \
+	eor	r12, r12, lr, ror #14; \
+	add	r8, r3, r2; \
+	str	r10, [sp, #14*4]; \
+	add	lr, r4, r7; \
+	str	r11, [sp, #10*4]; \
+	eor	r0, r0, r8, ror #14; \
+	str	r12, [sp, #15*4]; \
+	eor	r5, r5, lr, ror #14; \
+	stmia	sp, {r0-r7}; \
+
+
+#endif
+
+
+#define scrypt_core_macro1a_x4() \
+	ldmia	r0, {r4-r7}; \
+	ldmia	lr!, {r8-r11}; \
+	stmia	r1!, {r4-r7}; \
+	stmia	r3!, {r8-r11}; \
+	eor	r4, r4, r8; \
+	eor	r5, r5, r9; \
+	eor	r6, r6, r10; \
+	eor	r7, r7, r11; \
+	stmia	r0!, {r4-r7}; \
+	stmia	r12!, {r4-r7}; \
+
+
+#define scrypt_core_macro1b_x4() \
+	ldmia	r3!, {r8-r11}; \
+	ldmia	r2, {r4-r7}; \
+	eor	r8, r8, r4; \
+	eor	r9, r9, r5; \
+	eor	r10, r10, r6; \
+	eor	r11, r11, r7; \
+	ldmia	r0, {r4-r7}; \
+	stmia	r2!, {r8-r11}; \
+	eor	r4, r4, r8; \
+	eor	r5, r5, r9; \
+	eor	r6, r6, r10; \
+	eor	r7, r7, r11; \
+	ldmia	r1!, {r8-r11}; \
+	eor	r4, r4, r8; \
+	eor	r5, r5, r9; \
+	eor	r6, r6, r10; \
+	eor	r7, r7, r11; \
+	stmia	r0!, {r4-r7}; \
+	stmia	r12!, {r4-r7}; \
+
+
+#define scrypt_core_macro2_x4() \
+	ldmia	r12, {r4-r7}; \
+	ldmia	r0, {r8-r11}; \
+	add	r4, r4, r8; \
+	add	r5, r5, r9; \
+	add	r6, r6, r10; \
+	add	r7, r7, r11; \
+	stmia	r0!, {r4-r7}; \
+	ldmia	r2, {r8-r11}; \
+	eor	r4, r4, r8; \
+	eor	r5, r5, r9; \
+	eor	r6, r6, r10; \
+	eor	r7, r7, r11; \
+	stmia	r2!, {r4-r7}; \
+	stmia	r12!, {r4-r7}; \
+
+
+#define scrypt_core_macro3_x4() \
+	ldmia	r1!, {r4-r7}; \
+	ldmia	r0, {r8-r11}; \
+	add	r4, r4, r8; \
+	add	r5, r5, r9; \
+	add	r6, r6, r10; \
+	add	r7, r7, r11; \
+	stmia	r0!, {r4-r7}; \
+
+
+#define scrypt_core_macro3_x6() \
+	ldmia	r1!, {r2-r7}; \
+	ldmia	r0, {r8-r12, lr}; \
+	add	r2, r2, r8; \
+	add	r3, r3, r9; \
+	add	r4, r4, r10; \
+	add	r5, r5, r11; \
+	add	r6, r6, r12; \
+	add	r7, r7, lr; \
+	stmia	r0!, {r2-r7}; \
+
+
+
+	.text
+	.code 32
+	.align 2
+	.globl scrypt_core
+	.globl _scrypt_core
+#ifdef __ELF__
+	.type scrypt_core, %function
+#endif
+scrypt_core:
+_scrypt_core:
+	stmfd	sp!, {r4-r11, lr}
+	mov	r12, sp
+	sub	sp, sp, #21*4
+	bic	sp, sp, #63
+	str	r12, [sp, #20*4]
+	
+	scrypt_shuffle()
+	
+	str	r0, [sp, #16*4]
+	add	r12, r1, #1024*32*4
+	str	r12, [sp, #18*4]
+scrypt_core_loop1:
+	add	lr, r0, #16*4
+	add	r3, r1, #16*4
+	mov	r12, sp
+	scrypt_core_macro1a_x4()
+	scrypt_core_macro1a_x4()
+	scrypt_core_macro1a_x4()
+	scrypt_core_macro1a_x4()
+	str	r1, [sp, #17*4]
+	
+	salsa8_core()
+	
+	ldr	r0, [sp, #16*4]
+	mov	r12, sp
+	add	r2, r0, #16*4
+	scrypt_core_macro2_x4()
+	scrypt_core_macro2_x4()
+	scrypt_core_macro2_x4()
+	scrypt_core_macro2_x4()
+	
+	salsa8_core()
+	
+	ldr	r0, [sp, #16*4]
+	mov	r1, sp
+	add	r0, r0, #16*4
+	scrypt_core_macro3_x6()
+	scrypt_core_macro3_x6()
+	ldr	r3, [sp, #17*4]
+	ldr	r12, [sp, #18*4]
+	scrypt_core_macro3_x4()
+	
+	add	r1, r3, #16*4
+	sub	r0, r0, #32*4
+	cmp	r1, r12
+	bne	scrypt_core_loop1
+	
+	ldr	r4, [r0, #16*4]
+	sub	r1, r1, #1024*32*4
+	str	r1, [sp, #17*4]
+	mov	r4, r4, lsl #32-10
+	mov	r12, #1024
+	add	r1, r1, r4, lsr #32-10-7
+scrypt_core_loop2:
+	add	r2, r0, #16*4
+	add	r3, r1, #16*4
+	str	r12, [sp, #18*4]
+	mov	r12, sp
+#ifdef __ARM_ARCH_5E_OR_6_OR_7__
+	pld [r1, #24*4]
+	pld [r1, #8*4]
+#endif
+	scrypt_core_macro1b_x4()
+	scrypt_core_macro1b_x4()
+	scrypt_core_macro1b_x4()
+	scrypt_core_macro1b_x4()
+	
+	salsa8_core()
+	
+	ldr	r0, [sp, #16*4]
+	mov	r12, sp
+	add	r2, r0, #16*4
+	scrypt_core_macro2_x4()
+	scrypt_core_macro2_x4()
+	scrypt_core_macro2_x4()
+	scrypt_core_macro2_x4()
+	
+	salsa8_core()
+	
+	ldr	r0, [sp, #16*4]
+	mov	r1, sp
+	ldr	r3, [sp, #17*4]
+	add	r0, r0, #16*4
+	scrypt_core_macro3_x4()
+	mov	r4, r4, lsl #32-10
+	add	r3, r3, r4, lsr #32-10-7
+	str	r3, [sp, #19*4]
+#ifdef __ARM_ARCH_5E_OR_6_OR_7__
+	pld	[r3, #16*4]
+	pld	[r3]
+#endif
+	scrypt_core_macro3_x6()
+	scrypt_core_macro3_x6()
+	
+	ldr	r12, [sp, #18*4]
+	sub	r0, r0, #32*4
+	ldr	r1, [sp, #19*4]
+	subs	r12, r12, #1
+	bne	scrypt_core_loop2
+	
+	scrypt_shuffle()
+	
+	ldr	sp, [sp, #20*4]
+#ifdef __thumb__
+	ldmfd	sp!, {r4-r11, lr}
+	bx	lr
+#else
+	ldmfd	sp!, {r4-r11, pc}
+#endif
+
+#endif
