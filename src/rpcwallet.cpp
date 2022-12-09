@@ -901,4 +901,140 @@ Value ListReceived(const Array& params, bool fByAccounts)
             if (!ExtractDestination(txout.scriptPubKey, address) || !IsMine(*pwalletMain, address))
                 continue;
 
-            tallyitem& item = mapTa
+            tallyitem& item = mapTally[address];
+            item.nAmount += txout.nValue;
+            item.nConf = min(item.nConf, nDepth);
+        }
+    }
+
+    // Reply
+    Array ret;
+    map<string, tallyitem> mapAccountTally;
+    BOOST_FOREACH(const PAIRTYPE(CBitcoinAddress, string)& item, pwalletMain->mapAddressBook)
+    {
+        const CBitcoinAddress& address = item.first;
+        const string& strAccount = item.second;
+        map<CBitcoinAddress, tallyitem>::iterator it = mapTally.find(address);
+        if (it == mapTally.end() && !fIncludeEmpty)
+            continue;
+
+        int64_t nAmount = 0;
+        int nConf = std::numeric_limits<int>::max();
+        if (it != mapTally.end())
+        {
+            nAmount = (*it).second.nAmount;
+            nConf = (*it).second.nConf;
+        }
+
+        if (fByAccounts)
+        {
+            tallyitem& item = mapAccountTally[strAccount];
+            item.nAmount += nAmount;
+            item.nConf = min(item.nConf, nConf);
+        }
+        else
+        {
+            Object obj;
+            obj.push_back(Pair("address",       address.ToString()));
+            obj.push_back(Pair("account",       strAccount));
+            obj.push_back(Pair("amount",        ValueFromAmount(nAmount)));
+            obj.push_back(Pair("confirmations", (nConf == std::numeric_limits<int>::max() ? 0 : nConf)));
+            ret.push_back(obj);
+        }
+    }
+
+    if (fByAccounts)
+    {
+        for (map<string, tallyitem>::iterator it = mapAccountTally.begin(); it != mapAccountTally.end(); ++it)
+        {
+            int64_t nAmount = (*it).second.nAmount;
+            int nConf = (*it).second.nConf;
+            Object obj;
+            obj.push_back(Pair("account",       (*it).first));
+            obj.push_back(Pair("amount",        ValueFromAmount(nAmount)));
+            obj.push_back(Pair("confirmations", (nConf == std::numeric_limits<int>::max() ? 0 : nConf)));
+            ret.push_back(obj);
+        }
+    }
+
+    return ret;
+}
+
+Value listreceivedbyaddress(const Array& params, bool fHelp)
+{
+    if (fHelp || params.size() > 2)
+        throw runtime_error(
+            "listreceivedbyaddress [minconf=1] [includeempty=false]\n"
+            "[minconf] is the minimum number of confirmations before payments are included.\n"
+            "[includeempty] whether to include addresses that haven't received any payments.\n"
+            "Returns an array of objects containing:\n"
+            "  \"address\" : receiving address\n"
+            "  \"account\" : the account of the receiving address\n"
+            "  \"amount\" : total amount received by the address\n"
+            "  \"confirmations\" : number of confirmations of the most recent transaction included");
+
+    return ListReceived(params, false);
+}
+
+Value listreceivedbyaccount(const Array& params, bool fHelp)
+{
+    if (fHelp || params.size() > 2)
+        throw runtime_error(
+            "listreceivedbyaccount [minconf=1] [includeempty=false]\n"
+            "[minconf] is the minimum number of confirmations before payments are included.\n"
+            "[includeempty] whether to include accounts that haven't received any payments.\n"
+            "Returns an array of objects containing:\n"
+            "  \"account\" : the account of the receiving addresses\n"
+            "  \"amount\" : total amount received by addresses with this account\n"
+            "  \"confirmations\" : number of confirmations of the most recent transaction included");
+
+    accountingDeprecationCheck();
+
+    return ListReceived(params, true);
+}
+
+static void MaybePushAddress(Object & entry, const CTxDestination &dest)
+{
+    CBitcoinAddress addr;
+    if (addr.Set(dest))
+        entry.push_back(Pair("address", addr.ToString()));
+}
+
+void ListTransactions(const CWalletTx& wtx, const string& strAccount, int nMinDepth, bool fLong, Array& ret)
+{
+    int64_t nFee;
+    string strSentAccount;
+    list<pair<CTxDestination, int64_t> > listReceived;
+    list<pair<CTxDestination, int64_t> > listSent;
+
+    wtx.GetAmounts(listReceived, listSent, nFee, strSentAccount);
+
+    bool fAllAccounts = (strAccount == string("*"));
+
+    // Sent
+    if ((!wtx.IsCoinStake()) && (!listSent.empty() || nFee != 0) && (fAllAccounts || strAccount == strSentAccount))
+    {
+        BOOST_FOREACH(const PAIRTYPE(CTxDestination, int64_t)& s, listSent)
+        {
+            Object entry;
+            entry.push_back(Pair("account", strSentAccount));
+            MaybePushAddress(entry, s.first);
+            entry.push_back(Pair("category", "send"));
+            entry.push_back(Pair("amount", ValueFromAmount(-s.second)));
+            entry.push_back(Pair("fee", ValueFromAmount(-nFee)));
+            if (fLong)
+                WalletTxToJSON(wtx, entry);
+            ret.push_back(entry);
+        }
+    }
+
+    // Received
+    if (listReceived.size() > 0 && wtx.GetDepthInMainChain() >= nMinDepth)
+    {
+        bool stop = false;
+        BOOST_FOREACH(const PAIRTYPE(CTxDestination, int64_t)& r, listReceived)
+        {
+            string account;
+            if (pwalletMain->mapAddressBook.count(r.first))
+                account = pwalletMain->mapAddressBook[r.first];
+            if (fAllAccounts || (account
