@@ -1344,4 +1344,151 @@ Value backupwallet(const Array& params, bool fHelp)
 }
 
 
-Value keypo
+Value keypoolrefill(const Array& params, bool fHelp)
+{
+    if (fHelp || params.size() > 1)
+        throw runtime_error(
+            "keypoolrefill [new-size]\n"
+            "Fills the keypool."
+            + HelpRequiringPassphrase());
+
+    unsigned int nSize = max(GetArg("-keypool", 100), (int64_t)0);
+    if (params.size() > 0) {
+        if (params[0].get_int() < 0)
+            throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, expected valid size");
+        nSize = (unsigned int) params[0].get_int();
+    }
+
+    EnsureWalletIsUnlocked();
+
+    pwalletMain->TopUpKeyPool(nSize);
+
+    if (pwalletMain->GetKeyPoolSize() < nSize)
+        throw JSONRPCError(RPC_WALLET_ERROR, "Error refreshing keypool.");
+
+    return Value::null;
+}
+
+
+void ThreadTopUpKeyPool(void* parg)
+{
+    // Make this thread recognisable as the key-topping-up thread
+    RenameThread("abjcoin-key-top");
+
+    pwalletMain->TopUpKeyPool();
+}
+
+void ThreadCleanWalletPassphrase(void* parg)
+{
+    // Make this thread recognisable as the wallet relocking thread
+    RenameThread("abjcoin-lock-wa");
+
+    int64_t nMyWakeTime = GetTimeMillis() + *((int64_t*)parg) * 1000;
+
+    ENTER_CRITICAL_SECTION(cs_nWalletUnlockTime);
+
+    if (nWalletUnlockTime == 0)
+    {
+        nWalletUnlockTime = nMyWakeTime;
+
+        do
+        {
+            if (nWalletUnlockTime==0)
+                break;
+            int64_t nToSleep = nWalletUnlockTime - GetTimeMillis();
+            if (nToSleep <= 0)
+                break;
+
+            LEAVE_CRITICAL_SECTION(cs_nWalletUnlockTime);
+            MilliSleep(nToSleep);
+            ENTER_CRITICAL_SECTION(cs_nWalletUnlockTime);
+
+        } while(1);
+
+        if (nWalletUnlockTime)
+        {
+            nWalletUnlockTime = 0;
+            pwalletMain->Lock();
+        }
+    }
+    else
+    {
+        if (nWalletUnlockTime < nMyWakeTime)
+            nWalletUnlockTime = nMyWakeTime;
+    }
+
+    LEAVE_CRITICAL_SECTION(cs_nWalletUnlockTime);
+
+    delete (int64_t*)parg;
+}
+
+Value walletpassphrase(const Array& params, bool fHelp)
+{
+    if (pwalletMain->IsCrypted() && (fHelp || params.size() < 2 || params.size() > 3))
+        throw runtime_error(
+            "walletpassphrase <passphrase> <timeout> [stakingonly]\n"
+            "Stores the wallet decryption key in memory for <timeout> seconds.\n"
+            "if [stakingonly] is true sending functions are disabled.");
+    if (fHelp)
+        return true;
+    if (!pwalletMain->IsCrypted())
+        throw JSONRPCError(RPC_WALLET_WRONG_ENC_STATE, "Error: running with an unencrypted wallet, but walletpassphrase was called.");
+
+    if (!pwalletMain->IsLocked())
+        throw JSONRPCError(RPC_WALLET_ALREADY_UNLOCKED, "Error: Wallet is already unlocked, use walletlock first if need to change unlock settings.");
+    // Note that the walletpassphrase is stored in params[0] which is not mlock()ed
+    SecureString strWalletPass;
+    strWalletPass.reserve(100);
+    // TODO: get rid of this .c_str() by implementing SecureString::operator=(std::string)
+    // Alternately, find a way to make params[0] mlock()'d to begin with.
+    strWalletPass = params[0].get_str().c_str();
+
+    if (strWalletPass.length() > 0)
+    {
+        if (!pwalletMain->Unlock(strWalletPass))
+            throw JSONRPCError(RPC_WALLET_PASSPHRASE_INCORRECT, "Error: The wallet passphrase entered was incorrect.");
+    }
+    else
+        throw runtime_error(
+            "walletpassphrase <passphrase> <timeout>\n"
+            "Stores the wallet decryption key in memory for <timeout> seconds.");
+
+    NewThread(ThreadTopUpKeyPool, NULL);
+    int64_t* pnSleepTime = new int64_t(params[1].get_int64());
+    NewThread(ThreadCleanWalletPassphrase, pnSleepTime);
+
+    // ppcoin: if user OS account compromised prevent trivial sendmoney commands
+    if (params.size() > 2)
+        fWalletUnlockStakingOnly = params[2].get_bool();
+    else
+        fWalletUnlockStakingOnly = false;
+
+    return Value::null;
+}
+
+
+Value walletpassphrasechange(const Array& params, bool fHelp)
+{
+    if (pwalletMain->IsCrypted() && (fHelp || params.size() != 2))
+        throw runtime_error(
+            "walletpassphrasechange <oldpassphrase> <newpassphrase>\n"
+            "Changes the wallet passphrase from <oldpassphrase> to <newpassphrase>.");
+    if (fHelp)
+        return true;
+    if (!pwalletMain->IsCrypted())
+        throw JSONRPCError(RPC_WALLET_WRONG_ENC_STATE, "Error: running with an unencrypted wallet, but walletpassphrasechange was called.");
+
+    // TODO: get rid of these .c_str() calls by implementing SecureString::operator=(std::string)
+    // Alternately, find a way to make params[0] mlock()'d to begin with.
+    SecureString strOldWalletPass;
+    strOldWalletPass.reserve(100);
+    strOldWalletPass = params[0].get_str().c_str();
+
+    SecureString strNewWalletPass;
+    strNewWalletPass.reserve(100);
+    strNewWalletPass = params[1].get_str().c_str();
+
+    if (strOldWalletPass.length() < 1 || strNewWalletPass.length() < 1)
+        throw runtime_error(
+            "walletpassphrasechange <oldpassphrase> <newpassphrase>\n"
+            "Changes the wallet passphrase from
