@@ -904,3 +904,10 @@ xmm_scrypt_core_loop2:
 	movl	%ebx, 112(%edi)
 	
 	movl	%ebp, %esp
+	popl	%esi
+	popl	%edi
+	popl	%ebp
+	popl	%ebx
+	ret
+
+#endif
