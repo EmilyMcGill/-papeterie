@@ -452,4 +452,162 @@ void Unserialize_impl(Stream& is, std::vector<T, A>& v, int nType, int nVersion,
     }
 }
 
-template<typena
+template<typename Stream, typename T, typename A>
+void Unserialize_impl(Stream& is, std::vector<T, A>& v, int nType, int nVersion, const boost::false_type&)
+{
+    v.clear();
+    unsigned int nSize = ReadCompactSize(is);
+    unsigned int i = 0;
+    unsigned int nMid = 0;
+    while (nMid < nSize)
+    {
+        nMid += 5000000 / sizeof(T);
+        if (nMid > nSize)
+            nMid = nSize;
+        v.resize(nMid);
+        for (; i < nMid; i++)
+            Unserialize(is, v[i], nType, nVersion);
+    }
+}
+
+template<typename Stream, typename T, typename A>
+inline void Unserialize(Stream& is, std::vector<T, A>& v, int nType, int nVersion)
+{
+    Unserialize_impl(is, v, nType, nVersion, boost::is_fundamental<T>());
+}
+
+
+
+//
+// others derived from vector
+//
+inline unsigned int GetSerializeSize(const CScript& v, int nType, int nVersion)
+{
+    return GetSerializeSize((const std::vector<unsigned char>&)v, nType, nVersion);
+}
+
+template<typename Stream>
+void Serialize(Stream& os, const CScript& v, int nType, int nVersion)
+{
+    Serialize(os, (const std::vector<unsigned char>&)v, nType, nVersion);
+}
+
+template<typename Stream>
+void Unserialize(Stream& is, CScript& v, int nType, int nVersion)
+{
+    Unserialize(is, (std::vector<unsigned char>&)v, nType, nVersion);
+}
+
+
+
+//
+// pair
+//
+template<typename K, typename T>
+unsigned int GetSerializeSize(const std::pair<K, T>& item, int nType, int nVersion)
+{
+    return GetSerializeSize(item.first, nType, nVersion) + GetSerializeSize(item.second, nType, nVersion);
+}
+
+template<typename Stream, typename K, typename T>
+void Serialize(Stream& os, const std::pair<K, T>& item, int nType, int nVersion)
+{
+    Serialize(os, item.first, nType, nVersion);
+    Serialize(os, item.second, nType, nVersion);
+}
+
+template<typename Stream, typename K, typename T>
+void Unserialize(Stream& is, std::pair<K, T>& item, int nType, int nVersion)
+{
+    Unserialize(is, item.first, nType, nVersion);
+    Unserialize(is, item.second, nType, nVersion);
+}
+
+
+
+//
+// 3 tuple
+//
+template<typename T0, typename T1, typename T2>
+unsigned int GetSerializeSize(const boost::tuple<T0, T1, T2>& item, int nType, int nVersion)
+{
+    unsigned int nSize = 0;
+    nSize += GetSerializeSize(boost::get<0>(item), nType, nVersion);
+    nSize += GetSerializeSize(boost::get<1>(item), nType, nVersion);
+    nSize += GetSerializeSize(boost::get<2>(item), nType, nVersion);
+    return nSize;
+}
+
+template<typename Stream, typename T0, typename T1, typename T2>
+void Serialize(Stream& os, const boost::tuple<T0, T1, T2>& item, int nType, int nVersion)
+{
+    Serialize(os, boost::get<0>(item), nType, nVersion);
+    Serialize(os, boost::get<1>(item), nType, nVersion);
+    Serialize(os, boost::get<2>(item), nType, nVersion);
+}
+
+template<typename Stream, typename T0, typename T1, typename T2>
+void Unserialize(Stream& is, boost::tuple<T0, T1, T2>& item, int nType, int nVersion)
+{
+    Unserialize(is, boost::get<0>(item), nType, nVersion);
+    Unserialize(is, boost::get<1>(item), nType, nVersion);
+    Unserialize(is, boost::get<2>(item), nType, nVersion);
+}
+
+
+
+//
+// 4 tuple
+//
+template<typename T0, typename T1, typename T2, typename T3>
+unsigned int GetSerializeSize(const boost::tuple<T0, T1, T2, T3>& item, int nType, int nVersion)
+{
+    unsigned int nSize = 0;
+    nSize += GetSerializeSize(boost::get<0>(item), nType, nVersion);
+    nSize += GetSerializeSize(boost::get<1>(item), nType, nVersion);
+    nSize += GetSerializeSize(boost::get<2>(item), nType, nVersion);
+    nSize += GetSerializeSize(boost::get<3>(item), nType, nVersion);
+    return nSize;
+}
+
+template<typename Stream, typename T0, typename T1, typename T2, typename T3>
+void Serialize(Stream& os, const boost::tuple<T0, T1, T2, T3>& item, int nType, int nVersion)
+{
+    Serialize(os, boost::get<0>(item), nType, nVersion);
+    Serialize(os, boost::get<1>(item), nType, nVersion);
+    Serialize(os, boost::get<2>(item), nType, nVersion);
+    Serialize(os, boost::get<3>(item), nType, nVersion);
+}
+
+template<typename Stream, typename T0, typename T1, typename T2, typename T3>
+void Unserialize(Stream& is, boost::tuple<T0, T1, T2, T3>& item, int nType, int nVersion)
+{
+    Unserialize(is, boost::get<0>(item), nType, nVersion);
+    Unserialize(is, boost::get<1>(item), nType, nVersion);
+    Unserialize(is, boost::get<2>(item), nType, nVersion);
+    Unserialize(is, boost::get<3>(item), nType, nVersion);
+}
+
+
+
+//
+// map
+//
+template<typename K, typename T, typename Pred, typename A>
+unsigned int GetSerializeSize(const std::map<K, T, Pred, A>& m, int nType, int nVersion)
+{
+    unsigned int nSize = GetSizeOfCompactSize(m.size());
+    for (typename std::map<K, T, Pred, A>::const_iterator mi = m.begin(); mi != m.end(); ++mi)
+        nSize += GetSerializeSize((*mi), nType, nVersion);
+    return nSize;
+}
+
+template<typename Stream, typename K, typename T, typename Pred, typename A>
+void Serialize(Stream& os, const std::map<K, T, Pred, A>& m, int nType, int nVersion)
+{
+    WriteCompactSize(os, m.size());
+    for (typename std::map<K, T, Pred, A>::const_iterator mi = m.begin(); mi != m.end(); ++mi)
+        Serialize(os, (*mi), nType, nVersion);
+}
+
+template<typename Stream, typename K, typename T, typ
