@@ -945,4 +945,186 @@ public:
     {
         // Ignore from the beginning of the buffer
         assert(nSize >= 0);
-        unsigned int nReadPosNex
+        unsigned int nReadPosNext = nReadPos + nSize;
+        if (nReadPosNext >= vch.size())
+        {
+            if (nReadPosNext > vch.size())
+                setstate(std::ios::failbit, "CDataStream::ignore() : end of data");
+            nReadPos = 0;
+            vch.clear();
+            return (*this);
+        }
+        nReadPos = nReadPosNext;
+        return (*this);
+    }
+
+    CDataStream& write(const char* pch, int nSize)
+    {
+        // Write to the end of the buffer
+        assert(nSize >= 0);
+        vch.insert(vch.end(), pch, pch + nSize);
+        return (*this);
+    }
+
+    template<typename Stream>
+    void Serialize(Stream& s, int nType, int nVersion) const
+    {
+        // Special case: stream << stream concatenates like stream += stream
+        if (!vch.empty())
+            s.write((char*)&vch[0], vch.size() * sizeof(vch[0]));
+    }
+
+    template<typename T>
+    unsigned int GetSerializeSize(const T& obj)
+    {
+        // Tells the size of the object if serialized to this stream
+        return ::GetSerializeSize(obj, nType, nVersion);
+    }
+
+    template<typename T>
+    CDataStream& operator<<(const T& obj)
+    {
+        // Serialize to this stream
+        ::Serialize(*this, obj, nType, nVersion);
+        return (*this);
+    }
+
+    template<typename T>
+    CDataStream& operator>>(T& obj)
+    {
+        // Unserialize from this stream
+        ::Unserialize(*this, obj, nType, nVersion);
+        return (*this);
+    }
+
+    void GetAndClear(CSerializeData &data) {
+        data.insert(data.end(), begin(), end());
+        clear();
+    }
+};
+
+
+
+
+
+
+
+
+
+
+/** RAII wrapper for FILE*.
+ *
+ * Will automatically close the file when it goes out of scope if not null.
+ * If you're returning the file pointer, return file.release().
+ * If you need to close the file early, use file.fclose() instead of fclose(file).
+ */
+class CAutoFile
+{
+protected:
+    FILE* file;
+    short state;
+    short exceptmask;
+public:
+    int nType;
+    int nVersion;
+
+    CAutoFile(FILE* filenew, int nTypeIn, int nVersionIn)
+    {
+        file = filenew;
+        nType = nTypeIn;
+        nVersion = nVersionIn;
+        state = 0;
+        exceptmask = std::ios::badbit | std::ios::failbit;
+    }
+
+    ~CAutoFile()
+    {
+        fclose();
+    }
+
+    void fclose()
+    {
+        if (file != NULL && file != stdin && file != stdout && file != stderr)
+            ::fclose(file);
+        file = NULL;
+    }
+
+    FILE* release()             { FILE* ret = file; file = NULL; return ret; }
+    operator FILE*()            { return file; }
+    FILE* operator->()          { return file; }
+    FILE& operator*()           { return *file; }
+    FILE** operator&()          { return &file; }
+    FILE* operator=(FILE* pnew) { return file = pnew; }
+    bool operator!()            { return (file == NULL); }
+
+
+    //
+    // Stream subset
+    //
+    void setstate(short bits, const char* psz)
+    {
+        state |= bits;
+        if (state & exceptmask)
+            throw std::ios_base::failure(psz);
+    }
+
+    bool fail() const            { return state & (std::ios::badbit | std::ios::failbit); }
+    bool good() const            { return state == 0; }
+    void clear(short n = 0)      { state = n; }
+    short exceptions()           { return exceptmask; }
+    short exceptions(short mask) { short prev = exceptmask; exceptmask = mask; setstate(0, "CAutoFile"); return prev; }
+
+    void SetType(int n)          { nType = n; }
+    int GetType()                { return nType; }
+    void SetVersion(int n)       { nVersion = n; }
+    int GetVersion()             { return nVersion; }
+    void ReadVersion()           { *this >> nVersion; }
+    void WriteVersion()          { *this << nVersion; }
+
+    CAutoFile& read(char* pch, size_t nSize)
+    {
+        if (!file)
+            throw std::ios_base::failure("CAutoFile::read : file handle is NULL");
+        if (fread(pch, 1, nSize, file) != nSize)
+            setstate(std::ios::failbit, feof(file) ? "CAutoFile::read : end of file" : "CAutoFile::read : fread failed");
+        return (*this);
+    }
+
+    CAutoFile& write(const char* pch, size_t nSize)
+    {
+        if (!file)
+            throw std::ios_base::failure("CAutoFile::write : file handle is NULL");
+        if (fwrite(pch, 1, nSize, file) != nSize)
+            setstate(std::ios::failbit, "CAutoFile::write : write failed");
+        return (*this);
+    }
+
+    template<typename T>
+    unsigned int GetSerializeSize(const T& obj)
+    {
+        // Tells the size of the object if serialized to this stream
+        return ::GetSerializeSize(obj, nType, nVersion);
+    }
+
+    template<typename T>
+    CAutoFile& operator<<(const T& obj)
+    {
+        // Serialize to this stream
+        if (!file)
+            throw std::ios_base::failure("CAutoFile::operator<< : file handle is NULL");
+        ::Serialize(*this, obj, nType, nVersion);
+        return (*this);
+    }
+
+    template<typename T>
+    CAutoFile& operator>>(T& obj)
+    {
+        // Unserialize from this stream
+        if (!file)
+            throw std::ios_base::failure("CAutoFile::operator>> : file handle is NULL");
+        ::Unserialize(*this, obj, nType, nVersion);
+        return (*this);
+    }
+};
+
+#endif
