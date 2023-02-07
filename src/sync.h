@@ -187,4 +187,75 @@ public:
         value--;
     }
 
-    bool
+    bool try_wait() {
+        boost::unique_lock<boost::mutex> lock(mutex);
+        if (value < 1)
+            return false;
+        value--;
+        return true;
+    }
+
+    void post() {
+        {
+            boost::unique_lock<boost::mutex> lock(mutex);
+            value++;
+        }
+        condition.notify_one();
+    }
+};
+
+/** RAII-style semaphore lock */
+class CSemaphoreGrant
+{
+private:
+    CSemaphore *sem;
+    bool fHaveGrant;
+
+public:
+    void Acquire() {
+        if (fHaveGrant)
+            return;
+        sem->wait();
+        fHaveGrant = true;
+    }
+
+    void Release() {
+        if (!fHaveGrant)
+            return;
+        sem->post();
+        fHaveGrant = false;
+    }
+
+    bool TryAcquire() {
+        if (!fHaveGrant && sem->try_wait())
+            fHaveGrant = true;
+        return fHaveGrant;
+    }
+
+    void MoveTo(CSemaphoreGrant &grant) {
+        grant.Release();
+        grant.sem = sem;
+        grant.fHaveGrant = fHaveGrant;
+        sem = NULL;
+        fHaveGrant = false;
+    }
+
+    CSemaphoreGrant() : sem(NULL), fHaveGrant(false) {}
+
+    CSemaphoreGrant(CSemaphore &sema, bool fTry = false) : sem(&sema), fHaveGrant(false) {
+        if (fTry)
+            TryAcquire();
+        else
+            Acquire();
+    }
+
+    ~CSemaphoreGrant() {
+        Release();
+    }
+
+    operator bool() {
+        return fHaveGrant;
+    }
+};
+#endif
+
