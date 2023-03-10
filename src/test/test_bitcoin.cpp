@@ -32,4 +32,13 @@ struct TestingSetup {
 
 BOOST_GLOBAL_FIXTURE(TestingSetup);
 
-void Shutdown(v
+void Shutdown(void* parg)
+{
+  exit(0);
+}
+
+void StartShutdown()
+{
+  exit(0);
+}
+
