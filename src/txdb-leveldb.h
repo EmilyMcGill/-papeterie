@@ -157,4 +157,54 @@ protected:
         }
 
 
-        leveldb::Status status = pdb->Get(leveldb::ReadOptions(), ssKey.str
+        leveldb::Status status = pdb->Get(leveldb::ReadOptions(), ssKey.str(), &unused);
+        return status.IsNotFound() == false;
+    }
+
+
+public:
+    bool TxnBegin();
+    bool TxnCommit();
+    bool TxnAbort()
+    {
+        delete activeBatch;
+        activeBatch = NULL;
+        return true;
+    }
+
+    bool ReadVersion(int& nVersion)
+    {
+        nVersion = 0;
+        return Read(std::string("version"), nVersion);
+    }
+
+    bool WriteVersion(int nVersion)
+    {
+        return Write(std::string("version"), nVersion);
+    }
+
+    bool ReadTxIndex(uint256 hash, CTxIndex& txindex);
+    bool UpdateTxIndex(uint256 hash, const CTxIndex& txindex);
+    bool AddTxIndex(const CTransaction& tx, const CDiskTxPos& pos, int nHeight);
+    bool EraseTxIndex(const CTransaction& tx);
+    bool ContainsTx(uint256 hash);
+    bool ReadDiskTx(uint256 hash, CTransaction& tx, CTxIndex& txindex);
+    bool ReadDiskTx(uint256 hash, CTransaction& tx);
+    bool ReadDiskTx(COutPoint outpoint, CTransaction& tx, CTxIndex& txindex);
+    bool ReadDiskTx(COutPoint outpoint, CTransaction& tx);
+    bool WriteBlockIndex(const CDiskBlockIndex& blockindex);
+    bool ReadHashBestChain(uint256& hashBestChain);
+    bool WriteHashBestChain(uint256 hashBestChain);
+    bool ReadBestInvalidTrust(CBigNum& bnBestInvalidTrust);
+    bool WriteBestInvalidTrust(CBigNum bnBestInvalidTrust);
+    bool ReadSyncCheckpoint(uint256& hashCheckpoint);
+    bool WriteSyncCheckpoint(uint256 hashCheckpoint);
+    bool ReadCheckpointPubKey(std::string& strPubKey);
+    bool WriteCheckpointPubKey(const std::string& strPubKey);
+    bool LoadBlockIndex();
+private:
+    bool LoadBlockIndexGuts();
+};
+
+
+#endif // BITCOIN_DB_H
