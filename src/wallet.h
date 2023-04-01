@@ -185,4 +185,135 @@ public:
     void WalletUpdateSpent(const CTransaction& prevout, bool fBlock = false);
     int ScanForWalletTransactions(CBlockIndex* pindexStart, bool fUpdate = false);
     void ReacceptWalletTransactions();
-    void ResendWalletTransactions(bool fFo
+    void ResendWalletTransactions(bool fForce = false);
+    int64_t GetBalance() const;
+    int64_t GetUnconfirmedBalance() const;
+    int64_t GetImmatureBalance() const;
+    int64_t GetStake() const;
+    int64_t GetNewMint() const;
+    bool CreateTransaction(const std::vector<std::pair<CScript, int64_t> >& vecSend, CWalletTx& wtxNew, CReserveKey& reservekey, int64_t& nFeeRet, const CCoinControl *coinControl=NULL);
+    bool CreateTransaction(CScript scriptPubKey, int64_t nValue, CWalletTx& wtxNew, CReserveKey& reservekey, int64_t& nFeeRet, const CCoinControl *coinControl=NULL);
+    bool CommitTransaction(CWalletTx& wtxNew, CReserveKey& reservekey);
+
+    bool GetStakeWeight(const CKeyStore& keystore, uint64_t& nMinWeight, uint64_t& nMaxWeight, uint64_t& nWeight);
+    bool CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int64_t nSearchInterval, int64_t nFees, CTransaction& txNew, CKey& key);
+
+    std::string SendMoney(CScript scriptPubKey, int64_t nValue, CWalletTx& wtxNew, bool fAskFee=false);
+    std::string SendMoneyToDestination(const CTxDestination &address, int64_t nValue, CWalletTx& wtxNew, bool fAskFee=false);
+
+    bool NewKeyPool();
+    bool TopUpKeyPool(unsigned int nSize = 0);
+    int64_t AddReserveKey(const CKeyPool& keypool);
+    void ReserveKeyFromKeyPool(int64_t& nIndex, CKeyPool& keypool);
+    void KeepKey(int64_t nIndex);
+    void ReturnKey(int64_t nIndex);
+    bool GetKeyFromPool(CPubKey &key, bool fAllowReuse=true);
+    int64_t GetOldestKeyPoolTime();
+    void GetAllReserveKeys(std::set<CKeyID>& setAddress) const;
+
+    std::set< std::set<CTxDestination> > GetAddressGroupings();
+    std::map<CTxDestination, int64_t> GetAddressBalances();
+
+    bool IsMine(const CTxIn& txin) const;
+    int64_t GetDebit(const CTxIn& txin) const;
+    bool IsMine(const CTxOut& txout) const
+    {
+        return ::IsMine(*this, txout.scriptPubKey);
+    }
+    int64_t GetCredit(const CTxOut& txout) const
+    {
+        if (!MoneyRange(txout.nValue))
+            throw std::runtime_error("CWallet::GetCredit() : value out of range");
+        return (IsMine(txout) ? txout.nValue : 0);
+    }
+    bool IsChange(const CTxOut& txout) const;
+    int64_t GetChange(const CTxOut& txout) const
+    {
+        if (!MoneyRange(txout.nValue))
+            throw std::runtime_error("CWallet::GetChange() : value out of range");
+        return (IsChange(txout) ? txout.nValue : 0);
+    }
+    bool IsMine(const CTransaction& tx) const
+    {
+        BOOST_FOREACH(const CTxOut& txout, tx.vout)
+            if (IsMine(txout) && txout.nValue >= nMinimumInputValue)
+                return true;
+        return false;
+    }
+    bool IsFromMe(const CTransaction& tx) const
+    {
+        return (GetDebit(tx) > 0);
+    }
+    int64_t GetDebit(const CTransaction& tx) const
+    {
+        int64_t nDebit = 0;
+        BOOST_FOREACH(const CTxIn& txin, tx.vin)
+        {
+            nDebit += GetDebit(txin);
+            if (!MoneyRange(nDebit))
+                throw std::runtime_error("CWallet::GetDebit() : value out of range");
+        }
+        return nDebit;
+    }
+    int64_t GetCredit(const CTransaction& tx) const
+    {
+        int64_t nCredit = 0;
+        BOOST_FOREACH(const CTxOut& txout, tx.vout)
+        {
+            nCredit += GetCredit(txout);
+            if (!MoneyRange(nCredit))
+                throw std::runtime_error("CWallet::GetCredit() : value out of range");
+        }
+        return nCredit;
+    }
+    int64_t GetChange(const CTransaction& tx) const
+    {
+        int64_t nChange = 0;
+        BOOST_FOREACH(const CTxOut& txout, tx.vout)
+        {
+            nChange += GetChange(txout);
+            if (!MoneyRange(nChange))
+                throw std::runtime_error("CWallet::GetChange() : value out of range");
+        }
+        return nChange;
+    }
+    void SetBestChain(const CBlockLocator& loc);
+
+    DBErrors LoadWallet(bool& fFirstRunRet);
+
+    bool SetAddressBookName(const CTxDestination& address, const std::string& strName);
+
+    bool DelAddressBookName(const CTxDestination& address);
+
+    void UpdatedTransaction(const uint256 &hashTx);
+
+    void PrintWallet(const CBlock& block);
+
+    void Inventory(const uint256 &hash)
+    {
+        {
+            LOCK(cs_wallet);
+            std::map<uint256, int>::iterator mi = mapRequestCount.find(hash);
+            if (mi != mapRequestCount.end())
+                (*mi).second++;
+        }
+    }
+
+    unsigned int GetKeyPoolSize()
+    {
+        AssertLockHeld(cs_wallet); // setKeyPool
+        return setKeyPool.size();
+    }
+
+    bool GetTransaction(const uint256 &hashTx, CWalletTx& wtx);
+
+    bool SetDefaultKey(const CPubKey &vchPubKey);
+
+    // signify that a particular wallet feature is now used. this may change nWalletVersion and nWalletMaxVersion if those are lower
+    bool SetMinVersion(enum WalletFeature, CWalletDB* pwalletdbIn = NULL, bool fExplicit = false);
+
+    // change which version we're allowed to upgrade to (note that this does not immediately imply upgrading to that format)
+    bool SetMaxVersion(int nVersion);
+
+    // get the current wallet format (the oldest client version guaranteed to understand this wallet)
+    int GetVersio
