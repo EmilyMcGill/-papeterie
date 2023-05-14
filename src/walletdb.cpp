@@ -666,3 +666,55 @@ bool CWalletDB::Recover(CDBEnv& dbenv, std::string filename, bool fOnlyKeys)
         return false;
     }
     printf("Salvage(aggressive) found %"PRIszu" records\n", salvagedData.size());
+
+    bool fSuccess = allOK;
+    Db* pdbCopy = new Db(&dbenv.dbenv, 0);
+    int ret = pdbCopy->open(NULL,                 // Txn pointer
+                            filename.c_str(),   // Filename
+                            "main",    // Logical db name
+                            DB_BTREE,  // Database type
+                            DB_CREATE,    // Flags
+                            0);
+    if (ret > 0)
+    {
+        printf("Cannot create database file %s\n", filename.c_str());
+        return false;
+    }
+    CWallet dummyWallet;
+    CWalletScanState wss;
+
+    DbTxn* ptxn = dbenv.TxnBegin();
+    BOOST_FOREACH(CDBEnv::KeyValPair& row, salvagedData)
+    {
+        if (fOnlyKeys)
+        {
+            CDataStream ssKey(row.first, SER_DISK, CLIENT_VERSION);
+            CDataStream ssValue(row.second, SER_DISK, CLIENT_VERSION);
+            string strType, strErr;
+            bool fReadOK = ReadKeyValue(&dummyWallet, ssKey, ssValue,
+                                        wss, strType, strErr);
+            if (!IsKeyType(strType))
+                continue;
+            if (!fReadOK)
+            {
+                printf("WARNING: CWalletDB::Recover skipping %s: %s\n", strType.c_str(), strErr.c_str());
+                continue;
+            }
+        }
+        Dbt datKey(&row.first[0], row.first.size());
+        Dbt datValue(&row.second[0], row.second.size());
+        int ret2 = pdbCopy->put(ptxn, &datKey, &datValue, DB_NOOVERWRITE);
+        if (ret2 > 0)
+            fSuccess = false;
+    }
+    ptxn->commit(0);
+    pdbCopy->close(0);
+    delete pdbCopy;
+
+    return fSuccess;
+}
+
+bool CWalletDB::Recover(CDBEnv& dbenv, std::string filename)
+{
+    return CWalletDB::Recover(dbenv, filename, false);
+}
