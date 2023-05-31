@@ -123,4 +123,17 @@ private:
 	 * @throws ZerocoinException if the process takes too long
 	 *
 	 * Generates a new Zerocoin by (a) selecting a random serial
-	 * number, (b) committing to this serial 
+	 * number, (b) committing to this serial number and repeating until
+	 * the resulting commitment is prime. Stores the
+	 * resulting commitment (coin) and randomness (trapdoor).
+	 * This routine is substantially faster than the
+	 * mintCoin() routine, but could be more vulnerable
+	 * to timing attacks. Don't use it if you think someone
+	 * could be timing your coin minting.
+	 **/
+	void mintCoinFast(const CoinDenomination denomination);
+
+};
+
+} /* namespace libzerocoin */
+#endif /* COIN_H_ */
