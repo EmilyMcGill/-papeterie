@@ -182,4 +182,35 @@ public:
 
 	/**
 	 * One of two groups used to form a commitment to
-	 * a coin (which it self is a commitment to a serial 
+	 * a coin (which it self is a commitment to a serial number).
+	 * This is the one used in the serial number poof.
+	 * It's order must be equal to the modulus of coinCommitmentGroup.
+	 */
+	IntegerGroupParams serialNumberSoKCommitmentGroup;
+
+	/**
+	 * The number of iterations to use in the serial
+	 * number proof.
+	 */
+	uint32_t zkp_iterations;
+
+	/**
+	 * The amount of the hash function we use for
+	 * proofs.
+	 */
+	uint32_t zkp_hash_len;
+
+	IMPLEMENT_SERIALIZE
+	(
+	    READWRITE(initialized);
+	    READWRITE(accumulatorParams);
+	    READWRITE(coinCommitmentGroup);
+	    READWRITE(serialNumberSoKCommitmentGroup);
+	    READWRITE(zkp_iterations);
+	    READWRITE(zkp_hash_len);
+	)
+};
+
+} /* namespace libzerocoin */
+
+#endif /* PARAMS_H_ */
