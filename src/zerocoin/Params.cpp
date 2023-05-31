@@ -36,4 +36,10 @@ IntegerGroupParams::IntegerGroupParams() {
 }
 
 Bignum IntegerGroupParams::randomElement() const {
-	// The generator of th
+	// The generator of the group raised
+	// to a random number less than the order of the group
+	// provides us with a uniformly distributed random number.
+	return this->g.pow_mod(Bignum::randBignum(this->groupOrder),this->modulus);
+}
+
+} /* namespace libzerocoin */
